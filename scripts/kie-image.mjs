@@ -5,11 +5,12 @@
 //   npm run image -- <project> <name> "<prompt>" [--model=<alias>] [--aspect=16:9] [--set key=value ...]
 //   e.g. npm run image -- towmatic-intro hero-truck "a flatbed tow truck at dusk" --model=imagen4
 //   npm run image -- --list      # show the model aliases
+//   --out=<dir> saves into <dir> instead of videos/<project>/assets/images/ (e.g. for website/).
 //
 // Auth: in cloud sessions the kie.ai key is stored as an environment API credential and
 // attached by the agent proxy, so no key is needed here. Locally, set KIE_API_KEY.
 import { mkdirSync, writeFileSync } from "node:fs";
-import { extname, join, relative } from "node:path";
+import { extname, join, relative, resolve } from "node:path";
 
 const API = "https://api.kie.ai/api/v1/jobs";
 
@@ -150,7 +151,7 @@ const img = await fetch(url);
 if (!img.ok) throw new Error(`Download failed (${img.status}) from ${new URL(url).host}: ${url}`);
 
 const root = join(import.meta.dirname, "..");
-const dir = join(root, "videos", project, "assets", "images");
+const dir = flags.out ? resolve(flags.out) : join(root, "videos", project, "assets", "images");
 mkdirSync(dir, { recursive: true });
 const file = join(dir, `${name}${extname(new URL(url).pathname) || ".png"}`);
 writeFileSync(file, Buffer.from(await img.arrayBuffer()));

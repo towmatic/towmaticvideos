@@ -1386,6 +1386,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .closing .btn-row { width: auto; }
 }
 
+/* Desktop: text on the left so the truck in the photo stays visible on the right */
+@media (min-width: 960px) {
+  .closing::after {
+    background: linear-gradient(90deg,
+      color-mix(in srgb, var(--color-bg) 90%, transparent) 0%,
+      color-mix(in srgb, var(--color-bg) 60%, transparent) 45%,
+      color-mix(in srgb, var(--color-bg) 10%, transparent) 80%);
+  }
+  .closing__content { justify-items: start; text-align: left; }
+  .closing .btn-row { justify-content: flex-start; }
+  .closing__media img { object-position: 30% center; }
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
