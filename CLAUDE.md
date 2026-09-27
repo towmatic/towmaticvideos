@@ -16,6 +16,7 @@ All 21 published HyperFrames skills are vendored in `.claude/skills/` so they lo
   `assets/` media). Each project has its own `CLAUDE.md` with the composition rules.
 - `videos/towmatic-intro/` — 10s reference intro (wordmark → features → tagline). Copy its patterns.
 - `scripts/new-video.mjs` — scaffolds a project and vendors GSAP locally.
+- `scripts/kie-image.mjs` — generates images with kie.ai into `videos/<name>/assets/images/`.
 - `.claude/hooks/session-start.sh` — installs FFmpeg and the render browser in cloud sessions.
 
 ## Commands
@@ -26,9 +27,16 @@ cd videos/<name>
 npm run check                                   # lint + runtime + layout + motion + contrast
 npx hyperframes@0.8.80 preview --background     # Studio preview
 npx hyperframes@0.8.80 render --quality draft --output renders/<name>.mp4
+
+# from the repo root: generate an image into videos/<project>/assets/images/<name>.jpg
+npm run image -- <project> <name> "<prompt>" [--model=google/nano-banana] [--size=16:9]
 ```
 
 ## Repo conventions
+
+- Image generation uses kie.ai. In cloud sessions the key is an environment API credential that the
+  proxy attaches to `api.kie.ai` requests, so there is no `KIE_API_KEY` variable to read; locally, set
+  `KIE_API_KEY`. Finished images download from `tempfile.aiquickdraw.com`, which must be allowed.
 
 - Load GSAP from `assets/gsap.min.js`, never a CDN: headless Chrome in cloud sessions cannot reach
   CDNs through the proxy, which breaks `check` and renders (`gsap is not defined`).

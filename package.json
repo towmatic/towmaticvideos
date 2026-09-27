@@ -5,6 +5,7 @@
   "scripts": {
     "new": "node scripts/new-video.mjs",
     "doctor": "npx --yes hyperframes@0.8.80 doctor",
-    "skills:update": "npx --yes hyperframes@0.8.80 skills update"
+    "skills:update": "npx --yes hyperframes@0.8.80 skills update",
+    "image": "NODE_USE_ENV_PROXY=1 node --no-warnings scripts/kie-image.mjs"
   }
 }
