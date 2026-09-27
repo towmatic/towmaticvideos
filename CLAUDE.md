@@ -15,6 +15,8 @@ All 21 published HyperFrames skills are vendored in `.claude/skills/` so they lo
 - `videos/<name>/` — one HyperFrames project per video (`index.html` root, `compositions/` scenes,
   `assets/` media). Each project has its own `CLAUDE.md` with the composition rules.
 - `videos/towmatic-intro/` — 10s reference intro (wordmark → features → tagline). Copy its patterns.
+- `website/` — static prototype of the towmatic.ai marketing site redesign (plain HTML/CSS/JS, no build).
+  Its design system lives in `website/styles.css`; it does not use the video brand colors above.
 - `scripts/new-video.mjs` — scaffolds a project and vendors GSAP locally.
 - `scripts/kie-image.mjs` — generates images with kie.ai into `videos/<name>/assets/images/`.
 - `.claude/hooks/session-start.sh` — installs FFmpeg and the render browser in cloud sessions.

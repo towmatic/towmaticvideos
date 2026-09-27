@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Towmatic | AI Dispatch Automation for Tow Companies</title>
+  <meta name="description" content="Towmatic answers calls, quotes from your rate sheet and dispatches your next driver in seconds, 24/7. Voice AI, online booking and your own branded app.">
+  <meta name="theme-color" content="#0F0F0F">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================================================================
+     NAV (shared) — this block is copied into every page.
+     If you change it here, change it on every page so they stay in sync.
+     =================================================================== -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav" data-nav>
+  <div class="container site-nav__inner">
+    <a class="logo" href="index.html" aria-label="Towmatic home">
+      <!-- Placeholder wordmark: replace with the official Towmatic logo file -->
+      <svg class="logo__mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 9h12M14 9v6.5a3.5 3.5 0 1 1-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <span class="logo__word">Towmatic</span>
+    </a>
+
+    <nav class="site-nav__primary" aria-label="Main">
+      <ul class="nav-links">
+        <li class="nav-item--menu" data-menu>
+          <button class="nav-link" type="button" aria-expanded="false" aria-controls="products-menu" data-menu-toggle>
+            Products
+            <svg class="nav-link__chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mega" id="products-menu" hidden>
+            <ul class="mega__list">
+              <li>
+                <a class="mega__item" href="voice-ai.html">
+                  <span class="mega__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h3.5l1.8 4.3-2.3 1.5a11 11 0 0 0 6.2 6.2l1.5-2.3L20 15.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                  </span>
+                  <span><span class="mega__name">Voice AI</span><span class="mega__desc">Answers every call, 24/7.</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="mega__item" href="web-forms.html">
+                  <span class="mega__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span><span class="mega__name">Instant Dispatch Forms</span><span class="mega__desc">Customers book online, no call needed.</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="mega__item" href="native-app.html">
+                  <span class="mega__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.5" width="12" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><rect x="9" y="7" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span><span class="mega__name">Branded Customer App</span><span class="mega__desc">Your company on their home screen.</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-nav__actions">
+      <a class="nav-link" href="/login">Login</a>
+      <a class="btn btn--secondary btn--nav" href="/demo">Interactive Demo</a>
+      <a class="btn btn--primary btn--nav" href="#trial">Start Free Trial</a>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-mobile-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__body" aria-label="Mobile">
+      <div class="mobile-menu__group">
+        <p class="eyebrow">Products</p>
+        <a class="mobile-menu__product" href="voice-ai.html"><span class="mega__name">Voice AI</span><span class="mega__desc">Answers every call, 24/7.</span></a>
+        <a class="mobile-menu__product" href="web-forms.html"><span class="mega__name">Instant Dispatch Forms</span><span class="mega__desc">Customers book online, no call needed.</span></a>
+        <a class="mobile-menu__product" href="native-app.html"><span class="mega__name">Branded Customer App</span><span class="mega__desc">Your company on their home screen.</span></a>
+      </div>
+      <div class="mobile-menu__group">
+        <a class="mobile-menu__link" href="pricing.html">Pricing</a>
+        <a class="mobile-menu__link" href="blog.html">Blog</a>
+        <a class="mobile-menu__link" href="/login">Login</a>
+      </div>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a class="btn btn--secondary" href="/demo">Interactive Demo</a>
+      <a class="btn btn--primary" href="#trial">Start Free Trial</a>
+    </div>
+  </div>
+</header>
+<!-- =========================== /NAV (shared) =========================== -->
+
+<main id="main">
+
+  <!-- 5.1 Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__media" aria-hidden="true">
+      <!-- The poster is the still hero image. Phones and reduced-motion visitors only ever see the poster. -->
+      <video class="hero__video" muted loop playsinline preload="none" poster="images/hero.webp" data-hero-video>
+        <!-- Add hero video here: <source src="images/hero.mp4" type="video/mp4"> -->
+      </video>
+    </div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <div class="container hero__content">
+      <p class="eyebrow hero__eyebrow reveal">AI dispatch automation for tow companies</p>
+      <h1 class="hero__title reveal" id="hero-title">
+        <span class="sr-only">Every call, online booking and app request dispatched automatically.</span>
+        <span aria-hidden="true">
+          <span class="hero__line">Every <span class="hero__cycle"><span class="hero__word" data-cycle="call|online booking|app request">call</span></span></span>
+          <span class="hero__line">dispatched automatically.</span>
+        </span>
+      </h1>
+      <p class="hero__sub reveal">Towmatic answers, quotes and sends your next driver in seconds, 24/7, with no dispatcher on the clock.</p>
+      <div class="btn-row reveal">
+        <a class="btn btn--primary" href="/demo">Try the Interactive Demo</a>
+        <a class="btn btn--secondary" href="#trial">Start Free Trial</a>
+      </div>
+    </div>
+
+    <div class="proof-strip">
+      <ul class="container proof-strip__list">
+        <li class="proof-strip__item"><strong class="proof-strip__stat">$22,234</strong><span>captured for one client in one month</span></li>
+        <li class="proof-strip__item"><strong class="proof-strip__stat">1,000+</strong><span>real dispatches</span></li>
+        <li class="proof-strip__item"><strong class="proof-strip__stat proof-strip__stat--plain">Month-to-month.</strong><span>No contracts.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Step 2 adds sections 5.2 to 5.6 here: platform tabs, dashboard proof, how it works, testimonial, closing CTA -->
+
+</main>
+
+<!-- ===================================================================
+     FOOTER (shared) — this block is copied into every page.
+     If you change it here, change it on every page so they stay in sync.
+     =================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div>
+        <a class="logo" href="index.html" aria-label="Towmatic home">
+          <!-- Placeholder wordmark: replace with the official Towmatic logo file -->
+          <svg class="logo__mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="26" height="26" rx="7" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 9h12M14 9v6.5a3.5 3.5 0 1 1-3.5-3.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <span class="logo__word">Towmatic</span>
+        </a>
+        <p class="site-footer__tagline">Built by tow operators, for tow operators.</p>
+      </div>
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div>
+          <p class="eyebrow site-footer__heading">Products</p>
+          <ul class="site-footer__links">
+            <li><a href="voice-ai.html">Voice AI</a></li>
+            <li><a href="web-forms.html">Instant Dispatch Forms</a></li>
+            <li><a href="native-app.html">Branded Customer App</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow site-footer__heading">Company</p>
+          <ul class="site-footer__links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow site-footer__heading">Legal</p>
+          <ul class="site-footer__links">
+            <!-- Point these at the existing live legal pages (URLs to confirm) -->
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>Patents &amp; trademarks pending</p>
+      <p>&copy; 2026 Towmatic. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- ========================== /FOOTER (shared) ========================== -->
+
+<script src="main.js"></script>
+</body>
+</html>
