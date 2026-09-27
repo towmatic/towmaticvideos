@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        #tagline-line {
+          font-size: 124px;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+          text-align: center;
+        }
+        #tagline-accent {
+          color: #ffb400;
+        }
+        #tagline-bar {
+          margin-top: 44px;
+          width: 360px;
+          height: 10px;
+          border-radius: 5px;
+          background: #ffb400;
+          transform-origin: left center;
+        }
+      </style>
+
+      <div id="root" data-composition-id="tagline" data-width="1920" data-height="1080">
+        <div id="tagline-line">Towing, on <span id="tagline-accent">autopilot.</span></div>
+        <div id="tagline-bar"></div>
+      </div>
+
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#tagline-line", { scale: 0.92, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "power3.out" }, 0.1);
+        tl.fromTo("#tagline-bar", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.5);
+        window.__timelines["tagline"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

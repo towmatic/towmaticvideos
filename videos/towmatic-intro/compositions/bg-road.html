@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+        }
+        #bg-road-lane {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 140px;
+          height: 12px;
+          overflow: hidden;
+        }
+        #bg-road-dashes {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3840px;
+          height: 12px;
+          background: repeating-linear-gradient(90deg, #ffb400 0 120px, transparent 120px 240px);
+          opacity: 0.35;
+        }
+      </style>
+
+      <div id="root" data-composition-id="bg-road" data-width="1920" data-height="1080">
+        <div id="bg-road-lane">
+          <!-- Twice the canvas width so the dashes can scroll left seamlessly. -->
+          <div id="bg-road-dashes" data-layout-allow-overflow></div>
+        </div>
+      </div>
+
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#bg-road-dashes", { x: 0 }, { x: -1920, duration: 10, ease: "none" }, 0);
+        window.__timelines["bg-road"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

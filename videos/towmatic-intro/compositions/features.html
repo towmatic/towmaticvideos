@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        #features-title {
+          font-size: 64px;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          margin-bottom: 72px;
+        }
+        #features-cards {
+          display: flex;
+          gap: 48px;
+        }
+        .features-card {
+          width: 420px;
+          padding: 48px 40px;
+          border-radius: 28px;
+          background: #141b24;
+          border: 2px solid #243040;
+        }
+        .features-num {
+          font-size: 28px;
+          font-weight: 700;
+          color: #ffb400;
+          margin-bottom: 18px;
+        }
+        .features-name {
+          font-size: 52px;
+          font-weight: 700;
+          margin-bottom: 14px;
+        }
+        .features-desc {
+          font-size: 28px;
+          color: #9aa7b5;
+          line-height: 1.35;
+        }
+      </style>
+
+      <div id="root" data-composition-id="features" data-width="1920" data-height="1080">
+        <div id="features-title">One platform. Every call.</div>
+        <div id="features-cards">
+          <div class="features-card">
+            <div class="features-num">01</div>
+            <div class="features-name">Dispatch</div>
+            <div class="features-desc">Assign the right truck in seconds.</div>
+          </div>
+          <div class="features-card">
+            <div class="features-num">02</div>
+            <div class="features-name">Impound</div>
+            <div class="features-desc">Track every vehicle on the lot.</div>
+          </div>
+          <div class="features-card">
+            <div class="features-num">03</div>
+            <div class="features-name">Billing</div>
+            <div class="features-desc">Invoice before the hook drops.</div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#features-title", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.1);
+        tl.fromTo(".features-card", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.15, ease: "power3.out" }, 0.35);
+        tl.to("#features-title, #features-cards", { y: -40, opacity: 0, duration: 0.4, ease: "power2.in" }, 2.95);
+        window.__timelines["features"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

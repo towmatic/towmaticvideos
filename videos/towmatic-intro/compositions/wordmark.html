@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        #wordmark-mark {
+          display: flex;
+          align-items: center;
+          gap: 36px;
+        }
+        #wordmark-icon {
+          width: 150px;
+          height: 150px;
+          border-radius: 36px;
+          background: #ffb400;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        #wordmark-icon svg {
+          width: 96px;
+          height: 96px;
+        }
+        #wordmark-word {
+          display: flex;
+          font-size: 168px;
+          font-weight: 800;
+          letter-spacing: -0.04em;
+        }
+        .wordmark-letter {
+          display: inline-block;
+        }
+        #wordmark-sub {
+          margin-top: 28px;
+          font-size: 40px;
+          font-weight: 500;
+          color: #9aa7b5;
+          letter-spacing: 0.02em;
+        }
+      </style>
+
+      <div id="root" data-composition-id="wordmark" data-width="1920" data-height="1080">
+        <div id="wordmark-mark">
+          <div id="wordmark-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0b0f14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 16V8h9v8" />
+              <path d="M12 11h4l3 3v2h-7" />
+              <circle cx="7" cy="17" r="2" fill="#0b0f14" />
+              <circle cx="17" cy="17" r="2" fill="#0b0f14" />
+              <path d="M3 8 1 4" />
+            </svg>
+          </div>
+          <div id="wordmark-word">
+            <span class="wordmark-letter">T</span><span class="wordmark-letter">O</span><span class="wordmark-letter">W</span><span class="wordmark-letter">M</span><span class="wordmark-letter">A</span><span class="wordmark-letter">T</span><span class="wordmark-letter">I</span><span class="wordmark-letter">C</span>
+          </div>
+        </div>
+        <div id="wordmark-sub">Software for towing companies</div>
+      </div>
+
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#wordmark-icon", { scale: 0.4, rotation: -12, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.6, ease: "back.out(1.8)" }, 0.2);
+        tl.fromTo(".wordmark-letter", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.05, ease: "power3.out" }, 0.45);
+        tl.fromTo("#wordmark-sub", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 1.1);
+        tl.to("#wordmark-mark, #wordmark-sub", { y: -40, opacity: 0, duration: 0.4, ease: "power2.in" }, 3.15);
+        window.__timelines["wordmark"] = tl;
+      </script>
+    </template>
+  </body>
+</html>
