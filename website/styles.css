@@ -1756,6 +1756,66 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--color-text-muted);
 }
 
+/* Phone stage for feature blocks (no glow) */
+.phone-stage {
+  --pw: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg-alt);
+}
+.section--alt .phone-stage { background: var(--color-bg); }
+.phone-stage--pair { --pw: 160px; --overlap: 0.1; padding-block: 56px; }
+
+@media (min-width: 960px) {
+  .phone-stage { --pw: 250px; }
+  .phone-stage--pair { --pw: 220px; --overlap: 0.08; }
+}
+
+/* Booking timeline */
+.timeline { display: grid; }
+.timeline li {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  padding: 0 0 24px 36px;
+}
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+}
+.timeline li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 25px;
+  bottom: 2px;
+  width: 2px;
+  background: var(--color-border);
+}
+.timeline li.is-done::before { background: var(--color-text); border-color: var(--color-text); }
+.timeline li.is-now::before {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+.timeline b { font-weight: 600; }
+.timeline span { color: var(--color-text-muted); font-size: var(--fs-small); }
+
+.section--tight { padding-block: var(--section-pad) 0; }
+.section--tight .callout { margin-top: 0; }
+
 /* FAQ accordion */
 .faq { max-width: 880px; border-top: 1px solid var(--color-border); }
 
