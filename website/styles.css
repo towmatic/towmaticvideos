@@ -487,7 +487,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 70% center;
+  object-position: 85% center;
 }
 
 /* Dark gradient from the left keeps the headline readable over any photo */
@@ -531,6 +531,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: var(--fs-hero);
   line-height: 0.92;
   text-wrap: initial;
+  overflow-wrap: break-word;
 }
 
 .hero__line { display: block; }
