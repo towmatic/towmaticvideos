@@ -160,20 +160,8 @@
 
         <!-- Tab 1: Voice AI -->
         <div class="platform__panel" role="tabpanel" id="panel-voice" aria-labelledby="tab-voice" tabindex="0">
-          <div class="platform__stage">
-            <div class="phone" role="img" aria-label="Phone showing a Towmatic Voice AI call in progress">
-              <div class="phone__screen">
-                <div class="phone__status" aria-hidden="true"><span>3:04</span><span class="phone__dots"></span></div>
-                <p class="ui-eyebrow">Towmatic Voice AI</p>
-                <div class="call-head">
-                  <span class="ui-title">Live call</span>
-                  <span class="live-pill"><span class="live-dot"></span>On call</span>
-                </div>
-                <div class="waveform" data-waveform aria-hidden="true"></div>
-                <div class="bubble bubble--caller">My truck died on the interstate. Can you send someone?</div>
-                <div class="bubble bubble--ai">Yes. What’s your location and vehicle? I’ll text your quote right now.</div>
-              </div>
-            </div>
+          <div class="platform__stage platform__stage--photo">
+            <img src="images/tab-voice.webp" alt="A phone on a tow truck dashboard at night showing a live Towmatic Voice AI call with a waveform and transcript" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <div class="platform__copy">
             <h3 class="platform__headline">Answers every call, even at 3AM.</h3>
@@ -190,23 +178,8 @@
 
         <!-- Tab 2: Instant Dispatch Forms -->
         <div class="platform__panel" role="tabpanel" id="panel-forms" aria-labelledby="tab-forms" tabindex="0" hidden>
-          <div class="platform__stage">
-            <div class="phone" role="img" aria-label="Phone showing a short online tow request form">
-              <div class="phone__screen">
-                <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__dots"></span></div>
-                <p class="ui-eyebrow">Your Tow Co.</p>
-                <p class="ui-title">Request a tow</p>
-                <div class="chips"><span class="chip chip--on">Tow</span><span class="chip">Jump start</span><span class="chip">Lockout</span></div>
-                <div class="field"><span class="field__label">Name</span><span class="field__value">Full name</span></div>
-                <div class="field"><span class="field__label">Mobile</span><span class="field__value">(555) 555-0142</span></div>
-                <div class="field"><span class="field__label">Vehicle</span><span class="field__value">Year, make, model</span></div>
-                <div class="locate">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
-                  <span>Location shared</span><span class="locate__check" aria-hidden="true">✓</span>
-                </div>
-                <span class="ui-btn">Get my quote</span>
-              </div>
-            </div>
+          <div class="platform__stage platform__stage--photo">
+            <img src="images/tab-forms.webp" alt="A stranded driver holding a phone at night with a tow request form showing location shared and a Get my quote button" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <div class="platform__copy">
             <h3 class="platform__headline">Book a tow without a phone call.</h3>
@@ -217,29 +190,8 @@
 
         <!-- Tab 3: Branded Customer App -->
         <div class="platform__panel" role="tabpanel" id="panel-app" aria-labelledby="tab-app" tabindex="0" hidden>
-          <div class="platform__stage platform__stage--pair">
-            <div class="phone phone--back" role="img" aria-label="Phone home screen with the Your Tow Co. app icon">
-              <div class="phone__screen phone__screen--home">
-                <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__dots"></span></div>
-                <div class="app-grid" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span>
-                  <span></span><span></span><span></span><span></span>
-                  <span class="app-grid__mine"><i><svg viewBox="0 0 24 24" fill="none"><path d="M3 15V9h9v6M12 11h4l3 3v1M3 15h16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="16" cy="17" r="2" fill="currentColor"/></svg></i><b>Your Tow Co.</b></span>
-                  <span></span><span></span><span></span>
-                </div>
-              </div>
-            </div>
-            <div class="phone phone--front" role="img" aria-label="Your Tow Co. app booking screen with saved details">
-              <div class="phone__screen">
-                <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__dots"></span></div>
-                <p class="ui-eyebrow">Your Tow Co.</p>
-                <p class="ui-title">Book a tow</p>
-                <div class="field"><span class="field__label">Saved vehicle</span><span class="field__value field__value--set">Service truck #3</span></div>
-                <div class="field"><span class="field__label">Pickup</span><span class="field__value field__value--set">Current location</span></div>
-                <div class="field"><span class="field__label">Drop-off</span><span class="field__value field__value--set">Saved: body shop</span></div>
-                <span class="ui-btn">Book now</span>
-              </div>
-            </div>
+          <div class="platform__stage platform__stage--photo">
+            <img src="images/tab-app.webp" alt="A phone at a dealership service drive showing the Your Tow Co. app booking screen with saved details and a Book now button" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <div class="platform__copy">
             <h3 class="platform__headline">Your company, on their home screen.</h3>
@@ -250,36 +202,8 @@
 
         <!-- Tab 4: SmartDispatch -->
         <div class="platform__panel" role="tabpanel" id="panel-dispatch" aria-labelledby="tab-dispatch" tabindex="0" hidden>
-          <div class="platform__stage platform__stage--pair">
-            <div class="phone phone--back" role="img" aria-label="Phone lock screen with a Towmatic new dispatch notification">
-              <div class="phone__screen phone__screen--lock">
-                <div class="phone__status" aria-hidden="true"><span></span><span class="phone__dots"></span></div>
-                <p class="lock-time">3:06</p>
-                <div class="notif">
-                  <div class="notif__head"><span class="notif__icon"></span><span>Towmatic</span><span class="notif__when">now</span></div>
-                  <p class="notif__title">New dispatch</p>
-                  <p class="notif__body">Tow, ASAP. Open the app to confirm.</p>
-                </div>
-              </div>
-            </div>
-            <div class="phone phone--front" role="img" aria-label="Towmatic driver app job card with a Confirm Dispatch button">
-              <div class="phone__screen">
-                <div class="phone__status" aria-hidden="true"><span>3:06</span><span class="phone__dots"></span></div>
-                <p class="ui-eyebrow">Towmatic · Driver</p>
-                <p class="ui-title">New job</p>
-                <div class="job">
-                  <p class="job__type">Tow · ASAP</p>
-                  <div class="job__row"><span>Pickup</span><b>Interstate shoulder</b></div>
-                  <div class="job__row"><span>Drop-off</span><b>Customer’s shop</b></div>
-                  <div class="job__row"><span>Quote</span><b>Accepted by customer</b></div>
-                </div>
-                <div class="confirm-window">
-                  <span>Confirm before it rolls to the next driver</span>
-                  <span class="confirm-window__bar"><i></i></span>
-                </div>
-                <span class="ui-btn">Confirm Dispatch</span>
-              </div>
-            </div>
+          <div class="platform__stage platform__stage--photo">
+            <img src="images/tab-dispatch.webp" alt="A tow driver’s gloved hand holding a phone in the truck cab showing a new job card with a Confirm Dispatch button" width="1600" height="1200" loading="lazy" decoding="async">
           </div>
           <div class="platform__copy">
             <h3 class="platform__headline">Your driver rotation, run automatically.</h3>
