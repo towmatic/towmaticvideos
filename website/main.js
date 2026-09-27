@@ -188,7 +188,7 @@
     audio.preload = 'none';
     var label = button.querySelector('.audio-btn__label');
     var idleText = label.textContent;
-    var panel = button.closest('[role="tabpanel"], section');
+    var panel = button.closest('[data-audio-scope], [role="tabpanel"], section');
     var wave = panel && panel.querySelector('[data-waveform]');
 
     function setPlaying(on) {
