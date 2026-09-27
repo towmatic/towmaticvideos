@@ -29,7 +29,8 @@ npx hyperframes@0.8.80 preview --background     # Studio preview
 npx hyperframes@0.8.80 render --quality draft --output renders/<name>.mp4
 
 # from the repo root: generate an image into videos/<project>/assets/images/<name>.jpg
-npm run image -- <project> <name> "<prompt>" [--model=google/nano-banana] [--size=16:9]
+npm run image -- <project> <name> "<prompt>" [--model=<alias>] [--aspect=16:9] [--set key=value]
+npm run image -- --list                          # model aliases
 ```
 
 ## Repo conventions
@@ -37,6 +38,10 @@ npm run image -- <project> <name> "<prompt>" [--model=google/nano-banana] [--siz
 - Image generation uses kie.ai. In cloud sessions the key is an environment API credential that the
   proxy attaches to `api.kie.ai` requests, so there is no `KIE_API_KEY` variable to read; locally, set
   `KIE_API_KEY`. Finished images download from `tempfile.aiquickdraw.com`, which must be allowed.
+- Pick the model from the prompt, tell the user which one and why before generating, and honor a
+  model they name: text/signs/UI → `gpt-image-2` or `ideogram-v3`; photoreal hero shots →
+  `imagen4-ultra` or `seedream-5-pro`; general scenes → `nano-banana-2`/`nano-banana-pro`; drafts and
+  variations → `nano-banana`. The script prints credits used. Model schemas: `https://docs.kie.ai/llms.txt`.
 
 - Load GSAP from `assets/gsap.min.js`, never a CDN: headless Chrome in cloud sessions cannot reach
   CDNs through the proxy, which breaks `check` and renders (`gsap is not defined`).
