@@ -128,6 +128,98 @@
     }
   }
 
+  /* ---------- Platform tabs (arrow keys, Home and End supported) ---------- */
+  document.querySelectorAll('[data-tabs]').forEach(function (root) {
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+      // Keep the active tab visible in the scrolling mobile row
+      if (tab.scrollIntoView && tab.parentElement.scrollWidth > tab.parentElement.clientWidth) {
+        tab.parentElement.scrollTo({
+          left: tab.offsetLeft - tab.parentElement.offsetLeft - 20,
+          behavior: reduceMotion.matches ? 'auto' : 'smooth'
+        });
+      }
+      stopAudio();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(tab, false); });
+      tab.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = tabs[(i + 1) % tabs.length];
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (e.key === 'Home') next = tabs[0];
+        if (e.key === 'End') next = tabs[tabs.length - 1];
+        if (next) { e.preventDefault(); select(next, true); }
+      });
+    });
+  });
+
+  /* ---------- Waveform bars (drawn once, same every time) ---------- */
+  document.querySelectorAll('[data-waveform]').forEach(function (wave) {
+    var count = 34;
+    for (var i = 0; i < count; i++) {
+      var bar = document.createElement('i');
+      var h = 22 + Math.abs(Math.sin(i * 0.9) * 48 + Math.sin(i * 0.37) * 30);
+      bar.style.setProperty('--h', Math.min(h, 100).toFixed(0) + '%');
+      bar.style.setProperty('--d', ((i * 97) % 900) + 'ms');
+      wave.appendChild(bar);
+    }
+  });
+
+  /* ---------- Sample call audio ---------- */
+  var activeAudio = null;
+  var activeButton = null;
+
+  function stopAudio() {
+    if (activeAudio) activeAudio.pause();
+  }
+
+  document.querySelectorAll('[data-audio]').forEach(function (button) {
+    var audio = new Audio();
+    audio.preload = 'none';
+    var label = button.querySelector('.audio-btn__label');
+    var idleText = label.textContent;
+    var panel = button.closest('[role="tabpanel"], section');
+    var wave = panel && panel.querySelector('[data-waveform]');
+
+    function setPlaying(on) {
+      button.setAttribute('aria-pressed', String(on));
+      label.textContent = on ? 'Pause sample call' : idleText;
+      if (wave && !reduceMotion.matches) wave.classList.toggle('is-playing', on);
+    }
+
+    audio.addEventListener('play', function () { setPlaying(true); });
+    audio.addEventListener('pause', function () { setPlaying(false); });
+    audio.addEventListener('ended', function () { setPlaying(false); });
+    audio.addEventListener('error', function () {
+      setPlaying(false);
+      button.disabled = true;
+      label.textContent = 'Sample plays on the live site';
+    });
+
+    button.addEventListener('click', function () {
+      if (!audio.src) audio.src = button.getAttribute('data-audio');
+      if (audio.paused) {
+        if (activeAudio && activeAudio !== audio) activeAudio.pause();
+        activeAudio = audio;
+        activeButton = button;
+        var p = audio.play();
+        if (p && p.catch) p.catch(function () {});
+      } else {
+        audio.pause();
+      }
+    });
+  });
+
   /* ---------- Sections fade and rise on scroll, one time only ---------- */
   var reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || reduceMotion.matches) {

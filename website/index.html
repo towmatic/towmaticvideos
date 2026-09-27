@@ -141,7 +141,244 @@
     </div>
   </section>
 
-  <!-- Step 2 adds sections 5.2 to 5.6 here: platform tabs, dashboard proof, how it works, testimonial, closing CTA -->
+  <!-- 5.2 Platform tabs -->
+  <section class="section" id="platform" aria-labelledby="platform-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">One dispatch platform</p>
+        <h2 class="section-title" id="platform-title">However customers book, the job lands with your next driver.</h2>
+      </header>
+
+      <div class="platform reveal" data-tabs>
+        <div class="platform__tabs" role="tablist" aria-label="Towmatic products">
+          <button class="platform__tab" role="tab" id="tab-voice" aria-controls="panel-voice" aria-selected="true" type="button">Voice AI</button>
+          <button class="platform__tab" role="tab" id="tab-forms" aria-controls="panel-forms" aria-selected="false" tabindex="-1" type="button">Instant Dispatch Forms</button>
+          <button class="platform__tab" role="tab" id="tab-app" aria-controls="panel-app" aria-selected="false" tabindex="-1" type="button">Branded Customer App</button>
+          <button class="platform__tab" role="tab" id="tab-dispatch" aria-controls="panel-dispatch" aria-selected="false" tabindex="-1" type="button">SmartDispatch <span class="tag">Included</span></button>
+        </div>
+
+        <!-- Tab 1: Voice AI -->
+        <div class="platform__panel" role="tabpanel" id="panel-voice" aria-labelledby="tab-voice" tabindex="0">
+          <div class="platform__stage">
+            <div class="phone" role="img" aria-label="Phone showing a Towmatic Voice AI call in progress">
+              <div class="phone__screen">
+                <div class="phone__status" aria-hidden="true"><span>3:04</span><span class="phone__dots"></span></div>
+                <p class="ui-eyebrow">Towmatic Voice AI</p>
+                <div class="call-head">
+                  <span class="ui-title">Live call</span>
+                  <span class="live-pill"><span class="live-dot"></span>On call</span>
+                </div>
+                <div class="waveform" data-waveform aria-hidden="true"></div>
+                <div class="bubble bubble--caller">My truck died on the interstate. Can you send someone?</div>
+                <div class="bubble bubble--ai">Yes. What’s your location and vehicle? I’ll text your quote right now.</div>
+              </div>
+            </div>
+          </div>
+          <div class="platform__copy">
+            <h3 class="platform__headline">Answers every call, even at 3AM.</h3>
+            <p class="platform__line">Natural-sounding AI trained on towing. It quotes from your real rate sheet and books the job.</p>
+            <div class="platform__links">
+              <button class="audio-btn" type="button" data-audio="/testintro.wav" aria-pressed="false">
+                <span class="audio-btn__icon" aria-hidden="true"></span>
+                <span class="audio-btn__label">Play sample call</span>
+              </button>
+              <a class="link-more" href="voice-ai.html">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Instant Dispatch Forms -->
+        <div class="platform__panel" role="tabpanel" id="panel-forms" aria-labelledby="tab-forms" tabindex="0" hidden>
+          <div class="platform__stage">
+            <div class="phone" role="img" aria-label="Phone showing a short online tow request form">
+              <div class="phone__screen">
+                <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__dots"></span></div>
+                <p class="ui-eyebrow">Your Tow Co.</p>
+                <p class="ui-title">Request a tow</p>
+                <div class="chips"><span class="chip chip--on">Tow</span><span class="chip">Jump start</span><span class="chip">Lockout</span></div>
+                <div class="field"><span class="field__label">Name</span><span class="field__value">Full name</span></div>
+                <div class="field"><span class="field__label">Mobile</span><span class="field__value">(555) 555-0142</span></div>
+                <div class="field"><span class="field__label">Vehicle</span><span class="field__value">Year, make, model</span></div>
+                <div class="locate">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
+                  <span>Location shared</span><span class="locate__check" aria-hidden="true">✓</span>
+                </div>
+                <span class="ui-btn">Get my quote</span>
+              </div>
+            </div>
+          </div>
+          <div class="platform__copy">
+            <h3 class="platform__headline">Book a tow without a phone call.</h3>
+            <p class="platform__line">A form on your website that quotes instantly, shares GPS in one tap and dispatches your next driver.</p>
+            <div class="platform__links"><a class="link-more" href="web-forms.html">Learn more <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Branded Customer App -->
+        <div class="platform__panel" role="tabpanel" id="panel-app" aria-labelledby="tab-app" tabindex="0" hidden>
+          <div class="platform__stage platform__stage--pair">
+            <div class="phone phone--back" role="img" aria-label="Phone home screen with the Your Tow Co. app icon">
+              <div class="phone__screen phone__screen--home">
+                <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__dots"></span></div>
+                <div class="app-grid" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span>
+                  <span class="app-grid__mine"><i><svg viewBox="0 0 24 24" fill="none"><path d="M3 15V9h9v6M12 11h4l3 3v1M3 15h16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="17" r="2" fill="currentColor"/><circle cx="16" cy="17" r="2" fill="currentColor"/></svg></i><b>Your Tow Co.</b></span>
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="phone phone--front" role="img" aria-label="Your Tow Co. app booking screen with saved details">
+              <div class="phone__screen">
+                <div class="phone__status" aria-hidden="true"><span>9:41</span><span class="phone__dots"></span></div>
+                <p class="ui-eyebrow">Your Tow Co.</p>
+                <p class="ui-title">Book a tow</p>
+                <div class="field"><span class="field__label">Saved vehicle</span><span class="field__value field__value--set">Service truck #3</span></div>
+                <div class="field"><span class="field__label">Pickup</span><span class="field__value field__value--set">Current location</span></div>
+                <div class="field"><span class="field__label">Drop-off</span><span class="field__value field__value--set">Saved: body shop</span></div>
+                <span class="ui-btn">Book now</span>
+              </div>
+            </div>
+          </div>
+          <div class="platform__copy">
+            <h3 class="platform__headline">Your company, on their home screen.</h3>
+            <p class="platform__line">A custom app with your name and logo, so dealers, body shops and repeat customers book in seconds.</p>
+            <div class="platform__links"><a class="link-more" href="native-app.html">Learn more <span aria-hidden="true">→</span></a></div>
+          </div>
+        </div>
+
+        <!-- Tab 4: SmartDispatch -->
+        <div class="platform__panel" role="tabpanel" id="panel-dispatch" aria-labelledby="tab-dispatch" tabindex="0" hidden>
+          <div class="platform__stage platform__stage--pair">
+            <div class="phone phone--back" role="img" aria-label="Phone lock screen with a Towmatic new dispatch notification">
+              <div class="phone__screen phone__screen--lock">
+                <div class="phone__status" aria-hidden="true"><span></span><span class="phone__dots"></span></div>
+                <p class="lock-time">3:06</p>
+                <div class="notif">
+                  <div class="notif__head"><span class="notif__icon"></span><span>Towmatic</span><span class="notif__when">now</span></div>
+                  <p class="notif__title">New dispatch</p>
+                  <p class="notif__body">Tow, ASAP. Open the app to confirm.</p>
+                </div>
+              </div>
+            </div>
+            <div class="phone phone--front" role="img" aria-label="Towmatic driver app job card with a Confirm Dispatch button">
+              <div class="phone__screen">
+                <div class="phone__status" aria-hidden="true"><span>3:06</span><span class="phone__dots"></span></div>
+                <p class="ui-eyebrow">Towmatic · Driver</p>
+                <p class="ui-title">New job</p>
+                <div class="job">
+                  <p class="job__type">Tow · ASAP</p>
+                  <div class="job__row"><span>Pickup</span><b>Interstate shoulder</b></div>
+                  <div class="job__row"><span>Drop-off</span><b>Customer’s shop</b></div>
+                  <div class="job__row"><span>Quote</span><b>Accepted by customer</b></div>
+                </div>
+                <div class="confirm-window">
+                  <span>Confirm before it rolls to the next driver</span>
+                  <span class="confirm-window__bar"><i></i></span>
+                </div>
+                <span class="ui-btn">Confirm Dispatch</span>
+              </div>
+            </div>
+          </div>
+          <div class="platform__copy">
+            <h3 class="platform__headline">Your driver rotation, run automatically.</h3>
+            <p class="platform__line">Drivers get a push notification and confirm in the Towmatic app. No confirmation in time? It rolls to the next driver.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5.3 Proof: the dashboard -->
+  <section class="section section--alt" aria-labelledby="proof-title">
+    <div class="container proof">
+      <div class="proof__copy reveal">
+        <p class="eyebrow">Real results</p>
+        <h2 class="section-title" id="proof-title"><span class="accent">$22,234</span> captured in one month. One client.</h2>
+        <p class="section-sub">Every booking is tracked to its source, so you see exactly what Towmatic brings in.</p>
+      </div>
+
+      <figure class="dash reveal">
+        <div class="dash__panel">
+          <div class="dash__head">
+            <p class="dash__title">Revenue Captured by Towmatic</p>
+            <p class="dash__period">One client · one month</p>
+          </div>
+          <div class="dash__totals">
+            <div><p class="dash__label">Total captured*</p><p class="dash__big accent">$22,234</p></div>
+            <div><p class="dash__label">Jobs</p><p class="dash__big">127</p></div>
+          </div>
+          <table class="dash__table">
+            <caption class="sr-only">Revenue by booking channel</caption>
+            <thead>
+              <tr><th scope="col">Channel</th><th scope="col">Jobs</th><th scope="col">Share</th><th scope="col">Revenue</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Voice AI</th><td>66</td><td>52%</td><td>$11,550</td></tr>
+              <tr class="dash__bar-row" aria-hidden="true"><td colspan="4"><span class="dash__bar" style="--share: 52%"></span></td></tr>
+              <tr><th scope="row">Online Form</th><td>53</td><td>42%</td><td>$9,284</td></tr>
+              <tr class="dash__bar-row" aria-hidden="true"><td colspan="4"><span class="dash__bar" style="--share: 42%"></span></td></tr>
+              <tr><th scope="row">App</th><td>8</td><td>6%</td><td>$1,400</td></tr>
+              <tr class="dash__bar-row" aria-hidden="true"><td colspan="4"><span class="dash__bar" style="--share: 6%"></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="dash__note">*Some revenue estimated from average job value where no quote was given.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 5.4 How it works -->
+  <section class="section" aria-labelledby="how-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2 class="section-title sr-only" id="how-title">How it works</h2>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">01</span>
+          <h3 class="step__title">Customer books.</h3>
+          <p class="step__text">By phone, online form or your app.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">02</span>
+          <h3 class="step__title">Towmatic quotes and dispatches.</h3>
+          <p class="step__text">SmartQuote prices from your rate sheet, and SmartDispatch picks the next driver on call.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">03</span>
+          <h3 class="step__title">Driver confirms.</h3>
+          <p class="step__text">One tap in the Towmatic app, or it rolls to the next driver.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5.5 Testimonial -->
+  <!-- Confirm Overland Tow Service has approved being quoted by name before launch. -->
+  <section class="section section--alt" aria-label="What clients say">
+    <figure class="container quote reveal">
+      <svg class="quote__mark" viewBox="0 0 48 36" fill="none" aria-hidden="true"><path d="M0 36V21.6C0 9.4 6.2 2.2 18.6 0l2 4.6C13.4 6.8 10 11 9.8 17H19v19H0Zm28.6 0V21.6C28.6 9.4 34.8 2.2 47.2 0l2 4.6C42 6.8 38.6 11 38.4 17h9.2v19h-19Z" fill="currentColor"/></svg>
+      <blockquote class="quote__text"><p>It’s like having a full-time dispatcher who never sleeps.</p></blockquote>
+      <figcaption class="quote__who"><span class="quote__name">Overland Tow Service</span><span class="quote__role">Towmatic client</span></figcaption>
+    </figure>
+  </section>
+
+  <!-- 5.6 Closing call to action -->
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="closing__media" aria-hidden="true">
+      <img src="images/closing.webp" alt="" loading="lazy" decoding="async" width="2100" height="900">
+    </div>
+    <div class="container closing__content reveal">
+      <h2 class="section-title closing__title" id="closing-title">See it run with your company’s name on it.</h2>
+      <p class="section-sub">The interactive demo takes two minutes. No sales call.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/demo">Try the Interactive Demo</a>
+        <a class="btn btn--secondary" href="#trial">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
