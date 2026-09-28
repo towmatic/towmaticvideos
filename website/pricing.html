@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Branded Tow Booking App | Towmatic</title>
-  <meta name="description" content="Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically.">
+  <title>Pricing | Towmatic</title>
+  <meta name="description" content="Towmatic pricing for tow companies. Month-to-month plans for Voice AI, online booking forms and your own branded app. No contracts.">
   <meta name="theme-color" content="#0F0F0F">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -102,136 +102,156 @@
 <!-- =========================== /NAV (shared) =========================== -->
 
 <main id="main">
-  <!-- Product hero -->
-  <section class="hero hero--page" aria-labelledby="page-title">
-    <div class="hero__media" aria-hidden="true">
-      <img class="hero__img" src="images/native-app.webp" alt="" width="1920" height="1080" fetchpriority="high">
-    </div>
-    <div class="hero__scrim" aria-hidden="true"></div>
-    <div class="container hero__content">
-      <p class="eyebrow hero__eyebrow reveal">Branded Customer App</p>
-      <h1 class="hero__title hero__title--page reveal" id="page-title">Your tow company, in the App Store.</h1>
-      <p class="hero__sub reveal">A custom app with your name and logo, so dealers, body shops and repeat customers book in seconds.</p>
-      <div class="btn-row reveal">
-        <a class="btn btn--primary" href="/demo">Try the Interactive Demo</a>
-        <a class="btn btn--secondary" href="#trial">Start Free Trial</a>
-      </div>
+  <!-- Pricing header -->
+  <section class="page-head" aria-labelledby="page-title">
+    <div class="container page-head__inner">
+      <p class="eyebrow reveal">Pricing</p>
+      <h1 class="page-head__title reveal" id="page-title">Towmatic pricing for <span class="accent">tow companies</span>.</h1>
+      <p class="page-head__sub reveal">No hidden fees. No long-term contracts. Pick the setup that fits how your customers book.</p>
     </div>
   </section>
 
-  <!-- Who it's for -->
-  <section class="section section--alt" aria-labelledby="who-title">
+  <!--
+    OWNER TO CONFIRM before launch: every monthly price and setup fee on this page.
+    The crossed-out "regular" prices on Max and Edge are placeholders ($X,XXX) until the owner supplies them.
+    Setup fees for Voice AI Pro and Web Forms Pro are not listed yet (TBD).
+  -->
+
+  <!-- Bundles -->
+  <section class="section section--flush-top" aria-label="Bundles">
     <div class="container">
-      <header class="section-head reveal">
-        <p class="eyebrow">Who it’s for</p>
-        <h2 class="section-title" id="who-title">For the customers who call you again and again.</h2>
-      </header>
-      <ul class="place-grid reveal">
-        <li><b>Dealers</b><span>Service drives that send you vehicles every week.</span></li>
-        <li><b>Body shops</b><span>Book a pickup without picking up the phone.</span></li>
-        <li><b>Property managers</b><span>Private property calls, handled fast.</span></li>
-        <li><b>Repeat cash customers</b><span>Your number one, saved on their phone.</span></li>
+      <div class="plans plans--bundles">
+        <article class="plan plan--featured reveal" aria-labelledby="plan-max">
+          <div class="plan__tags"><span class="tag tag--accent">Best value</span><span class="tag">Limited time offer</span></div>
+          <h2 class="plan__name" id="plan-max">Towmatic Max</h2>
+          <p class="plan__includes">Voice AI Pro + Web Forms Pro + Branded Customer App, in one subscription.</p>
+          <div class="plan__pricing">
+            <p class="plan__was">Regularly <s>$X,XXX/mo</s></p>
+            <p class="plan__price"><span class="plan__amount">$797</span><span class="plan__per">/month</span></p>
+            <p class="plan__setup">Setup <s>$X,XXX</s> <b>$497</b></p>
+          </div>
+          <ul class="plan__list">
+            <li>Voice AI answers every call, 24/7</li>
+            <li>Online booking forms and QR codes</li>
+            <li>Your branded app on iOS and Android</li>
+            <li>SmartQuote, SmartLocate, SmartDispatch and SmartConfirm</li>
+            <li>$30/month in communication credits</li>
+          </ul>
+          <a class="btn btn--primary plan__cta" href="#trial">Claim Towmatic Max</a>
+        </article>
+
+        <article class="plan reveal" aria-labelledby="plan-edge">
+          <div class="plan__tags"><span class="tag">Limited time offer</span></div>
+          <h2 class="plan__name" id="plan-edge">Towmatic Edge</h2>
+          <p class="plan__includes">Web Forms Pro + Branded Customer App. Instant dispatch from your website and your app.</p>
+          <div class="plan__pricing">
+            <p class="plan__was">Regularly <s>$X,XXX/mo</s></p>
+            <p class="plan__price"><span class="plan__amount">$697</span><span class="plan__per">/month</span></p>
+            <p class="plan__setup">Setup <s>$X,XXX</s> <b>$497</b></p>
+          </div>
+          <ul class="plan__list">
+            <li>Online booking forms and QR codes</li>
+            <li>Your branded app on iOS and Android</li>
+            <li>SmartQuote, SmartLocate, SmartDispatch and SmartConfirm</li>
+            <li>$30/month in communication credits</li>
+          </ul>
+          <a class="btn btn--secondary plan__cta" href="#trial">Claim Towmatic Edge</a>
+        </article>
+      </div>
+
+      <!-- Single products -->
+      <div class="plans plans--single">
+        <article class="plan reveal" aria-labelledby="plan-voice">
+          <h2 class="plan__name plan__name--sm" id="plan-voice">Voice AI Pro</h2>
+          <p class="plan__includes">An AI dispatcher that answers every call, quotes and books the job.</p>
+          <div class="plan__pricing">
+            <p class="plan__price"><span class="plan__amount">$597</span><span class="plan__per">/month</span></p>
+          </div>
+          <p class="plan__bonus"><b>Web Forms Pro included free</b> <s>$397/mo</s></p>
+          <ul class="plan__list">
+            <li>AI voice agent, 24/7, including Spanish</li>
+            <li>SmartQuote™ from your rate sheet</li>
+            <li>SmartDispatch™ and SmartConfirm™</li>
+            <li>SmartLocate™ GPS sharing</li>
+            <li>Call logs, transcripts and recordings</li>
+          </ul>
+          <a class="btn btn--secondary plan__cta" href="#trial">Get started</a>
+          <a class="link-more" href="voice-ai.html">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="plan reveal" aria-labelledby="plan-forms">
+          <h2 class="plan__name plan__name--sm" id="plan-forms">Web Forms Pro</h2>
+          <p class="plan__includes">Customers book by form or QR code. No phone call needed.</p>
+          <div class="plan__pricing">
+            <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
+          </div>
+          <ul class="plan__list">
+            <li>ASAP, scheduled, motor club, police and private property forms</li>
+            <li>Custom QR codes and a link page</li>
+            <li>SmartLocate™ GPS sharing</li>
+            <li>Instant driver notification</li>
+            <li>Live the same day you sign up</li>
+          </ul>
+          <a class="btn btn--secondary plan__cta" href="#trial">Get started</a>
+          <a class="link-more" href="web-forms.html">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="plan reveal" aria-labelledby="plan-app">
+          <h2 class="plan__name plan__name--sm" id="plan-app">Branded Customer App</h2>
+          <p class="plan__includes">Your own app on iOS and Android. Sold on its own, no other plan required.</p>
+          <div class="plan__pricing">
+            <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
+            <p class="plan__setup"><b>$1,997</b> one-time setup</p>
+          </div>
+          <ul class="plan__list">
+            <li>iOS and Android build with your name and logo</li>
+            <li>App Store and Google Play submission</li>
+            <li>Live in 2–3 weeks</li>
+            <li>Hosting, OS updates and maintenance included</li>
+            <li>Every booking dispatched automatically</li>
+          </ul>
+          <a class="btn btn--secondary plan__cta" href="#trial">Add the Branded App</a>
+          <a class="link-more" href="native-app.html">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+
+      <ul class="plan-notes reveal">
+        <li><b>Month-to-month.</b> No contracts.</li>
+        <li><b>Voice AI minutes billed at cost,</b> typically $0.15–$0.25 per minute.</li>
+        <li><b>$30/month in communication credits</b> included with every Voice AI and Web Forms subscription.</li>
       </ul>
     </div>
   </section>
 
-  <!-- Feature 1: name and logo -->
-  <section class="section feature" aria-labelledby="f1-title">
-    <div class="container feature__grid">
-      <div class="feature__copy reveal">
-        <p class="eyebrow">Your brand</p>
-        <h2 class="feature__title" id="f1-title">Your name and logo on their home screen.</h2>
-        <p class="feature__line">Not ours. Customers see your company every time they unlock their phone.</p>
-      </div>
-      <div class="feature__visual reveal">
-        <img class="shot shot--photo" src="images/app-home.webp" alt="A service advisor at a dealership holding a phone whose home screen shows the orange Your Tow Co. app icon among everyday apps" width="1200" height="1500" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature 2: saved details -->
-  <section class="section section--alt feature feature--flip" aria-labelledby="f2-title">
-    <div class="container feature__grid">
-      <div class="feature__copy reveal">
-        <p class="eyebrow">One-tap repeat bookings</p>
-        <h2 class="feature__title" id="f2-title">Saved details. Booked in seconds.</h2>
-        <p class="feature__line">Vehicles, pickup spots and drop-off locations are saved, so repeat customers book the next tow with one tap.</p>
-      </div>
-      <div class="feature__visual reveal">
-        <img class="shot shot--photo" src="images/app-book.webp" alt="A body shop manager holding a phone with the Your Tow Co. app open to Book a tow, showing a saved vehicle, pickup, drop-off and a Book now button" width="1200" height="1490" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature 3: automatic dispatch -->
-  <section class="section feature" aria-labelledby="f3-title">
-    <div class="container feature__grid">
-      <div class="feature__copy reveal">
-        <p class="eyebrow">Automatic dispatch</p>
-        <h2 class="feature__title" id="f3-title">Every booking goes straight to a driver.</h2>
-        <p class="feature__line">App bookings are dispatched automatically to your next driver on call. Nobody has to retype a thing.</p>
-      </div>
-      <div class="feature__visual reveal">
-        <div class="panel" role="img" aria-label="Booking timeline: booked in app, next driver notified, driver confirmed in the Towmatic app">
-          <div class="panel__head"><span class="panel__title">Booking</span><span class="panel__meta">From Your Tow Co. app</span></div>
-          <ol class="timeline">
-            <li class="is-done"><b>Booked in your app</b><span>Saved vehicle, pickup and drop-off</span></li>
-            <li class="is-done"><b>Next driver notified</b><span>Push notification from the Towmatic app</span></li>
-            <li class="is-now"><b>Driver confirms</b><span>One tap on Confirm Dispatch</span></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detail block: for your drivers too -->
-  <section class="section section--alt feature feature--flip" aria-labelledby="drivers-title">
-    <div class="container feature__grid">
-      <div class="feature__copy reveal">
-        <p class="eyebrow">For your drivers too</p>
-        <h2 class="feature__title" id="drivers-title">Every plan includes the Towmatic driver app.</h2>
-        <p class="feature__line">Drivers get a push notification for each job and confirm it in the app.</p>
-      </div>
-      <div class="feature__visual reveal">
-        <img class="shot shot--photo" src="images/app-driver.webp" alt="A tow driver about to tap Confirm Dispatch in the Towmatic driver app on a dash-mounted phone, with a New dispatch notification at the top" width="1200" height="1490" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
-  <!-- Store review note -->
-  <section class="section section--tight" aria-label="Launch timing">
+  <!-- Included with every plan -->
+  <section class="section section--alt" aria-labelledby="every-title">
     <div class="container">
-      <p class="callout reveal"><span class="callout__label">Launch timing</span>Live in the App Store and Google Play in 2–3 weeks.</p>
+      <header class="section-head reveal">
+        <p class="eyebrow">Every plan</p>
+        <h2 class="section-title" id="every-title">What’s included with every plan.</h2>
+      </header>
+      <ul class="place-grid place-grid--3 reveal">
+        <li><b>Automatic dispatch</b><span>SmartDispatch sends each job to your next driver on call.</span></li>
+        <li><b>Driver confirmation</b><span>SmartConfirm rolls the job to the next driver if it isn’t confirmed in time.</span></li>
+        <li><b>Towmatic driver app</b><span>Push notifications and one-tap Confirm Dispatch.</span></li>
+        <li><b>Your dashboard</b><span>Every booking tracked to its source.</span></li>
+        <li><b>Communication credits</b><span>$30/month for dispatch calls, texts and notifications on Voice AI and Web Forms plans.</span></li>
+        <li><b>No contracts</b><span>Month-to-month billing on every plan.</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- FAQ — owner to confirm every answer before launch -->
+  <!-- FAQ (answer supplied by the owner) -->
   <section class="section" aria-labelledby="faq-title">
     <div class="container">
       <header class="section-head reveal">
         <p class="eyebrow">FAQ</p>
-        <h2 class="section-title" id="faq-title">Branded app questions.</h2>
+        <h2 class="section-title" id="faq-title">Pricing questions.</h2>
       </header>
       <div class="faq reveal">
-        <details class="faq__item">
-          <summary>How long until my app is live?</summary>
-          <p>Live in the App Store and Google Play in 2–3 weeks.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Whose name is on the app?</summary>
-          <p>Yours. The app carries your company’s name and logo.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Who is the app for?</summary>
-          <p>Dealers, body shops, property managers and repeat cash customers: anyone who books with you often.</p>
-        </details>
-        <details class="faq__item">
-          <summary>What happens when someone books in the app?</summary>
-          <p>The job is dispatched automatically to your next driver on call. The driver confirms in the Towmatic app, and if they don’t confirm in time, it rolls to the next driver.</p>
-        </details>
-        <details class="faq__item">
-          <summary>Do my drivers need an app?</summary>
-          <p>Every plan includes the Towmatic app for drivers. It delivers a push notification for each job, and the driver confirms in the app. Drivers who aren’t signed in get a text or phone call instead.</p>
+        <details class="faq__item" open>
+          <summary>How does usage billing work?</summary>
+          <p>Voice AI usage is billed per minute based on actual call duration, typically ranging from $0.15–$0.25 per minute depending on call complexity. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover driver dispatch notifications (calls, texts, and emails) and customer confirmations. That’s approximately 500-600 dispatches per month included at no extra cost.</p>
         </details>
       </div>
     </div>
