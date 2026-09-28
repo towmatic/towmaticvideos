@@ -2091,6 +2091,77 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: 0.9375rem;
 }
 
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
+.post-grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 720px) { .post-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+@media (min-width: 1100px) { .post-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.post-card {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  transition: border-color 160ms ease;
+}
+.post-card:hover { border-color: color-mix(in srgb, var(--color-text) 25%, var(--color-border)); }
+.post-card__link { display: flex; flex-direction: column; height: 100%; text-decoration: none; }
+.post-card__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--color-bg-alt); }
+.post-card__body { display: flex; flex-direction: column; gap: 12px; flex: 1; padding: 22px 24px 24px; }
+.post-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+.post-card__cat { font-weight: 600; color: var(--color-text); }
+.post-card__title {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: 1.02;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.post-card__excerpt { color: var(--color-text-muted); font-size: 0.9375rem; line-height: 1.55; }
+.post-card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+.post-card__more {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+}
+.post-card__link:hover .post-card__more { color: var(--color-accent); }
+
+.post-card--soon {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  min-height: 220px;
+  padding: 32px;
+  text-align: center;
+  background: transparent;
+  border-style: dashed;
+}
+.post-card--soon .post-card__title { color: var(--color-text-muted); }
+
 /* FAQ accordion */
 .faq { max-width: 880px; border-top: 1px solid var(--color-border); }
 
