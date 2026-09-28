@@ -221,7 +221,7 @@ These are intentional. Build them as shown in the prototype.
 - **Real Results panel:** $28,488 total, 164 jobs, nights and weekends only. Voice AI 85 jobs / 52% /
   $14,799; Online Form 69 / 42% / $11,895; App 10 / 6% / $1,794.
 - **Testimonial** is attributed to **Overland Tow Service**, Towmatic client.
-- **Homepage FAQ** added (three owner-supplied questions).
+- **Homepage FAQ** added (six owner-supplied questions).
 - **Closing section** on every page: "Take Towmatic for a test drive." / "Click around the full dashboard,
   call our AI agent to book a test tow, and try the online booking form yourself." (The demo is a
   sandbox dashboard with a callable AI agent and a test booking form; it is not customized per company.)
