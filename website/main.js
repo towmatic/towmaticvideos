@@ -70,6 +70,10 @@
     mobileMenu.hidden = !open;
     document.body.classList.toggle('is-locked', open);
     nav.classList.toggle('is-menu-open', open);
+    // Keep keyboard focus inside the open menu
+    document.querySelectorAll('main, footer').forEach(function (el) {
+      if (open) el.setAttribute('inert', ''); else el.removeAttribute('inert');
+    });
   }
 
   if (mobileToggle && mobileMenu) {
