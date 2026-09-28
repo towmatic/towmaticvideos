@@ -59,7 +59,7 @@ retired, 301-redirect it to the closest page above.
 |---|---|
 | Login | `/login` |
 | Interactive Demo / Try the Interactive Demo | `/demo` |
-| Start Free Trial | `#trial`: **placeholder, owner to confirm the real URL** (possibly `/signup`) |
+| Start Free Trial | `/signup` |
 | Privacy Policy / Terms & Conditions | `/privacy-policy`, `/terms-and-conditions` |
 
 ### Shared nav and footer
@@ -165,7 +165,7 @@ Carry every tag over exactly. Each page has:
 |---|---|---|
 | `/` | Towmatic \| AI Dispatch Automation for Tow Companies | Towmatic answers calls, quotes from your rate sheet and dispatches your next driver in seconds, 24/7. Voice AI, online booking and your own branded app. |
 | `/ai-voice-agent-tow-dispatch` | AI Voice Agent for Tow Dispatch \| Towmatic | Towmatic Voice AI answers every tow call 24/7, quotes from your real rate sheet and books the job. Multilingual, including Spanish. Every call logged. |
-| `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. Live the same day. |
+| `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
 | `/native-app` | Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for Voice AI, online booking forms and your own branded app. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about AI dispatch for your tow company. Sales, customer service and partnership questions. |
@@ -235,12 +235,14 @@ These are intentional. Build them as shown in the prototype.
   1,000 jobs" became "thousands of jobs".
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
 
-### Still for the owner to confirm before launch
+- **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
+- **Start Free Trial** buttons go to `/signup`.
 
-- The **Start Free Trial** URL (currently `#trial`).
-- The FAQ answers on the **Voice AI, Web Forms and Branded App** pages (written from the brief's facts,
-  marked in the HTML).
-- That **Overland Tow Service** approved being quoted by name.
+### Confirmed by the owner
+
+- All prices and setup fees on the Pricing page.
+- The FAQ answers on every page.
+- Overland Tow Service approved being quoted by name.
 
 ---
 
