@@ -1160,6 +1160,12 @@ main:focus { outline: none; }
 }
 
 
+.type-note {
+  max-width: 44rem;
+  margin-top: 24px;
+  color: var(--color-text-muted);
+}
+
 @media (min-width: 768px) {
   .type-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .type-grid li { min-height: 96px; font-size: 1.75rem; }
