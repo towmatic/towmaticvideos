@@ -1159,12 +1159,6 @@ main:focus { outline: none; }
   line-height: 1.05;
 }
 
-.type-note {
-  margin-top: 24px;
-  color: var(--color-text-muted);
-}
-.type-note a { color: var(--color-text); text-underline-offset: 3px; }
-.type-note a:hover { color: var(--color-accent); }
 
 @media (min-width: 768px) {
   .type-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
