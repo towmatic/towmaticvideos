@@ -147,7 +147,6 @@
           behavior: reduceMotion.matches ? 'auto' : 'smooth'
         });
       }
-      stopAudio();
     }
 
     tabs.forEach(function (tab, i) {
@@ -160,63 +159,6 @@
         if (e.key === 'End') next = tabs[tabs.length - 1];
         if (next) { e.preventDefault(); select(next, true); }
       });
-    });
-  });
-
-  /* ---------- Waveform bars (drawn once, same every time) ---------- */
-  document.querySelectorAll('[data-waveform]').forEach(function (wave) {
-    var count = 34;
-    for (var i = 0; i < count; i++) {
-      var bar = document.createElement('i');
-      var h = 22 + Math.abs(Math.sin(i * 0.9) * 48 + Math.sin(i * 0.37) * 30);
-      bar.style.setProperty('--h', Math.min(h, 100).toFixed(0) + '%');
-      bar.style.setProperty('--d', ((i * 97) % 900) + 'ms');
-      wave.appendChild(bar);
-    }
-  });
-
-  /* ---------- Sample call audio ---------- */
-  var activeAudio = null;
-  var activeButton = null;
-
-  function stopAudio() {
-    if (activeAudio) activeAudio.pause();
-  }
-
-  document.querySelectorAll('[data-audio]').forEach(function (button) {
-    var audio = new Audio();
-    audio.preload = 'none';
-    var label = button.querySelector('.audio-btn__label');
-    var idleText = label.textContent;
-    var panel = button.closest('[data-audio-scope], [role="tabpanel"], section');
-    var wave = panel && panel.querySelector('[data-waveform]');
-
-    function setPlaying(on) {
-      button.setAttribute('aria-pressed', String(on));
-      label.textContent = on ? 'Pause sample call' : idleText;
-      if (wave && !reduceMotion.matches) wave.classList.toggle('is-playing', on);
-    }
-
-    audio.addEventListener('play', function () { setPlaying(true); });
-    audio.addEventListener('pause', function () { setPlaying(false); });
-    audio.addEventListener('ended', function () { setPlaying(false); });
-    audio.addEventListener('error', function () {
-      setPlaying(false);
-      button.disabled = true;
-      label.textContent = 'Sample plays on the live site';
-    });
-
-    button.addEventListener('click', function () {
-      if (!audio.src) audio.src = button.getAttribute('data-audio');
-      if (audio.paused) {
-        if (activeAudio && activeAudio !== audio) activeAudio.pause();
-        activeAudio = audio;
-        activeButton = button;
-        var p = audio.play();
-        if (p && p.catch) p.catch(function () {});
-      } else {
-        audio.pause();
-      }
     });
   });
 

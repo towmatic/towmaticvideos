@@ -1141,48 +1141,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   background: var(--color-accent);
 }
 
-/* Audio sample button */
-.audio-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0;
-  background: none;
-  border: 0;
-  color: var(--color-text);
-  font-family: var(--font-display);
-  font-size: 1.3125rem;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  cursor: pointer;
-}
-.audio-btn__icon {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--color-accent);
-}
-.audio-btn__icon::before {
-  content: "";
-  width: 14px;
-  height: 16px;
-  margin-left: 3px;
-  background: var(--color-bg);
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-.audio-btn[aria-pressed="true"] .audio-btn__icon::before {
-  margin-left: 0;
-  width: 14px;
-  height: 16px;
-  clip-path: polygon(0 0, 35% 0, 35% 100%, 0 100%, 0 0, 65% 0, 100% 0, 100% 100%, 65% 100%, 65% 0);
-}
-.audio-btn:disabled { cursor: default; color: var(--color-text-muted); }
-.audio-btn:disabled .audio-btn__icon { background: var(--color-surface); }
-.audio-btn:disabled .audio-btn__icon::before { background: var(--color-text-muted); }
-
 /* ==========================================================================
    5.3 Proof dashboard
    ========================================================================== */
@@ -1457,7 +1415,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--color-text-muted);
 }
 
-.feature__copy .audio-btn { margin-top: 8px; }
 
 @media (min-width: 960px) {
   .feature__grid { grid-template-columns: 1fr 1fr; gap: 80px; }
