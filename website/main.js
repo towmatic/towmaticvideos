@@ -4,6 +4,20 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  /* ---------- New pages start at the top ----------
+     Embedded viewers (like the preview) can keep the previous page's scroll spot.
+     Skip this for #anchor links and Back/Forward, where the browser restores your place. */
+  (function () {
+    var entry = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (location.hash || (entry && entry.type === 'back_forward')) return;
+    window.scrollTo(0, 0);
+    var root = document.documentElement;
+    var pad = root.style.scrollPaddingTop;
+    root.style.scrollPaddingTop = '0px'; // don't offset for the sticky nav here
+    try { root.scrollIntoView({ block: 'start' }); } catch (e) {}
+    root.style.scrollPaddingTop = pad;
+  })();
+
   /* ---------- Nav: transparent over the hero, solid after scrolling ---------- */
   var nav = document.querySelector('[data-nav]');
   var hasHero = !!document.querySelector('.hero');

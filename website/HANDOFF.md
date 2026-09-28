@@ -191,6 +191,10 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 
 FAQs use native `<details>`/`<summary>`, so they need no script.
 
+**Scroll position on page change.** Every new page must open at the top. If the live site is a
+single-page app, reset the scroll position to the top on each route change, except for Back/Forward
+(restore the previous position) and `#anchor` links. The prototype does the same at the top of `main.js`.
+
 ---
 
 ## 7. Contact form: must be wired up
