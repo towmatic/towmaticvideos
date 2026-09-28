@@ -1839,6 +1839,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-radius: var(--radius-card);
   background: var(--color-surface);
 }
+.shot--photo {
+  max-width: 520px;
+  margin-inline: auto;
+}
 .shot--phone {
   max-width: 380px;
   margin-inline: auto;
