@@ -220,6 +220,35 @@
     });
   });
 
+  /* ---------- Contact form (prototype: not connected to anything) ---------- */
+  document.querySelectorAll('[data-contact-form]').forEach(function (form) {
+    var status = form.querySelector('[data-form-status]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var firstBad = null;
+      form.querySelectorAll('[required]').forEach(function (field) {
+        var bad = !field.checkValidity();
+        field.closest('.field-group').classList.toggle('is-invalid', bad);
+        field.setAttribute('aria-invalid', String(bad));
+        if (bad && !firstBad) firstBad = field;
+      });
+      status.hidden = false;
+      if (firstBad) {
+        status.textContent = 'Please fill in the highlighted fields.';
+        firstBad.focus();
+      } else {
+        status.textContent = 'Thanks! This preview form isn’t connected yet, so nothing was sent.';
+      }
+    });
+    form.addEventListener('input', function (e) {
+      var group = e.target.closest('.field-group');
+      if (group && e.target.checkValidity()) {
+        group.classList.remove('is-invalid');
+        e.target.removeAttribute('aria-invalid');
+      }
+    });
+  });
+
   /* ---------- Sections fade and rise on scroll, one time only ---------- */
   var reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || reduceMotion.matches) {
