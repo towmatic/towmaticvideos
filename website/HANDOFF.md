@@ -255,7 +255,9 @@ These are intentional. Build them as shown in the prototype.
 - **Monthly cost calculator** added to the Pricing page (section 6); the Voice AI FAQ links to it.
 - **Unlimited calls** on every Voice AI plan (Max, Voice AI Pro): no call caps or tiers, always paired with
   "you only pay for the minutes you use". Shown on the Pricing cards, billing notes, calculator, the Voice AI
-  hero, the homepage Voice AI tab, and an FAQ on Pricing and Voice AI. Not claimed for Web Forms, Edge or the App.
+  hero, the homepage Voice AI tab, and an FAQ on Pricing and Voice AI.
+- **Unlimited bookings** on every plan: on all five Pricing cards (Max and Voice AI Pro read "Unlimited calls
+  and bookings"), the billing note, the calculator, and an FAQ on the Web Forms and Branded App pages.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
