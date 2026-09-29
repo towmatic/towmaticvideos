@@ -228,7 +228,6 @@
         var round = function (n) { return (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString('en-US'); };
         out.revcalc.textContent = whole(jobs) + ' jobs × ' + round(ticket);
         out.revenue.textContent = round(revenue);
-        out.net.textContent = round(revenue - total);
       }
     }
 
