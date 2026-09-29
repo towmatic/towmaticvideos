@@ -220,6 +220,42 @@
       out.credit.textContent = credit > 0 ? '−' + money(credit) : money(0);
       out.total.textContent = money(total);
       out.setup.textContent = setup ? 'Plus ' + money(setup) + ' one-time setup' : 'No setup fee';
+      compareUpdate(total);
+    }
+
+    /* Compare to a human dispatcher. Each role keeps its own amount. */
+    var compare = calc.querySelector('[data-compare]');
+    var costs = { part: 2000, full: 4000 };
+    var role = 'full';
+    function compareUpdate(total) {
+      if (!compare) return;
+      var box = compare.querySelector('[data-dispatcher]');
+      var human = Math.max(0, +box.value || 0);
+      costs[role] = human;
+      var max = Math.max(human, total, 1);
+      compare.querySelector('[data-bar="human"]').style.width = (human / max * 100) + '%';
+      compare.querySelector('[data-bar="us"]').style.width = (total / max * 100) + '%';
+      var round = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+      compare.querySelector('[data-out="human"]').textContent = round(human);
+      compare.querySelector('[data-out="us"]').textContent = round(total);
+      var diff = human - total, verdict = compare.querySelector('[data-out="verdict"]');
+      if (!human) verdict.textContent = 'Enter your dispatcher’s monthly cost to compare.';
+      else if (diff >= 1) verdict.innerHTML = 'You’d save <b>' + round(diff) + ' a month</b>, about ' + round(diff * 12) + ' a year.';
+      else if (diff <= -1) verdict.innerHTML = 'At these numbers Towmatic costs <b>' + round(-diff) + ' more a month</b>.';
+      else verdict.textContent = 'At these numbers the cost is about the same.';
+    }
+    if (compare) {
+      var roleNames = { part: 'Part-time dispatcher', full: 'Full-time dispatcher' };
+      compare.querySelectorAll('[data-role]').forEach(function (r) {
+        r.addEventListener('change', function () {
+          role = r.value;
+          compare.querySelector('[data-dispatcher]').value = costs[role];
+          compare.querySelector('[data-role-label]').textContent = roleNames[role] + ' cost per month';
+          compare.querySelector('[data-role-name]').textContent = roleNames[role];
+          update();
+        });
+      });
+      compare.querySelector('[data-dispatcher]').addEventListener('input', update);
     }
 
     plan.addEventListener('change', update);

@@ -191,6 +191,9 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
   length, quotes and booked jobs. Math: subscription + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 text credit (texts only, never below $0), with the setup fee shown separately. Voice AI lines
   only appear for plans with Voice AI (Max, Voice AI Pro). Keep the rates in `main.js` in sync with billing.
+  Below it, **Compare to a human dispatcher**: a Part-time / Full-time toggle and a monthly cost box (example
+  starting amounts $2,000 and $4,000; each option remembers its own value). Shows two bars and "You'd save
+  $X a month, about $Y a year", or says plainly when Towmatic would cost more.
 - Scroll-reveal animation.
 
 FAQs use native `<details>`/`<summary>`, so they need no script.
