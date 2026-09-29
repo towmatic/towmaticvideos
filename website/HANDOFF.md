@@ -243,7 +243,8 @@ These are intentional. Build them as shown in the prototype.
   1,000 jobs" became "thousands of jobs".
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
 - **Voice AI Pro is $397/month** (was $597). Voice AI minutes are described as approximately $0.20 per
-  minute everywhere (not a $0.15–$0.25 range).
+  minute everywhere (not a $0.15–$0.25 range), billed by the second (never rounded up to a full minute).
+  The per-text price ($0.016) is not shown to visitors.
 - **The $30/month credit covers text messages only** (quotes, booking confirmations, update/cancel/GPS
   links, driver dispatch texts, and review requests), not calls.
 - **Monthly cost calculator** added to the Pricing page (section 6); the Voice AI FAQ links to it.
