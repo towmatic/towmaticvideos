@@ -187,6 +187,10 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Hero video plays only on screens 768px and wider without reduced motion, once a source is added.
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
+- Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
+  length, quotes and booked jobs. Math: subscription + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
+  − the $30 text credit (texts only, never below $0), with the setup fee shown separately. Voice AI lines
+  only appear for plans with Voice AI (Max, Voice AI Pro). Keep the rates in `main.js` in sync with billing.
 - Scroll-reveal animation.
 
 FAQs use native `<details>`/`<summary>`, so they need no script.
@@ -238,6 +242,11 @@ These are intentional. Build them as shown in the prototype.
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
   1,000 jobs" became "thousands of jobs".
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
+- **Voice AI Pro is $397/month** (was $597). Voice AI minutes are described as approximately $0.20 per
+  minute everywhere (not a $0.15–$0.25 range).
+- **The $30/month credit covers text messages only** (quotes, booking confirmations, update/cancel/GPS
+  links, driver dispatch texts, and review requests), not calls.
+- **Monthly cost calculator** added to the Pricing page (section 6); the Voice AI FAQ links to it.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.

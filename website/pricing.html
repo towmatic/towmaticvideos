@@ -92,7 +92,7 @@
       "name": "How does usage billing work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Voice AI usage is billed per minute based on actual call duration, typically ranging from $0.15–$0.25 per minute depending on call complexity. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover driver dispatch notifications (calls, texts, and emails) and customer confirmations. That’s approximately 500-600 dispatches per month included at no extra cost."
+        "text": "Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost."
       }
     }
   ]
@@ -317,9 +317,65 @@
 
       <ul class="plan-notes reveal">
         <li><b>Month-to-month.</b> No contracts.</li>
-        <li><b>Voice AI minutes billed at cost,</b> typically $0.15–$0.25 per minute.</li>
+        <li><b>Voice AI minutes</b> run approximately $0.20 per minute.</li>
         <li><b>$30/month in communication credits</b> per account, covering your whole subscription.</li>
       </ul>
+
+      <!-- Monthly cost calculator. Rates: Voice AI approx. $0.20/min; each text $0.016; $30/mo text credit per account. -->
+      <section class="calc reveal" id="calculator" aria-labelledby="calc-title" data-calc>
+        <header class="calc__head">
+          <p class="eyebrow">Cost calculator</p>
+          <h2 class="calc__title" id="calc-title">Estimate your monthly bill.</h2>
+        </header>
+        <div class="calc__body">
+          <div class="calc__inputs">
+            <div class="calc__field">
+              <label for="calc-plan">Plan</label>
+              <select id="calc-plan" data-calc-plan>
+                <option value="797|497|1">Towmatic Max ($797/mo)</option>
+                <option value="697|497|0">Towmatic Edge ($697/mo)</option>
+                <option value="397|0|1" selected>Voice AI Pro ($397/mo)</option>
+                <option value="397|0|0">Web Forms Pro ($397/mo)</option>
+                <option value="397|1997|0">Branded Customer App ($397/mo)</option>
+              </select>
+            </div>
+            <div class="calc__field" data-calc-voice>
+              <div class="calc__label-row"><label for="calc-calls">Calls answered by Voice AI</label><output for="calc-calls" data-out="calls">100</output></div>
+              <input id="calc-calls" type="range" min="0" max="1000" step="10" value="100" data-calc-input="calls">
+            </div>
+            <div class="calc__field" data-calc-voice>
+              <div class="calc__label-row"><label for="calc-length">Average call length</label><output for="calc-length" data-out="length">2.5 min</output></div>
+              <input id="calc-length" type="range" min="1" max="5" step="0.5" value="2.5" data-calc-input="length">
+              <p class="calc__hint">Tow bookings average about 2.5 minutes. Police calls run shorter, about 1 minute 10 seconds.</p>
+            </div>
+            <div class="calc__field">
+              <div class="calc__label-row"><label for="calc-quotes">Quotes sent per month</label><output for="calc-quotes" data-out="quotes">70</output></div>
+              <input id="calc-quotes" type="range" min="0" max="1000" step="10" value="70" data-calc-input="quotes">
+              <p class="calc__hint">One text per quote.</p>
+            </div>
+            <div class="calc__field">
+              <div class="calc__label-row"><label for="calc-jobs">Jobs booked per month</label><output for="calc-jobs" data-out="jobs">50</output></div>
+              <input id="calc-jobs" type="range" min="0" max="1000" step="10" value="50" data-calc-input="jobs">
+              <p class="calc__hint">By phone, web form or app. Two texts per job: a booking confirmation, and a link to update, cancel or share GPS.</p>
+            </div>
+          </div>
+
+          <div class="calc__result" aria-live="polite">
+            <dl class="calc__lines">
+              <div><dt>Subscription</dt><dd data-out="sub">$397.00</dd></div>
+              <div data-calc-voice><dt>Voice AI minutes <span data-out="mins">250 min</span></dt><dd data-out="voice">$50.00</dd></div>
+              <div><dt>Text messages <span data-out="texts">170 texts</span></dt><dd data-out="textcost">$2.72</dd></div>
+              <div class="calc__credit"><dt>$30 text credit</dt><dd data-out="credit">−$2.72</dd></div>
+            </dl>
+            <div class="calc__total">
+              <p class="calc__total-label">Estimated monthly total</p>
+              <p class="calc__total-amount" data-out="total">$447.00</p>
+            </div>
+            <p class="calc__setup" data-out="setup">No setup fee</p>
+          </div>
+        </div>
+        <p class="calc__note">Estimate only. Voice AI minutes run approximately $0.20 per minute, a little more or less per call. Each text costs $0.016, and your $30 monthly credit covers text messages. Backup texts and calls to drivers who aren’t signed into the Towmatic app aren’t included here.</p>
+      </section>
     </div>
   </section>
 
@@ -335,7 +391,7 @@
         <li><b>Driver confirmation</b><span>SmartConfirm rolls the job to the next driver if it isn’t confirmed in time.</span></li>
         <li><b>Towmatic driver app</b><span>Push notifications and one-tap Confirm Dispatch.</span></li>
         <li><b>Your dashboard</b><span>Every booking tracked to its source.</span></li>
-        <li><b>Communication credits</b><span>$30/month per account for dispatch calls, texts and notifications.</span></li>
+        <li><b>Communication credits</b><span>$30/month per account toward text messages.</span></li>
         <li><b>No contracts</b><span>Month-to-month billing on every plan.</span></li>
       </ul>
     </div>
@@ -351,7 +407,7 @@
       <div class="faq reveal">
         <details class="faq__item" open>
           <summary>How does usage billing work?</summary>
-          <p>Voice AI usage is billed per minute based on actual call duration, typically ranging from $0.15–$0.25 per minute depending on call complexity. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover driver dispatch notifications (calls, texts, and emails) and customer confirmations. That’s approximately 500-600 dispatches per month included at no extra cost.</p>
+          <p>Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost.</p>
         </details>
       </div>
     </div>

@@ -180,6 +180,53 @@
     });
   });
 
+  /* ---------- Pricing: monthly cost calculator ----------
+     Voice AI ≈ $0.20/min. Each text $0.016: 1 per quote, 2 per booked job.
+     The $30 monthly credit applies to texts only. */
+  document.querySelectorAll('[data-calc]').forEach(function (calc) {
+    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30;
+    var plan = calc.querySelector('[data-calc-plan]');
+    var inputs = {};
+    calc.querySelectorAll('[data-calc-input]').forEach(function (el) { inputs[el.getAttribute('data-calc-input')] = el; });
+    var out = {};
+    calc.querySelectorAll('[data-out]').forEach(function (el) { out[el.getAttribute('data-out')] = el; });
+    var voiceBits = calc.querySelectorAll('[data-calc-voice]');
+    var money = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+    var whole = function (n) { return n.toLocaleString('en-US'); };
+
+    function update() {
+      var parts = plan.value.split('|');
+      var sub = +parts[0], setup = +parts[1], hasVoice = parts[2] === '1';
+      var calls = +inputs.calls.value, length = +inputs.length.value;
+      var quotes = +inputs.quotes.value, jobs = +inputs.jobs.value;
+
+      voiceBits.forEach(function (el) { el.hidden = !hasVoice; });
+      var minutes = hasVoice ? calls * length : 0;
+      var voice = minutes * RATE_MIN;
+      var texts = quotes + jobs * 2;
+      var textCost = texts * RATE_TEXT;
+      var credit = Math.min(textCost, TEXT_CREDIT);
+      var total = sub + voice + textCost - credit;
+
+      out.calls.textContent = whole(calls);
+      out.length.textContent = length + ' min';
+      out.quotes.textContent = whole(quotes);
+      out.jobs.textContent = whole(jobs);
+      out.sub.textContent = money(sub);
+      out.mins.textContent = whole(Math.round(minutes)) + ' min';
+      out.voice.textContent = money(voice);
+      out.texts.textContent = whole(texts) + ' texts';
+      out.textcost.textContent = money(textCost);
+      out.credit.textContent = credit > 0 ? '−' + money(credit) : money(0);
+      out.total.textContent = money(total);
+      out.setup.textContent = setup ? 'Plus ' + money(setup) + ' one-time setup' : 'No setup fee';
+    }
+
+    plan.addEventListener('change', update);
+    Object.keys(inputs).forEach(function (k) { inputs[k].addEventListener('input', update); });
+    update();
+  });
+
   /* ---------- Contact form (prototype: not connected to anything) ---------- */
   document.querySelectorAll('[data-contact-form]').forEach(function (form) {
     var status = form.querySelector('[data-form-status]');
