@@ -31,6 +31,7 @@
   "description": "AI-powered dispatch automation platform for tow companies. Features include AI Voice Agent, SmartQuote™, SmartDispatch™, SmartConfirm™, and SmartLocate™.",
   "featureList": [
     "AI Voice Agent - 24/7 automated call answering",
+    "Unlimited calls on Voice AI plans - no call caps or tiers",
     "SmartQuote™ - Automated pricing based on your rate sheet",
     "SmartDispatch™ - Automatic driver rotation and dispatching",
     "SmartConfirm™ - Driver confirmation with auto-escalation",
@@ -93,6 +94,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a limit on how many calls I get?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every Voice AI plan includes unlimited calls. There are no call caps, tiers or overage charges for going over a call count. You only pay for the minutes you use, approximately $0.20 per minute, billed by the second."
       }
     }
   ]
@@ -225,6 +234,7 @@
           </div>
           <ul class="plan__list">
             <li>Voice AI answers every call, 24/7</li>
+            <li><b>Unlimited calls.</b> No caps or tiers</li>
             <li>Online booking forms and QR codes</li>
             <li>Your branded app on iOS and Android</li>
             <li>SmartQuote, SmartLocate, SmartDispatch and SmartConfirm</li>
@@ -269,6 +279,7 @@
             </div>
           </div>
           <ul class="plan__list">
+            <li><b>Unlimited calls.</b> No caps or tiers</li>
             <li>AI voice agent, 24/7, including Spanish</li>
             <li>SmartQuote™ from your rate sheet</li>
             <li>SmartDispatch™ and SmartConfirm™</li>
@@ -317,7 +328,7 @@
 
       <ul class="plan-notes reveal">
         <li><b>Month-to-month.</b> No contracts.</li>
-        <li><b>Voice AI minutes</b> run approximately $0.20 per minute, billed by the second.</li>
+        <li><b>Unlimited calls</b> on every Voice AI plan. Minutes run approximately $0.20 per minute, billed by the second.</li>
         <li><b>$30/month in communication credits</b> per account, covering your whole subscription.</li>
       </ul>
 
@@ -342,6 +353,7 @@
             <div class="calc__field" data-calc-voice>
               <div class="calc__label-row"><label for="calc-calls">Calls answered by Voice AI</label><output for="calc-calls" data-out="calls">100</output></div>
               <input id="calc-calls" type="range" min="0" max="1000" step="10" value="100" data-calc-input="calls">
+              <p class="calc__hint">Calls are unlimited. No caps or tiers, you only pay for the minutes used.</p>
             </div>
             <div class="calc__field" data-calc-voice>
               <div class="calc__label-row"><label for="calc-length">Average call length</label><output for="calc-length" data-out="length">2.5 min</output></div>
@@ -437,6 +449,10 @@
         <details class="faq__item" open>
           <summary>How does usage billing work?</summary>
           <p>Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Is there a limit on how many calls I get?</summary>
+          <p>No. Every Voice AI plan includes unlimited calls. There are no call caps, tiers or overage charges for going over a call count. You only pay for the minutes you use, approximately $0.20 per minute, billed by the second.</p>
         </details>
       </div>
     </div>
