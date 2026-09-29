@@ -358,6 +358,11 @@
               <input id="calc-jobs" type="range" min="0" max="1000" step="10" value="50" data-calc-input="jobs">
               <p class="calc__hint">By phone, web form or app. Two texts per job: a booking confirmation, and a link to update, cancel or share GPS.</p>
             </div>
+            <div class="calc__field">
+              <label for="calc-ticket">Average ticket price</label>
+              <div class="money-input"><span aria-hidden="true">$</span><input id="calc-ticket" type="number" inputmode="numeric" min="0" step="5" value="175" data-calc-ticket></div>
+              <p class="calc__hint">What an average job brings in. Used to estimate revenue from booked jobs.</p>
+            </div>
           </div>
 
           <div class="calc__result" aria-live="polite">
@@ -372,6 +377,10 @@
               <p class="calc__total-amount" data-out="total">$447.00</p>
             </div>
             <p class="calc__setup" data-out="setup">No setup fee</p>
+            <div class="calc__revenue">
+              <div class="calc__rev-row"><span>Revenue from booked jobs <span class="calc__rev-sub" data-out="revcalc">50 jobs × $175</span></span><b data-out="revenue">$8,750</b></div>
+              <div class="calc__rev-row"><span>After Towmatic’s cost</span><b data-out="net">$8,303</b></div>
+            </div>
           </div>
         </div>
         <div class="compare" data-compare>

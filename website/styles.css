@@ -1529,6 +1529,18 @@ main:focus { outline: none; }
   .calc__result { position: sticky; top: calc(var(--nav-height) + 24px); }
 }
 
+.calc__revenue {
+  display: grid;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+.calc__rev-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.calc__rev-row > span { color: var(--color-text-muted); }
+.calc__rev-sub { display: block; font-size: var(--fs-small); opacity: 0.8; }
+.calc__rev-row b { font-size: 1.25rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.calc__rev-row:first-child b { color: var(--color-text); }
+
 /* Dispatcher comparison */
 .compare {
   display: grid;

@@ -221,6 +221,15 @@
       out.total.textContent = money(total);
       out.setup.textContent = setup ? 'Plus ' + money(setup) + ' one-time setup' : 'No setup fee';
       compareUpdate(total);
+      var ticketBox = calc.querySelector('[data-calc-ticket]');
+      if (ticketBox) {
+        var ticket = Math.max(0, +ticketBox.value || 0);
+        var revenue = jobs * ticket;
+        var round = function (n) { return (n < 0 ? '−$' : '$') + Math.round(Math.abs(n)).toLocaleString('en-US'); };
+        out.revcalc.textContent = whole(jobs) + ' jobs × ' + round(ticket);
+        out.revenue.textContent = round(revenue);
+        out.net.textContent = round(revenue - total);
+      }
     }
 
     /* Compare to a human dispatcher. Each role keeps its own amount. */
@@ -258,6 +267,8 @@
       compare.querySelector('[data-dispatcher]').addEventListener('input', update);
     }
 
+    var ticketInput = calc.querySelector('[data-calc-ticket]');
+    if (ticketInput) ticketInput.addEventListener('input', update);
     plan.addEventListener('change', update);
     Object.keys(inputs).forEach(function (k) { inputs[k].addEventListener('input', update); });
     update();
