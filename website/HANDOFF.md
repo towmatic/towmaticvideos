@@ -30,6 +30,7 @@ Preview: open `index.html` in a browser (no build step). Everything is plain HTM
 | `ai-voice-agent-tow-dispatch.html` | `/ai-voice-agent-tow-dispatch` | **Voice AI page.** Uses this existing URL to keep its ranking. There is no `/voice-ai` page. |
 | `web-forms.html` | `/web-forms` | Instant Dispatch Forms |
 | `native-app.html` | `/native-app` | Branded Customer App |
+| `google-business-profile-management.html` | `/google-business-profile-management` | **New page.** Towmatic Local (Google Business Profile posts and review replies) |
 | `pricing.html` | `/pricing` | Plans and pricing |
 | `contact.html` | `/contact` | Contact form (see section 7) |
 | `blog.html` | `/blog` | Blog index |
@@ -129,6 +130,7 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `va-voice.webp`, `va-quote.webp`, `va-log.webp` | Voice AI feature blocks | kie.ai, nano-banana-pro |
 | `wf-quote.webp`, `wf-locate.webp`, `wf-rotation.webp` | Web Forms feature blocks | kie.ai, nano-banana-pro |
 | `app-home.webp`, `app-book.webp`, `app-driver.webp` | Branded App feature blocks | kie.ai, nano-banana-pro |
+| `local.webp`, `local-post.webp`, `local-review.webp` | Towmatic Local hero and feature blocks | kie.ai, nano-banana-pro |
 | `blog-ai-vs-traditional.webp` | AI vs Traditional post cover and blog card | Owner (from the live post) |
 | `blog-10-seconds.webp` | 10 Seconds post cover and blog card | Owner (from the live post) |
 | `blog-mobile-booking.webp` | Inside the 10 Seconds post | Owner (from the live post) |
@@ -153,9 +155,9 @@ Carry every tag over exactly. Each page has:
   (`https://towmatic.ai/towmatic-logo-color.png`) resolve wherever the files are hosted.** Update the paths
   if they are stored elsewhere.
 - JSON-LD structured data:
-  - Homepage: `Organization` and `SoftwareApplication` (all five plans at current prices).
+  - Homepage: `Organization` and `SoftwareApplication` (all six plans at current prices, including Towmatic Local).
   - Pricing: `SoftwareApplication`.
-  - Homepage, Voice AI, Web Forms, Branded App, Pricing: `FAQPage` built from the visible FAQs. Keep
+  - Homepage, Voice AI, Web Forms, Branded App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
     it in sync if an FAQ changes.
   - Blog posts: `BlogPosting` and `BreadcrumbList`.
   - **The old self-awarded `aggregateRating` (5 stars from 1 review) has been removed on purpose. Do not
@@ -167,13 +169,14 @@ Carry every tag over exactly. Each page has:
 | `/ai-voice-agent-tow-dispatch` | AI Voice Agent for Tow Dispatch \| Towmatic | Towmatic Voice AI answers every tow call 24/7, quotes from your real rate sheet and books the job. Multilingual, including Spanish. Every call logged. |
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
 | `/native-app` | Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
+| `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for Voice AI, online booking forms and your own branded app. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about AI dispatch for your tow company. Sales, customer service and partnership questions. |
 | `/blog` | Towmatic Blog \| Insights from Inside the Towing Industry | Real talk about AI dispatch, towing automation and running a tow company, from operators with 90+ years of combined experience. |
 | `/blog/ai-vs-traditional-towing-dispatch` | AI vs. Traditional Towing Dispatch: Which Wins in 2026? \| Towmatic Blog | (kept from the live post) Honest, data-backed comparison of AI-powered tow dispatching vs traditional human dispatchers — cost, response time, accuracy, after-hours coverage. |
 | `/blog/book-tow-jobs-in-10-seconds` | Book a Tow in 10 Seconds — How Web Forms & QR Codes Change Towing \| Towmatic Blog | (kept from the live post) Customers no longer want to call. Learn how QR-code-driven web forms let drivers book a tow in under 10 seconds — and why partner locations love them. |
 
-**`sitemap.xml`** in this folder lists all 18 live URLs, including the pages kept as is. Replace the live
+**`sitemap.xml`** in this folder lists all 19 live URLs, including the pages kept as is. Replace the live
 sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.txt` also points to
 `/api/sitemap.xml`; leave that as is.
 
@@ -188,7 +191,8 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
-  length, quotes and booked jobs. Math: subscription + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
+  length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox (checked, locked and
+  shown as "Included" when Max is picked). Math: subscription + Towmatic Local if added + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 text credit (texts only, never below $0), with the setup fee shown separately. Voice AI lines
   only appear for plans with Voice AI (Max, Voice AI Pro). Keep the rates in `main.js` in sync with billing.
   An **Average ticket price** box (example $175, from the real results: $28,488 ÷ 164 jobs) adds
@@ -261,6 +265,14 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile
+  posts once or twice a week, each with a Book button linking to the customer's Instant Dispatch Form, plus a
+  reply to every review (owners can turn on approvals or let Towmatic handle every reply). $197/month, sold on
+  its own, no setup fee, no other charges, and included in Towmatic Max. It is the 4th product in the nav,
+  phone menu and footer, has its own "Grow your business" card on Pricing, and is a calculator add-on.
+  Copy rules: present it as a done-for-you service ("we post", "we reply"); don't describe how posts and
+  replies are produced; never promise a specific ranking. Benefit copy is framed on Google's own local
+  ranking factors (relevance, distance, prominence), with no third-party statistics.
 
 ### Confirmed by the owner
 

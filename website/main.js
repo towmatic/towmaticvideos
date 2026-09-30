@@ -182,10 +182,15 @@
 
   /* ---------- Pricing: monthly cost calculator ----------
      Voice AI ≈ $0.20/min. Each text $0.016: 1 per quote, 2 per booked job.
-     The $30 monthly credit applies to texts only. */
+     The $30 monthly credit applies to texts only.
+     Towmatic Local is a $197/mo add-on, already included in Max. */
   document.querySelectorAll('[data-calc]').forEach(function (calc) {
-    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30;
+    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30, LOCAL = 197;
     var plan = calc.querySelector('[data-calc-plan]');
+    var local = calc.querySelector('[data-calc-local]');
+    var localLabel = calc.querySelector('[data-calc-local-label]');
+    var localLine = calc.querySelector('[data-calc-local-line]');
+    var localWanted = false;
     var inputs = {};
     calc.querySelectorAll('[data-calc-input]').forEach(function (el) { inputs[el.getAttribute('data-calc-input')] = el; });
     var out = {};
@@ -197,6 +202,13 @@
     function update() {
       var parts = plan.value.split('|');
       var sub = +parts[0], setup = +parts[1], hasVoice = parts[2] === '1';
+      var localIncluded = parts[3] === '1';
+      local.checked = localIncluded || localWanted;
+      local.disabled = localIncluded;
+      localLabel.textContent = localIncluded ? 'Towmatic Local included with Max' : 'Add Towmatic Local (+$197/mo)';
+      localLine.hidden = !local.checked;
+      out.local.textContent = localIncluded ? 'Included' : money(LOCAL);
+      var localCost = local.checked && !localIncluded ? LOCAL : 0;
       var calls = +inputs.calls.value, length = +inputs.length.value;
       var quotes = +inputs.quotes.value, jobs = +inputs.jobs.value;
 
@@ -206,7 +218,7 @@
       var texts = quotes + jobs * 2;
       var textCost = texts * RATE_TEXT;
       var credit = Math.min(textCost, TEXT_CREDIT);
-      var total = sub + voice + textCost - credit;
+      var total = sub + localCost + voice + textCost - credit;
 
       out.calls.textContent = whole(calls);
       out.length.textContent = length + ' min';
@@ -269,6 +281,7 @@
     var ticketInput = calc.querySelector('[data-calc-ticket]');
     if (ticketInput) ticketInput.addEventListener('input', update);
     plan.addEventListener('change', update);
+    local.addEventListener('change', function () { localWanted = local.checked; update(); });
     Object.keys(inputs).forEach(function (k) { inputs[k].addEventListener('input', update); });
     update();
   });
