@@ -245,7 +245,7 @@ These are intentional. Build them as shown in the prototype.
 - **"Play sample call" buttons removed**; the Voice AI page links to the interactive demo instead.
 - **Branded App goes live in 2–3 weeks** (App Store and Google Play).
 - **Pricing:** Max and Edge shown as limited-time offers with crossed-out regular prices
-  ($1,291/mo + $1,997 setup and $794/mo + $1,997 setup). Voice AI Pro includes Web Forms Pro free. No
+  ($1,488/mo + $1,997 setup and $794/mo + $1,997 setup). Voice AI Pro includes Web Forms Pro free. No
   setup fee on Voice AI Pro or Web Forms Pro. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
@@ -267,8 +267,9 @@ These are intentional. Build them as shown in the prototype.
 - **Start Free Trial** buttons go to `/signup`.
 - **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile
   posts once or twice a week, each with a Book button linking to the customer's Instant Dispatch Form, plus a
-  reply to every review (owners can turn on approvals or let Towmatic handle every reply). $197/month, sold on
-  its own, no setup fee, no other charges, and included in Towmatic Max. It is the 4th product in the nav,
+  reply to every review (owners can turn on approvals or let Towmatic handle every reply). $197/month add-on to
+  any Towmatic plan (not sold on its own for now), no setup fee, no other charges, and included in Towmatic Max
+  (Max's crossed-out regular price, $1,488/mo, includes it). It is the 4th product in the nav,
   phone menu and footer, has its own "Grow your business" card on Pricing, and is a calculator add-on.
   Copy rules: present it as a done-for-you service ("we post", "we reply"); don't describe how posts and
   replies are produced; never promise a specific ranking. Benefit copy is framed on Google's own local
