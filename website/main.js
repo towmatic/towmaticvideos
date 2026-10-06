@@ -182,7 +182,7 @@
 
   /* ---------- Pricing: monthly cost calculator ----------
      Voice AI ≈ $0.20/min. Each text $0.016: 1 per quote, 2 per booked job.
-     The $30 monthly credit applies to texts only.
+     The $30 monthly credit covers texts (and backup texts/calls to drivers, not estimated here).
      Towmatic Local is a $197/mo add-on, already included in Max.
      Web Forms Pro is a $97/mo add-on for Voice AI Pro, already included in Max. */
   document.querySelectorAll('[data-calc]').forEach(function (calc) {

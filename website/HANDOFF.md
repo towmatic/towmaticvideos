@@ -194,7 +194,8 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
   length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox (checked, locked and
   shown as "Included" when Max is picked) and, for Voice AI Pro, an "Add Web Forms Pro (+$97/mo)" checkbox (included
   with Max; hidden for plans without Voice AI). Math: subscription + Towmatic Local if added + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
-  − the $30 text credit (texts only, never below $0), with the setup fee shown separately. Voice AI lines
+  − the $30 communication credit (applied to texts, never below $0; driver backup texts and calls also use
+  the credit but aren't estimated), with the setup fee shown separately. Voice AI lines
   only appear for plans with Voice AI (Max, Voice AI Pro). Keep the rates in `main.js` in sync with billing.
   An **Average ticket price** box (example $175, from the real results: $28,488 ÷ 164 jobs) adds
   "Revenue from booked jobs" (jobs booked × ticket).
@@ -257,8 +258,9 @@ These are intentional. Build them as shown in the prototype.
 - **Voice AI Pro is $397/month** (was $597). Voice AI minutes are described as approximately $0.20 per
   minute everywhere (not a $0.15–$0.25 range), billed by the second (never rounded up to a full minute).
   The per-text price ($0.016) is not shown to visitors.
-- **The $30/month credit covers text messages only** (quotes, booking confirmations, update/cancel/GPS
-  links, driver dispatch texts, and review requests), not calls.
+- **The $30/month credit covers text messages** (quotes, booking confirmations, update/cancel/GPS links,
+  driver dispatch texts, and review requests) **plus backup texts and calls to drivers** who aren't signed into
+  the Towmatic app. It does not cover Voice AI call minutes.
 - **Monthly cost calculator** added to the Pricing page (section 6); the Voice AI FAQ links to it.
 - **Unlimited calls** on every Voice AI plan (Max, Voice AI Pro): no call caps or tiers, always paired with
   "you only pay for the minutes you use". Shown on the Pricing cards, billing notes, calculator, the Voice AI
