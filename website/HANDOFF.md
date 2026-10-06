@@ -251,6 +251,8 @@ These are intentional. Build them as shown in the prototype.
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
   1,000 jobs" became "thousands of jobs".
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
+- **Footer notice** reads "Towmatic® is a registered trademark. Patents pending." (Towmatic is a USPTO-registered
+  trademark; the Smart feature names stay ™.)
 - **Voice AI Pro is $397/month** (was $597). Voice AI minutes are described as approximately $0.20 per
   minute everywhere (not a $0.15–$0.25 range), billed by the second (never rounded up to a full minute).
   The per-text price ($0.016) is not shown to visitors.
