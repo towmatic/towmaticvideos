@@ -243,7 +243,7 @@
   <!--
     Prices confirmed by the owner (September 2026).
     Crossed-out regular prices: Max $1,488/mo + $1,997 setup; Edge $794/mo + $1,997 setup.
-    Voice AI Pro and Web Forms Pro have no setup fee. The $30/month communication credit is per account, not per product.
+    Voice AI Pro and Web Forms Pro have no setup fee. Web Forms Pro is a $97/mo add-on with Voice AI Pro (regularly $397/mo). The $30/month communication credit is per account, not per product.
     Towmatic Local: $197/mo add-on to any plan (not sold on its own), no setup fee, no other charges. Included in Towmatic Max.
   -->
 
@@ -302,10 +302,10 @@
             <p class="plan__setup"><b>No setup fee</b></p>
           </div>
           <div class="plan__bonus">
-            <span class="plan__bonus-badge">Free</span>
+            <span class="plan__bonus-badge">$97</span>
             <div class="plan__bonus-copy">
-              <p class="plan__bonus-title">Web Forms Pro included</p>
-              <p class="plan__bonus-text"><s>$397/mo</s> value. Online booking forms, QR codes and SmartLocate at no extra cost.</p>
+              <p class="plan__bonus-title">Add Web Forms Pro</p>
+              <p class="plan__bonus-text"><s>$397/mo</s> Just $97/mo with Voice AI. Save $300 a month on online booking forms, QR codes and SmartLocate.</p>
             </div>
           </div>
           <ul class="plan__list">
@@ -395,7 +395,8 @@
       </ul>
 
       <!-- Monthly cost calculator. Rates: Voice AI approx. $0.20/min; each text $0.016; $30/mo text credit per account.
-           Plan option values are price|setup|hasVoice|includesLocal. Towmatic Local is a $197/mo add-on, included in Max. -->
+           Plan option values are price|setup|hasVoice|includesLocal|includesForms. Towmatic Local is a $197/mo add-on, included in Max.
+           Web Forms Pro is a $97/mo add-on for Voice AI Pro only, included in Max. -->
       <section class="calc reveal" id="calculator" aria-labelledby="calc-title" data-calc>
         <header class="calc__head">
           <p class="eyebrow">Cost calculator</p>
@@ -406,13 +407,17 @@
             <div class="calc__field">
               <label for="calc-plan">Plan</label>
               <select id="calc-plan" data-calc-plan>
-                <option value="797|497|1|1">Towmatic Max ($797/mo)</option>
+                <option value="797|497|1|1|1">Towmatic Max ($797/mo)</option>
                 <option value="697|497|0">Towmatic Edge ($697/mo)</option>
                 <option value="397|0|1" selected>Voice AI Pro ($397/mo)</option>
                 <option value="397|0|0">Web Forms Pro ($397/mo)</option>
                 <option value="397|1997|0">Branded Customer App ($397/mo)</option>
               </select>
             </div>
+            <label class="calc__check" data-calc-forms-wrap>
+              <input type="checkbox" data-calc-forms>
+              <span data-calc-forms-label>Add Web Forms Pro (+$97/mo)</span>
+            </label>
             <label class="calc__check">
               <input type="checkbox" data-calc-local>
               <span data-calc-local-label>Add Towmatic Local (+$197/mo)</span>
@@ -447,6 +452,7 @@
           <div class="calc__result" aria-live="polite">
             <dl class="calc__lines">
               <div><dt>Subscription</dt><dd data-out="sub">$397.00</dd></div>
+              <div data-calc-forms-line hidden><dt>Web Forms Pro</dt><dd data-out="forms">$97.00</dd></div>
               <div data-calc-local-line hidden><dt>Towmatic Local</dt><dd data-out="local">$197.00</dd></div>
               <div data-calc-voice><dt>Voice AI minutes <span data-out="mins">250 min</span></dt><dd data-out="voice">$50.00</dd></div>
               <div><dt>Text messages <span data-out="texts">370 texts</span></dt><dd data-out="textcost">$5.92</dd></div>

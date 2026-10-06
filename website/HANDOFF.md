@@ -192,7 +192,8 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Contact form validation (section 7).
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
   length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox (checked, locked and
-  shown as "Included" when Max is picked). Math: subscription + Towmatic Local if added + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
+  shown as "Included" when Max is picked) and, for Voice AI Pro, an "Add Web Forms Pro (+$97/mo)" checkbox (included
+  with Max; hidden for plans without Voice AI). Math: subscription + Towmatic Local if added + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 text credit (texts only, never below $0), with the setup fee shown separately. Voice AI lines
   only appear for plans with Voice AI (Max, Voice AI Pro). Keep the rates in `main.js` in sync with billing.
   An **Average ticket price** box (example $175, from the real results: $28,488 ÷ 164 jobs) adds
@@ -245,7 +246,7 @@ These are intentional. Build them as shown in the prototype.
 - **"Play sample call" buttons removed**; the Voice AI page links to the interactive demo instead.
 - **Branded App goes live in 2–3 weeks** (App Store and Google Play).
 - **Pricing:** Max and Edge shown as limited-time offers with crossed-out regular prices
-  ($1,488/mo + $1,997 setup and $794/mo + $1,997 setup). Voice AI Pro includes Web Forms Pro free. No
+  ($1,488/mo + $1,997 setup and $794/mo + $1,997 setup). Web Forms Pro is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
   setup fee on Voice AI Pro or Web Forms Pro. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over

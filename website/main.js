@@ -183,14 +183,20 @@
   /* ---------- Pricing: monthly cost calculator ----------
      Voice AI ≈ $0.20/min. Each text $0.016: 1 per quote, 2 per booked job.
      The $30 monthly credit applies to texts only.
-     Towmatic Local is a $197/mo add-on, already included in Max. */
+     Towmatic Local is a $197/mo add-on, already included in Max.
+     Web Forms Pro is a $97/mo add-on for Voice AI Pro, already included in Max. */
   document.querySelectorAll('[data-calc]').forEach(function (calc) {
-    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30, LOCAL = 197;
+    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30, LOCAL = 197, FORMS = 97;
     var plan = calc.querySelector('[data-calc-plan]');
     var local = calc.querySelector('[data-calc-local]');
     var localLabel = calc.querySelector('[data-calc-local-label]');
     var localLine = calc.querySelector('[data-calc-local-line]');
     var localWanted = false;
+    var forms = calc.querySelector('[data-calc-forms]');
+    var formsWrap = calc.querySelector('[data-calc-forms-wrap]');
+    var formsLabel = calc.querySelector('[data-calc-forms-label]');
+    var formsLine = calc.querySelector('[data-calc-forms-line]');
+    var formsWanted = false;
     var inputs = {};
     calc.querySelectorAll('[data-calc-input]').forEach(function (el) { inputs[el.getAttribute('data-calc-input')] = el; });
     var out = {};
@@ -209,6 +215,14 @@
       localLine.hidden = !local.checked;
       out.local.textContent = localIncluded ? 'Included' : money(LOCAL);
       var localCost = local.checked && !localIncluded ? LOCAL : 0;
+      var formsIncluded = parts[4] === '1';
+      formsWrap.hidden = !hasVoice;
+      forms.checked = hasVoice && (formsIncluded || formsWanted);
+      forms.disabled = formsIncluded;
+      formsLabel.textContent = formsIncluded ? 'Web Forms Pro included with Max' : 'Add Web Forms Pro (+$97/mo)';
+      formsLine.hidden = !forms.checked;
+      out.forms.textContent = formsIncluded ? 'Included' : money(FORMS);
+      var formsCost = forms.checked && !formsIncluded ? FORMS : 0;
       var calls = +inputs.calls.value, length = +inputs.length.value;
       var quotes = +inputs.quotes.value, jobs = +inputs.jobs.value;
 
@@ -218,7 +232,7 @@
       var texts = quotes + jobs * 2;
       var textCost = texts * RATE_TEXT;
       var credit = Math.min(textCost, TEXT_CREDIT);
-      var total = sub + localCost + voice + textCost - credit;
+      var total = sub + localCost + formsCost + voice + textCost - credit;
 
       out.calls.textContent = whole(calls);
       out.length.textContent = length + ' min';
@@ -282,6 +296,7 @@
     if (ticketInput) ticketInput.addEventListener('input', update);
     plan.addEventListener('change', update);
     local.addEventListener('change', function () { localWanted = local.checked; update(); });
+    forms.addEventListener('change', function () { formsWanted = forms.checked; update(); });
     Object.keys(inputs).forEach(function (k) { inputs[k].addEventListener('input', update); });
     update();
   });
