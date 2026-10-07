@@ -22,6 +22,10 @@ Preview: open `index.html` in a browser (no build step). Everything is plain HTM
 
 ## 2. Pages and URLs
 
+**Reference screenshots** of every page are in `screenshots/` (full page, desktop at 1440px and phone at
+390px, e.g. `pricing-desktop.webp`, `pricing-phone.webp`). Match them. They are a visual reference only, not
+site assets: don't publish the folder.
+
 ### Rebuilt in this redesign
 
 | Prototype file | Live URL | Notes |
