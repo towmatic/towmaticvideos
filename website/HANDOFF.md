@@ -155,7 +155,7 @@ Carry every tag over exactly. Each page has:
   (`https://towmatic.ai/towmatic-logo-color.png`) resolve wherever the files are hosted.** Update the paths
   if they are stored elsewhere.
 - JSON-LD structured data:
-  - Homepage: `Organization` and `SoftwareApplication` (all six plans at current prices, including Towmatic Local).
+  - Homepage: `Organization` and `SoftwareApplication` (the three products plus Towmatic Local, at current prices).
   - Pricing: `SoftwareApplication`.
   - Homepage, Voice AI, Web Forms, Branded App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
     it in sync if an FAQ changes.
@@ -191,12 +191,12 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
-  length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox (checked, locked and
-  shown as "Included" when Max is picked) and, for Voice AI Pro, an "Add Web Forms Pro (+$97/mo)" checkbox (included
-  with Max; hidden for plans without Voice AI). Math: subscription + Towmatic Local if added + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
+  length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox and, for Voice AI Pro only, an
+  "Add Web Forms Pro (+$97/mo)" checkbox (hidden for plans without Voice AI). Plans: Voice AI Pro, Web Forms Pro,
+  Branded Customer App. Math: subscription + add-ons + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 communication credit (applied to texts, never below $0; driver backup texts and calls also use
   the credit but aren't estimated), with the setup fee shown separately. Voice AI lines
-  only appear for plans with Voice AI (Max, Voice AI Pro). Keep the rates in `main.js` in sync with billing.
+  only appear for Voice AI Pro. Keep the rates in `main.js` in sync with billing.
   An **Average ticket price** box (example $175, from the real results: $28,488 ÷ 164 jobs) adds
   "Revenue from booked jobs" (jobs booked × ticket).
   Below it, **Compare to a human dispatcher**: a Part-time / Full-time toggle and a monthly cost box (example
@@ -246,8 +246,9 @@ These are intentional. Build them as shown in the prototype.
   sandbox dashboard with a callable AI agent and a test booking form; it is not customized per company.)
 - **"Play sample call" buttons removed**; the Voice AI page links to the interactive demo instead.
 - **Branded App goes live in 2–3 weeks** (App Store and Google Play).
-- **Pricing:** Max and Edge shown as limited-time offers with crossed-out regular prices
-  ($1,488/mo + $1,997 setup and $794/mo + $1,997 setup). Web Forms Pro is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
+- **Pricing:** three products only: Voice AI Pro, Web Forms Pro and Branded Customer App, plus the Towmatic Local
+  add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not show them anywhere (cards,
+  calculator, structured data or copy). Web Forms Pro is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
   setup fee on Voice AI Pro or Web Forms Pro. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
@@ -262,10 +263,10 @@ These are intentional. Build them as shown in the prototype.
   driver dispatch texts, and review requests) **plus backup texts and calls to drivers** who aren't signed into
   the Towmatic app. It does not cover Voice AI call minutes.
 - **Monthly cost calculator** added to the Pricing page (section 6); the Voice AI FAQ links to it.
-- **Unlimited calls** on every Voice AI plan (Max, Voice AI Pro): no call caps or tiers, always paired with
+- **Unlimited calls** on Voice AI Pro: no call caps or tiers, always paired with
   "you only pay for the minutes you use". Shown on the Pricing cards, billing notes, calculator, the Voice AI
   hero, the homepage Voice AI tab, and an FAQ on Pricing and Voice AI.
-- **Unlimited bookings** on every plan: on all five Pricing cards (Max and Voice AI Pro read "Unlimited calls
+- **Unlimited bookings** on every plan: on all three product cards on Pricing (Voice AI Pro reads "Unlimited calls
   and bookings"), the billing note, the calculator, and an FAQ on the Web Forms and Branded App pages.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
@@ -273,8 +274,7 @@ These are intentional. Build them as shown in the prototype.
 - **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile
   posts once or twice a week, each with a Book button linking to the customer's Instant Dispatch Form, plus a
   reply to every review (owners can turn on approvals or let Towmatic handle every reply). $197/month add-on to
-  any Towmatic plan (not sold on its own for now), no setup fee, no other charges, and included in Towmatic Max
-  (Max's crossed-out regular price, $1,488/mo, includes it). It is the 4th product in the nav,
+  any Towmatic plan (not sold on its own for now), no setup fee, no other charges. It is the 4th product in the nav,
   phone menu and footer, has its own "Grow your business" card on Pricing, and is a calculator add-on.
   Copy rules: present it as a done-for-you service ("we post", "we reply"); don't describe how posts and
   replies are produced; never promise a specific ranking. Benefit copy is framed on Google's own local

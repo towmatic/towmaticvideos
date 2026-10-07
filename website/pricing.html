@@ -44,22 +44,6 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Towmatic Max",
-      "price": "797",
-      "priceCurrency": "USD",
-      "url": "https://towmatic.ai/pricing",
-      "availability": "https://schema.org/InStock"
-    },
-    {
-      "@type": "Offer",
-      "name": "Towmatic Edge",
-      "price": "697",
-      "priceCurrency": "USD",
-      "url": "https://towmatic.ai/pricing",
-      "availability": "https://schema.org/InStock"
-    },
-    {
-      "@type": "Offer",
       "name": "Voice AI Pro",
       "price": "397",
       "priceCurrency": "USD",
@@ -119,7 +103,7 @@
       "name": "Can I buy Towmatic Local on its own?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not right now. Towmatic Local is a $197/month add-on to any Towmatic plan, with no setup fee and no other charges, so every post can link to your booking form. It’s already included in Towmatic Max. See how Towmatic Local works."
+        "text": "Not right now. Towmatic Local is a $197/month add-on to any Towmatic plan, with no setup fee and no other charges, so every post can link to your booking form. See how Towmatic Local works."
       }
     }
   ]
@@ -242,57 +226,13 @@
 
   <!--
     Prices confirmed by the owner (September 2026).
-    Crossed-out regular prices: Max $1,488/mo + $1,997 setup; Edge $794/mo + $1,997 setup.
     Voice AI Pro and Web Forms Pro have no setup fee. Web Forms Pro is a $97/mo add-on with Voice AI Pro (regularly $397/mo). The $30/month communication credit is per account, not per product.
-    Towmatic Local: $197/mo add-on to any plan (not sold on its own), no setup fee, no other charges. Included in Towmatic Max.
+    Towmatic Local: $197/mo add-on to any plan (not sold on its own), no setup fee, no other charges.
   -->
 
-  <!-- Bundles -->
-  <section class="section section--flush-top" aria-label="Bundles">
+  <!-- Plans -->
+  <section class="section section--flush-top" aria-label="Plans">
     <div class="container">
-      <div class="plans plans--bundles">
-        <article class="plan plan--featured reveal" aria-labelledby="plan-max">
-          <div class="plan__tags"><span class="tag tag--accent">Best value</span><span class="tag">Limited time offer</span></div>
-          <h2 class="plan__name" id="plan-max">Towmatic Max</h2>
-          <p class="plan__includes">Voice AI Pro + Web Forms Pro + Branded Customer App + Towmatic Local, in one subscription.</p>
-          <div class="plan__pricing">
-            <p class="plan__was">Regularly <s>$1,488/mo</s></p>
-            <p class="plan__price"><span class="plan__amount">$797</span><span class="plan__per">/month</span></p>
-            <p class="plan__setup">Setup <s>$1,997</s> <b>$497</b></p>
-          </div>
-          <ul class="plan__list">
-            <li>Voice AI answers every call, 24/7</li>
-            <li><b>Unlimited calls and bookings.</b> No caps or tiers</li>
-            <li>Online booking forms and QR codes</li>
-            <li>Your branded app on iOS and Android</li>
-            <li>Towmatic Local: weekly Google posts and review replies</li>
-            <li>SmartQuote, SmartLocate, SmartDispatch and SmartConfirm</li>
-            <li>$30/month in communication credits</li>
-          </ul>
-          <a class="btn btn--primary plan__cta" href="/signup">Claim Towmatic Max</a>
-        </article>
-
-        <article class="plan reveal" aria-labelledby="plan-edge">
-          <div class="plan__tags"><span class="tag">Limited time offer</span></div>
-          <h2 class="plan__name" id="plan-edge">Towmatic Edge</h2>
-          <p class="plan__includes">Web Forms Pro + Branded Customer App. Instant dispatch from your website, Google Business Profile and your app.</p>
-          <div class="plan__pricing">
-            <p class="plan__was">Regularly <s>$794/mo</s></p>
-            <p class="plan__price"><span class="plan__amount">$697</span><span class="plan__per">/month</span></p>
-            <p class="plan__setup">Setup <s>$1,997</s> <b>$497</b></p>
-          </div>
-          <ul class="plan__list">
-            <li><b>Unlimited bookings.</b> No caps or tiers</li>
-            <li>Online booking forms and QR codes</li>
-            <li>Your branded app on iOS and Android</li>
-            <li>SmartQuote, SmartLocate, SmartDispatch and SmartConfirm</li>
-            <li>$30/month in communication credits</li>
-          </ul>
-          <a class="btn btn--secondary plan__cta" href="/signup">Claim Towmatic Edge</a>
-        </article>
-      </div>
-
-      <!-- Single products -->
       <div class="plans plans--single">
         <article class="plan reveal" aria-labelledby="plan-voice">
           <h2 class="plan__name plan__name--sm" id="plan-voice">Voice AI Pro</h2>
@@ -366,7 +306,7 @@
       <div class="plans plans--addon">
         <article class="plan plan--wide reveal" aria-labelledby="plan-local-name" id="plan-local">
           <div class="plan__main">
-            <div class="plan__tags"><span class="tag">Add-on</span><span class="tag">Included in Max</span></div>
+            <div class="plan__tags"><span class="tag">Add-on</span></div>
             <h2 class="plan__name plan__name--sm" id="plan-local-name">Towmatic Local</h2>
             <p class="plan__includes">Add it to any Towmatic plan. We keep your Google Business Profile active and reply to every review, so customers find you and book.</p>
             <div class="plan__pricing">
@@ -395,8 +335,8 @@
       </ul>
 
       <!-- Monthly cost calculator. Rates: Voice AI approx. $0.20/min; each text $0.016; $30/mo communication credit per account (texts, plus backup texts and calls to drivers).
-           Plan option values are price|setup|hasVoice|includesLocal|includesForms. Towmatic Local is a $197/mo add-on, included in Max.
-           Web Forms Pro is a $97/mo add-on for Voice AI Pro only, included in Max. -->
+           Plan option values are price|setup|hasVoice. Towmatic Local is a $197/mo add-on to any plan.
+           Web Forms Pro is a $97/mo add-on for Voice AI Pro only. -->
       <section class="calc reveal" id="calculator" aria-labelledby="calc-title" data-calc>
         <header class="calc__head">
           <p class="eyebrow">Cost calculator</p>
@@ -407,8 +347,6 @@
             <div class="calc__field">
               <label for="calc-plan">Plan</label>
               <select id="calc-plan" data-calc-plan>
-                <option value="797|497|1|1|1">Towmatic Max ($797/mo)</option>
-                <option value="697|497|0">Towmatic Edge ($697/mo)</option>
                 <option value="397|0|1" selected>Voice AI Pro ($397/mo)</option>
                 <option value="397|0|0">Web Forms Pro ($397/mo)</option>
                 <option value="397|1997|0">Branded Customer App ($397/mo)</option>
@@ -416,11 +354,11 @@
             </div>
             <label class="calc__check" data-calc-forms-wrap>
               <input type="checkbox" data-calc-forms>
-              <span data-calc-forms-label>Add Web Forms Pro (+$97/mo)</span>
+              <span>Add Web Forms Pro (+$97/mo)</span>
             </label>
             <label class="calc__check">
               <input type="checkbox" data-calc-local>
-              <span data-calc-local-label>Add Towmatic Local (+$197/mo)</span>
+              <span>Add Towmatic Local (+$197/mo)</span>
             </label>
             <div class="calc__field" data-calc-voice>
               <div class="calc__label-row"><label for="calc-calls">Calls answered by Voice AI</label><output for="calc-calls" data-out="calls">100</output></div>
@@ -530,7 +468,7 @@
         </details>
         <details class="faq__item">
           <summary>Can I buy Towmatic Local on its own?</summary>
-          <p>Not right now. Towmatic Local is a $197/month add-on to any Towmatic plan, with no setup fee and no other charges, so every post can link to your booking form. It’s already included in Towmatic Max. <a href="google-business-profile-management.html">See how Towmatic Local works.</a></p>
+          <p>Not right now. Towmatic Local is a $197/month add-on to any Towmatic plan, with no setup fee and no other charges, so every post can link to your booking form. <a href="google-business-profile-management.html">See how Towmatic Local works.</a></p>
         </details>
       </div>
     </div>

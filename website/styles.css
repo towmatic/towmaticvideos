@@ -1301,12 +1301,6 @@ main:focus { outline: none; }
   display: grid;
   gap: 16px;
 }
-.plans + .plans { margin-top: 16px; }
-
-@media (min-width: 900px) {
-  .plans--bundles { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .plans + .plans { margin-top: 24px; }
-}
 @media (min-width: 1024px) {
   .plans--single { grid-template-columns: repeat(3, 1fr); gap: 24px; }
 }
@@ -1320,12 +1314,6 @@ main:focus { outline: none; }
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
 }
-.plan--featured {
-  border-color: var(--color-accent);
-  background:
-    linear-gradient(160deg, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 45%),
-    var(--color-surface);
-}
 
 @media (min-width: 900px) {
   .plan { padding: 36px 32px; }
@@ -1333,11 +1321,6 @@ main:focus { outline: none; }
 
 .plan__tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .plan__tags .tag { margin-left: 0; }
-.tag--accent {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-bg);
-}
 
 .plan__name { font-size: clamp(2.5rem, 2rem + 1.6vw, 3.5rem); }
 .plan__name--sm { font-size: clamp(2rem, 1.7rem + 1vw, 2.5rem); }
@@ -1345,7 +1328,6 @@ main:focus { outline: none; }
 .plan__includes { color: var(--color-text-muted); font-size: 0.9375rem; line-height: 1.5; }
 
 .plan__pricing { display: grid; gap: 6px; }
-.plan__was { font-size: var(--fs-small); color: var(--color-text-muted); }
 .plan__price {
   display: flex;
   align-items: baseline;
@@ -1358,7 +1340,6 @@ main:focus { outline: none; }
   line-height: 0.9;
   font-variant-numeric: tabular-nums;
 }
-.plan--featured .plan__amount { color: var(--color-accent); }
 .plan__per { color: var(--color-text-muted); }
 .plan__setup { font-size: 0.9375rem; color: var(--color-text-muted); }
 .plan__setup b { color: var(--color-text); font-weight: 600; }
@@ -1431,7 +1412,6 @@ main:focus { outline: none; }
 /* Grow your business: Towmatic Local, one wide card */
 .plans-group { display: grid; gap: 8px; margin-top: 56px; margin-bottom: 20px; }
 .plans-group__title { font-size: clamp(2rem, 1.7rem + 1vw, 2.5rem); }
-.plans + .plans--addon { margin-top: 0; }
 .plan__main, .plan__side { display: flex; flex-direction: column; gap: 18px; }
 @media (min-width: 900px) {
   .plans-group { margin-top: 72px; margin-bottom: 24px; }
@@ -1594,8 +1574,6 @@ main:focus { outline: none; }
   cursor: pointer;
 }
 .calc__check input { width: 20px; height: 20px; margin: 0; accent-color: var(--color-accent); cursor: pointer; }
-.calc__check:has(input:disabled) { color: var(--color-text-muted); cursor: default; }
-.calc__check:has(input:disabled) input { cursor: default; }
 
 .money-input {
   display: flex;
