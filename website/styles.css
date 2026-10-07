@@ -2120,6 +2120,12 @@ main:focus { outline: none; }
   color: var(--color-text-muted);
 }
 
+/* App store badges: not linked (owner's choice); keep at 40px tall */
+.site-footer__apps { margin-top: 28px; }
+.site-footer__apps-label { margin-bottom: 12px; font-size: var(--fs-small); color: var(--color-text-muted); }
+.site-footer__badges { display: flex; flex-wrap: wrap; gap: 12px; }
+.site-footer__badges img { height: 40px; width: auto; }
+
 .site-footer__cols {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

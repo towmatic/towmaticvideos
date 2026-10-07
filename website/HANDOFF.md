@@ -135,6 +135,7 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `blog-10-seconds.webp` | 10 Seconds post cover and blog card | Owner (from the live post) |
 | `blog-mobile-booking.webp` | Inside the 10 Seconds post | Owner (from the live post) |
 | `logo.webp` | Nav and footer logo (transparent) | Owner |
+| `app-store-badge.webp`, `google-play-badge.svg` | Footer app badges | Owner (Apple badge); Google's current official badge |
 | `favicon.png`, `apple-touch-icon.png` | Browser tab and home-screen icon | Cropped from the owner's logo |
 
 `source/towmatic-logo-original.png` is the owner's original logo file, kept for reference.
@@ -254,6 +255,9 @@ These are intentional. Build them as shown in the prototype.
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
   1,000 jobs" became "thousands of jobs".
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
+- **Footer app badges:** "Get the Towmatic app for owners and drivers" with the App Store and Google Play badges,
+  40px tall, on every page. **They are not linked to the store listings on purpose (owner's choice). Do not add
+  links.** Use Google's current "GET IT ON Google Play" badge, never the old "Android app on Google Play" one.
 - **Footer notice** reads "Towmatic® is a registered trademark. Patents pending." (Towmatic is a USPTO-registered
   trademark; the Smart feature names stay ™.)
 - **Voice AI Pro is $397/month** (was $597). Voice AI minutes are described as approximately $0.20 per
