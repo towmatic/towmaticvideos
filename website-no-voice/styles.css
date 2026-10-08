@@ -1231,6 +1231,10 @@ main:focus { outline: none; }
   max-width: 520px;
   margin-inline: auto;
 }
+/* Wide real photo with a caption (Web Forms page) */
+.photo-band { margin: 0 0 32px; }
+.photo-band figcaption { margin-top: 12px; font-size: var(--fs-small); color: var(--color-text-muted); }
+
 .shot--phone {
   max-width: 380px;
   margin-inline: auto;

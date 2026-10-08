@@ -147,6 +147,7 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `tab-forms.webp`, `tab-app.webp`, `tab-dispatch.webp` | Homepage platform tabs | kie.ai, nano-banana-pro |
 | `wf-quote.webp`, `wf-locate.webp`, `wf-rotation.webp` | Web Forms feature blocks | kie.ai, nano-banana-pro |
 | `app-home.webp`, `app-book.webp`, `app-driver.webp` | Branded App feature blocks | kie.ai, nano-banana-pro |
+| `truck-qr-side.webp` (Web Forms, "Put it everywhere"), `truck-qr-back.webp` (homepage, "In the real world") | Real client truck photos with QR codes | Owner (Midwest Tow & Recovery, used with permission; Towmatic watermark cropped out; QR codes left real and scannable) |
 | `local.webp`, `local-post.webp`, `local-review.webp` | Towmatic Local hero and feature blocks | kie.ai, nano-banana-pro |
 | `blog-10-seconds.webp` | 10 Seconds post cover and blog card | Owner (from the live post) |
 | `blog-mobile-booking.webp` | Inside the 10 Seconds post | Owner (from the live post) |
@@ -284,6 +285,12 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **Free website setup** for Web Forms Pro customers: Towmatic adds the booking form to the customer's website for
+  free, as a "Book a Tow" button that opens the form or the whole form built into their page (their choice), on any
+  website. Shown as a "We'll put it on your website for you" section on the Web Forms page, a Web Forms FAQ, a
+  "Free setup on your website" bullet on the Web Forms Pro card, and a line in the homepage Web Forms tab.
+- **Real truck photos** (Midwest Tow & Recovery, a client, approved): homepage "In the real world" section and the
+  Web Forms "Put it everywhere" section.
 - **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile
   posts once or twice a week, each with a Book button linking to the customer's Instant Dispatch Form, plus a
   reply to every review (owners can turn on approvals or let Towmatic handle every reply). $197/month add-on to
