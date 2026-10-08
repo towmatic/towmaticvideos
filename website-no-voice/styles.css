@@ -1121,6 +1121,33 @@ main:focus { outline: none; }
 /* SmartQuote rate list */
 
 /* Detail grid (placements, audiences) */
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.type-grid li {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  padding: 16px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+.type-note {
+  max-width: 44rem;
+  margin-top: 24px;
+  color: var(--color-text-muted);
+}
+@media (min-width: 768px) {
+  .type-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .type-grid li { min-height: 96px; font-size: 1.75rem; }
+}
 
 /* Text thread */
 

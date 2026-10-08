@@ -289,6 +289,9 @@ These are intentional. Build them as shown in the prototype.
   free, as a "Book a Tow" button that opens the form or the whole form built into their page (their choice), on any
   website. Shown as a "We'll put it on your website for you" section on the Web Forms page, a Web Forms FAQ, a
   "Free setup on your website" bullet on the Web Forms Pro card, and a line in the homepage Web Forms tab.
+- **Seven booking forms** grid on the Web Forms page ("A form for every kind of job."): ASAP Tow, ASAP Service,
+  Private Property, Fleet/Account, Scheduled, Police Calls, Motor Club. Carried over from the original site's Voice AI
+  call types, with "Transfer to Human" removed. The Web Forms Pro card and the homepage FAQ list the same seven.
 - **Real truck photos** (Midwest Tow & Recovery, a client, approved): homepage "In the real world" section and the
   Web Forms "Put it everywhere" section.
 - **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile
