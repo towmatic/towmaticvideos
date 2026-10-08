@@ -250,9 +250,9 @@ These are intentional. Build them as shown in the prototype.
 - **No Voice AI.** The Voice AI page, the homepage Voice AI tab, the Voice AI Pro plan, the $97 Web Forms add-on and
   every call-minute and "unlimited calls" line are removed. See the redirects in section 2.
 - **Homepage hero:** "Your customers would rather tap than call." (no cycling word).
-- **Hero proof strip:** "$13,689 captured for one client in one month, nights and weekends only" ·
+- **Hero proof strip:** "$13,689 captured for one client in one month" ·
   "Thousands of tows booked for clients" · "Month-to-month. No contracts."
-- **Real Results panel:** $13,689 total, 79 jobs, nights and weekends only. Online Form 69 jobs / 87% /
+- **Real Results panel:** $13,689 total, 79 jobs, one client, one month. No "nights and weekends only" wording in this version: the forms take bookings 24/7. Online Form 69 jobs / 87% /
   $11,895; App 10 / 13% / $1,794. (The same client's Voice AI bookings are left out because Voice AI isn't offered.)
 - **Testimonial** is attributed to **Overland Tow Service**, Towmatic client.
 - **Homepage FAQ** (six questions, rewritten for online booking: cancel by text link, choose which booking forms, see every booking, rates, service area, change things myself).
