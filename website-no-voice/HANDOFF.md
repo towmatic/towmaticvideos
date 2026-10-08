@@ -207,7 +207,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker (Web Forms Pro, Branded Customer App), an
-  "Add Towmatic Local (+$197/mo)" checkbox, and sliders for quotes and booked jobs. Math: subscription + add-on
+  "Add Towmatic Local (+$197/mo)" checkbox, and sliders for quotes and booked jobs (start at 180 quotes and 110 jobs). Math: subscription + add-on
   + (quotes + 2 × jobs) × $0.016 − the $30 communication credit (applied to texts, never below $0; driver backup
   texts and calls also use the credit but aren't estimated), with the setup fee shown separately. Keep the rate in
   `main.js` in sync with billing.
