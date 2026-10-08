@@ -279,6 +279,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **Quotes are optional on the forms.** ASAP Tow, ASAP Service and Scheduled each come in two versions: quote first
+  (dispatched when the customer replies YES) or book now (dispatched right away, no quote). Never write that every
+  form or every booking is quoted.
 - **"I already have a form on my website" objection** is answered in two places: a comparison section on the Web
   Forms page ("Already have a form?" / "Most website forms just send an email.": a typical website form vs the
   Towmatic Instant Dispatch Form, five rows that line up across both cards on desktop and stack on phones), and the
