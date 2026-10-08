@@ -1286,6 +1286,60 @@ main:focus { outline: none; }
   border-radius: 28px;
 }
 
+/* "Already have a form?" comparison: two cards, the old way muted, Towmatic in accent */
+.vs { display: grid; gap: 16px; }
+.vs__col {
+  padding: 28px 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+.vs__col--us {
+  border-color: var(--color-accent);
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 45%),
+    var(--color-surface);
+}
+.vs__title { font-size: clamp(1.75rem, 1.5rem + 0.8vw, 2.25rem); margin-bottom: 8px; }
+.vs__col--old .vs__title { color: var(--color-text-muted); }
+.vs__list > div {
+  position: relative;
+  padding: 14px 0 14px 34px;
+  border-top: 1px solid var(--color-border);
+}
+.vs__list > div::before {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.vs__col--old .vs__list > div::before { content: "\2715"; background: var(--color-border); color: var(--color-text-muted); }
+.vs__col--us .vs__list > div::before { content: "\2713"; background: var(--color-accent); color: var(--color-bg); }
+.vs__list dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.vs__list dd { margin: 2px 0 0; }
+.vs__col--old .vs__list dd { color: var(--color-text-muted); }
+.vs__col--us .vs__list dd { color: var(--color-text); font-weight: 600; }
+@media (min-width: 900px) {
+  /* Both cards share one row grid (subgrid) so each row lines up across the two cards */
+  .vs { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, auto); column-gap: 24px; row-gap: 0; }
+  .vs__col { display: grid; grid-row: span 6; grid-template-rows: subgrid; padding: 36px 32px; }
+  .vs__list { display: contents; }
+  .vs__title { align-self: end; }
+}
+
 /* ==========================================================================
    Pricing
    ========================================================================== */
@@ -2096,6 +2150,7 @@ main:focus { outline: none; }
   padding-bottom: 24px;
   color: var(--color-text-muted);
 }
+.faq__item p:not(:last-child) { padding-bottom: 12px; }
 .faq__item p a { color: var(--color-text); text-underline-offset: 3px; }
 
 /* ==========================================================================
