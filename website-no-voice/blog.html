@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Towmatic Blog | Insights from Inside the Towing Industry</title>
+  <meta name="description" content="Real talk about online booking, towing automation and running a tow company, from operators with 90+ years of combined experience.">
+  <meta name="theme-color" content="#0F0F0F">
+  <!-- SEO (generated) -->
+  <link rel="canonical" href="https://towmatic.ai/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Towmatic">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Towmatic Blog | Insights from Inside the Towing Industry">
+  <meta property="og:description" content="Real talk about online booking, towing automation and running a tow company, from operators with 90+ years of combined experience.">
+  <meta property="og:url" content="https://towmatic.ai/blog">
+  <meta property="og:image" content="https://towmatic.ai/towmatic-og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Towmatic Blog | Insights from Inside the Towing Industry">
+  <meta name="twitter:description" content="Real talk about online booking, towing automation and running a tow company, from operators with 90+ years of combined experience.">
+  <meta name="twitter:image" content="https://towmatic.ai/towmatic-og-image.png">
+  <!-- /SEO -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================================================================
+     NAV (shared) — this block is copied into every page.
+     If you change it here, change it on every page so they stay in sync.
+     =================================================================== -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-nav" data-nav>
+  <div class="container site-nav__inner">
+    <a class="logo" href="index.html" aria-label="Towmatic home">
+      <img class="logo__img" src="images/logo.webp" alt="" width="600" height="129">
+    </a>
+
+    <nav class="site-nav__primary" aria-label="Main">
+      <ul class="nav-links">
+        <li class="nav-item--menu" data-menu>
+          <button class="nav-link" type="button" aria-expanded="false" aria-controls="products-menu" data-menu-toggle>
+            Products
+            <svg class="nav-link__chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="mega" id="products-menu" hidden>
+            <ul class="mega__list">
+              <li>
+                <a class="mega__item" href="web-forms.html">
+                  <span class="mega__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span><span class="mega__name">Instant Dispatch Forms</span><span class="mega__desc">Customers book online, no call needed.</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="mega__item" href="native-app.html">
+                  <span class="mega__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.5" width="12" height="19" rx="2.5" stroke="currentColor" stroke-width="1.8"/><rect x="9" y="7" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </span>
+                  <span><span class="mega__name">Branded Customer App</span><span class="mega__desc">Your company on their home screen.</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="mega__item" href="google-business-profile-management.html">
+                  <span class="mega__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m12 6.8 1 2.1 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3 1-2.1Z" fill="currentColor"/></svg>
+                  </span>
+                  <span><span class="mega__name">Towmatic Local</span><span class="mega__desc">Google posts and review replies, done for you.</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-nav__actions">
+      <a class="nav-link" href="/login">Login</a>
+      <a class="btn btn--secondary btn--nav" href="/demo">Interactive Demo</a>
+      <a class="btn btn--primary btn--nav" href="/signup">Start Free Trial</a>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-mobile-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav class="mobile-menu__body" aria-label="Mobile">
+      <div class="mobile-menu__group">
+        <p class="eyebrow">Products</p>
+        <a class="mobile-menu__product" href="web-forms.html"><span class="mega__name">Instant Dispatch Forms</span><span class="mega__desc">Customers book online, no call needed.</span></a>
+        <a class="mobile-menu__product" href="native-app.html"><span class="mega__name">Branded Customer App</span><span class="mega__desc">Your company on their home screen.</span></a>
+        <a class="mobile-menu__product" href="google-business-profile-management.html"><span class="mega__name">Towmatic Local</span><span class="mega__desc">Google posts and review replies, done for you.</span></a>
+      </div>
+      <div class="mobile-menu__group">
+        <a class="mobile-menu__link" href="pricing.html">Pricing</a>
+        <a class="mobile-menu__link" href="blog.html">Blog</a>
+        <a class="mobile-menu__link" href="/login">Login</a>
+      </div>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a class="btn btn--secondary" href="/demo">Interactive Demo</a>
+      <a class="btn btn--primary" href="/signup">Start Free Trial</a>
+    </div>
+  </div>
+</header>
+<!-- =========================== /NAV (shared) =========================== -->
+
+<main id="main" tabindex="-1">
+  <section class="page-head" aria-labelledby="page-title">
+    <div class="container page-head__inner">
+      <p class="eyebrow reveal">Towmatic Blog</p>
+      <h1 class="page-head__title reveal" id="page-title">Insights from <span class="accent">inside the industry</span>.</h1>
+      <p class="page-head__sub reveal">Real talk about online booking, towing automation, and running a tow company — from operators with 90+ years of combined experience.</p>
+    </div>
+  </section>
+
+  <section class="section section--flush-top" aria-label="Posts">
+    <div class="container">
+      <ul class="post-grid">
+        <li class="post-card reveal">
+          <a class="post-card__link" href="blog-book-tow-jobs-in-10-seconds.html">
+            <img class="post-card__img" src="images/blog-10-seconds.webp" alt="A stranded driver in a parking lot booking a tow on her phone" width="1050" height="600" loading="lazy" decoding="async">
+            <div class="post-card__body">
+              <p class="post-card__meta"><span class="post-card__cat">Tow Business Growth</span><span>9 min read</span></p>
+              <h2 class="post-card__title">How Tow Companies Can Book Jobs in 10 Seconds (Without a Phone Call)</h2>
+              <p class="post-card__excerpt">Learn how modern tow companies are using QR codes and web forms to book tow jobs in 10 seconds flat - no phone calls, no missed opportunities, no dispatcher needed.</p>
+              <p class="post-card__foot"><time datetime="2026-03-02">March 2, 2026</time><span class="post-card__more">Read more <span aria-hidden="true">→</span></span></p>
+            </div>
+          </a>
+        </li>
+        <li class="post-card post-card--soon reveal">
+          <p class="post-card__title">More coming soon</p>
+          <p class="post-card__excerpt">We're working on more insights from the field. Stay tuned.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5.6 Closing call to action -->
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="closing__media" aria-hidden="true">
+      <img src="images/closing.webp" alt="" loading="lazy" decoding="async" width="2100" height="900">
+    </div>
+    <div class="container closing__content reveal">
+      <h2 class="section-title closing__title" id="closing-title">Take Towmatic for a test drive.</h2>
+      <p class="section-sub">Click around the full dashboard and book a test tow with the online booking form yourself.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="/demo">Try the Interactive Demo</a>
+        <a class="btn btn--secondary" href="/signup">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- ===================================================================
+     FOOTER (shared) — this block is copied into every page.
+     If you change it here, change it on every page so they stay in sync.
+     =================================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div>
+        <a class="logo" href="index.html" aria-label="Towmatic home">
+      <img class="logo__img" src="images/logo.webp" alt="" width="600" height="129">
+        </a>
+        <p class="site-footer__tagline">Built by tow operators, for tow operators.</p>
+        <div class="site-footer__apps">
+          <p class="site-footer__apps-label">Get the Towmatic app for owners and drivers</p>
+          <div class="site-footer__badges">
+            <img src="images/app-store-badge.webp" alt="Download on the App Store" width="133" height="40" loading="lazy" decoding="async">
+            <img src="images/google-play-badge.svg" alt="Get it on Google Play" width="136" height="40" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+      <nav class="site-footer__cols" aria-label="Footer">
+        <div>
+          <p class="eyebrow site-footer__heading">Products</p>
+          <ul class="site-footer__links">
+            <li><a href="web-forms.html">Instant Dispatch Forms</a></li>
+            <li><a href="native-app.html">Branded Customer App</a></li>
+            <li><a href="google-business-profile-management.html">Towmatic Local</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow site-footer__heading">Company</p>
+          <ul class="site-footer__links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow site-footer__heading">Legal</p>
+          <ul class="site-footer__links">
+            <!-- Existing live legal pages -->
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <p>Towmatic® is a registered trademark. Patents pending.</p>
+      <p>&copy; 2026 Towmatic. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- ========================== /FOOTER (shared) ========================== -->
+
+<script src="main.js"></script>
+</body>
+</html>

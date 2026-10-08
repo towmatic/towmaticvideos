@@ -18,6 +18,8 @@ All 21 published HyperFrames skills are vendored in `.claude/skills/` so they lo
 - `website/` — static prototype of the towmatic.ai marketing site redesign (plain HTML/CSS/JS, no build).
   Its design system lives in `website/styles.css`; it does not use the video brand colors above.
   `website/HANDOFF.md` is the build spec for the live site (URLs, SEO, owner decisions); keep it current.
+- `website-no-voice/` — alternate version of that site with Voice AI removed (online booking + dispatch only).
+  Same structure and its own `HANDOFF.md`; changes to one site are not copied to the other automatically.
 - `scripts/new-video.mjs` — scaffolds a project and vendors GSAP locally.
 - `scripts/kie-image.mjs` — generates images with kie.ai into `videos/<name>/assets/images/`.
 - `.claude/hooks/session-start.sh` — installs FFmpeg and the render browser in cloud sessions.
