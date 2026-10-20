@@ -8,3 +8,4 @@ renders/
 !videos/*/assets/**/*.webm
 .hyperframes/
 .DS_Store
+videos/*/snapshots/

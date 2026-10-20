@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <template>
+      <style>
+        #root {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          background: #0a0a0a;
+        }
+        #streaks-base,
+        #streaks-glow,
+        #streaks-pulse,
+        #streaks-embers {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+        #streaks-glow,
+        #streaks-pulse {
+          background: url("assets/images/streaks.png") center / 100% 100% no-repeat;
+        }
+        #streaks-base img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        /* Soft bloom on the orange lines only (streaks.png is the photo's orange pixels on transparency). */
+        #streaks-glow {
+          mix-blend-mode: screen;
+          filter: blur(9px) saturate(1.2);
+          opacity: 0.4;
+        }
+        /* Light pulses: the same streaks, brightened and revealed only inside rings that travel
+           outward from the truck. --streaks-o is the ring offset in px, driven by the timeline. */
+        #streaks-pulse {
+          --streaks-o: 0;
+          mix-blend-mode: screen;
+          filter: brightness(1.7) saturate(1.15);
+          -webkit-mask-image: repeating-radial-gradient(
+            circle at 57% 62%,
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px),
+            rgba(0, 0, 0, 1) calc(var(--streaks-o) * 1px + 70px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 150px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 480px)
+          );
+          mask-image: repeating-radial-gradient(
+            circle at 57% 62%,
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px),
+            rgba(0, 0, 0, 1) calc(var(--streaks-o) * 1px + 70px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 150px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 480px)
+          );
+        }
+        .streaks-ember {
+          position: absolute;
+          left: 0;
+          top: 0;
+          border-radius: 50%;
+          background: #ffb070;
+          box-shadow: 0 0 6px 2px rgba(232, 114, 42, 0.75);
+          opacity: 0;
+        }
+      </style>
+
+      <div id="root" data-composition-id="streaks" data-width="1920" data-height="1080">
+        <div id="streaks-base"><img src="assets/images/hero.png" alt="" /></div>
+        <div id="streaks-glow"></div>
+        <div id="streaks-pulse"></div>
+        <div id="streaks-embers"></div>
+      </div>
+
+      <script>
+        (function () {
+          var LOOP = 8; // seconds; every motion below completes a whole number of cycles per loop
+          var PERIOD = 480; // px between pulse rings (matches the mask's repeat length)
+
+          // Seeded PRNG so ember placement is identical on every render.
+          var seed = 20261020;
+          function rand() {
+            seed |= 0; seed = (seed + 0x6d2b79f5) | 0;
+            var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+            t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+            return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+          }
+
+          var layer = document.getElementById("streaks-embers");
+          var embers = [];
+          for (var i = 0; i < 36; i++) {
+            var el = document.createElement("div");
+            el.className = "streaks-ember";
+            var size = 2 + rand() * 3;
+            el.style.width = size + "px";
+            el.style.height = size + "px";
+            layer.appendChild(el);
+            embers.push({
+              el: el,
+              x0: 1920 * (0.38 + rand() * 0.6),
+              y0: 1080 * (0.5 + rand() * 0.5),
+              dx: 50 + rand() * 150,
+              dy: -(90 + rand() * 220),
+              phase: rand(),
+              peak: 0.45 + rand() * 0.5,
+            });
+          }
+
+          var pulse = document.getElementById("streaks-pulse");
+          var glow = document.getElementById("streaks-glow");
+          var clock = { t: 0 };
+
+          function render() {
+            var t = clock.t;
+            // Rings move outward exactly 2 periods per loop, so frame 0 and the last frame match.
+            pulse.style.setProperty("--streaks-o", ((t / LOOP) * PERIOD * 2) % PERIOD);
+            // Glow breathes twice per loop.
+            glow.style.opacity = (0.4 + 0.14 * Math.sin((2 * Math.PI * t) / (LOOP / 2))).toFixed(4);
+            for (var k = 0; k < embers.length; k++) {
+              var e = embers[k];
+              var u = (t / LOOP + e.phase) % 1; // each ember lives one loop, offset by its phase
+              var a = Math.pow(Math.sin(Math.PI * u), 1.5) * e.peak; // 0 at birth and death: seamless wrap
+              e.el.style.opacity = a.toFixed(4);
+              e.el.style.transform =
+                "translate(" + (e.x0 + e.dx * u).toFixed(2) + "px," + (e.y0 + e.dy * u).toFixed(2) + "px)";
+            }
+          }
+
+          var tl = gsap.timeline({ paused: true });
+          tl.to(clock, { t: LOOP, duration: LOOP, ease: "none", onUpdate: render }, 0);
+          render();
+          window.__timelines["streaks"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
