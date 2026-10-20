@@ -9,3 +9,7 @@ renders/
 .hyperframes/
 .DS_Store
 videos/*/snapshots/
+!website/images/*.mp4
+!website-no-voice/images/*.mp4
+!website/images/*.webm
+!website-no-voice/images/*.webm

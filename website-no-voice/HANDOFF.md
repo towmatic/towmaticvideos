@@ -141,6 +141,7 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | File | Used on | Source |
 |---|---|---|
 | `hero.webp` | Homepage hero (also the hero video poster) | kie.ai, seedream-5-pro |
+| `hero.mp4`, `hero.webm` | Homepage hero video (animated version of `hero.webp`) | Rendered with HyperFrames from `videos/hero-streaks/` |
 | `closing.webp` | Closing section on most pages | kie.ai, seedream-5-pro |
 | `web-forms.webp` | Web Forms hero | kie.ai, seedream-5-pro |
 | `native-app.webp` | Branded App hero | kie.ai, seedream-5-pro |
@@ -157,8 +158,12 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 
 `source/towmatic-logo-original.png` is the owner's original logo file, kept for reference.
 
-**Hero video slot.** The homepage hero has a `<video>` element with `hero.webp` as its poster and the
-source commented out ("Add hero video here"). Phones and reduced-motion visitors only ever see the poster.
+**Hero video.** The homepage hero `<video>` plays `images/hero.mp4` (1.2 MB, 8s seamless loop, 1920×1080, H.264,
+no audio, muted, looping, with `images/hero.webm` (VP9, 0.96 MB) as a fallback source) with `hero.webp` as its poster. It animates the orange light lines in the hero photo:
+light pulses run outward along the lines, the lines sway gently, the glow breathes and embers drift; the truck stays
+still. It plays only on screens 768px and wider without reduced motion (see `main.js`); phones and reduced-motion
+visitors only ever see the poster. Keep that behavior. Source project: `videos/hero-streaks/` in this repo
+(HyperFrames composition; re-render with `npx hyperframes render`).
 
 ---
 

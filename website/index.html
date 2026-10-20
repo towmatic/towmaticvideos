@@ -281,7 +281,9 @@
     <div class="hero__media" aria-hidden="true">
       <!-- The poster is the still hero image. Phones and reduced-motion visitors only ever see the poster. -->
       <video class="hero__video" muted loop playsinline preload="none" poster="images/hero.webp" data-hero-video>
-        <!-- Add hero video here: <source src="images/hero.mp4" type="video/mp4"> -->
+        <!-- 8s seamless loop rendered from videos/hero-streaks (HyperFrames). Desktop only, never with reduced motion. -->
+        <source src="images/hero.mp4" type="video/mp4">
+        <source src="images/hero.webm" type="video/webm">
       </video>
     </div>
     <div class="hero__scrim" aria-hidden="true"></div>
