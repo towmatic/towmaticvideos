@@ -13,6 +13,8 @@
           background: #0a0a0a;
         }
         #streaks-base,
+        #streaks-erase,
+        #streaks-lines,
         #streaks-glow,
         #streaks-pulse,
         #streaks-embers {
@@ -21,40 +23,52 @@
           width: 100%;
           height: 100%;
         }
-        #streaks-glow,
-        #streaks-pulse {
-          background: url("assets/images/streaks.png") center / 100% 100% no-repeat;
-        }
         #streaks-base img {
           display: block;
           width: 100%;
           height: 100%;
         }
-        /* Soft bloom on the orange lines only (streaks.png is the photo's orange pixels on transparency). */
+        /* lines.png = the photo's orange light lines (truck masked out) on transparency. */
+        #streaks-erase,
+        #streaks-lines,
+        #streaks-glow,
+        #streaks-pulse {
+          background: url("assets/images/lines.png") center / 100% 100% no-repeat;
+        }
+        /* Darken the photo's own lines (they sit on a dark road) so the swaying copy leaves no ghost. */
+        #streaks-erase {
+          filter: brightness(0);
+          opacity: 0.88;
+        }
+        /* The lines, gently warped by #streaks-warp. Slightly dimmer than the photo between pulses. */
+        #streaks-lines {
+          filter: url(#streaks-warp);
+          opacity: 0.82;
+        }
         #streaks-glow {
           mix-blend-mode: screen;
-          filter: blur(9px) saturate(1.2);
+          filter: url(#streaks-warp) blur(9px) saturate(1.2);
           opacity: 0.4;
         }
-        /* Light pulses: the same streaks, brightened and revealed only inside rings that travel
-           outward from the truck. --streaks-o is the ring offset in px, driven by the timeline. */
+        /* Bright pulses that travel outward along the lines: the warped lines, brightened and shown
+           only inside rings around the truck. --streaks-o is the ring offset in px. */
         #streaks-pulse {
           --streaks-o: 0;
           mix-blend-mode: screen;
-          filter: brightness(1.7) saturate(1.15);
+          filter: url(#streaks-warp) brightness(1.9) saturate(1.15);
           -webkit-mask-image: repeating-radial-gradient(
             circle at 57% 62%,
             rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px),
-            rgba(0, 0, 0, 1) calc(var(--streaks-o) * 1px + 70px),
-            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 150px),
-            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 480px)
+            rgba(0, 0, 0, 1) calc(var(--streaks-o) * 1px + 40px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 100px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 320px)
           );
           mask-image: repeating-radial-gradient(
             circle at 57% 62%,
             rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px),
-            rgba(0, 0, 0, 1) calc(var(--streaks-o) * 1px + 70px),
-            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 150px),
-            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 480px)
+            rgba(0, 0, 0, 1) calc(var(--streaks-o) * 1px + 40px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 100px),
+            rgba(0, 0, 0, 0) calc(var(--streaks-o) * 1px + 320px)
           );
         }
         .streaks-ember {
@@ -66,10 +80,23 @@
           box-shadow: 0 0 6px 2px rgba(232, 114, 42, 0.75);
           opacity: 0;
         }
+        #streaks-defs {
+          position: absolute;
+          width: 0;
+          height: 0;
+        }
       </style>
 
       <div id="root" data-composition-id="streaks" data-width="1920" data-height="1080">
+        <svg id="streaks-defs" aria-hidden="true">
+          <filter id="streaks-warp" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.0032 0.0085" numOctaves="2" seed="11" result="streaks-noise" />
+            <feDisplacementMap id="streaks-disp" in="SourceGraphic" in2="streaks-noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </svg>
         <div id="streaks-base"><img src="assets/images/hero.png" alt="" /></div>
+        <div id="streaks-erase"></div>
+        <div id="streaks-lines"></div>
         <div id="streaks-glow"></div>
         <div id="streaks-pulse"></div>
         <div id="streaks-embers"></div>
@@ -78,7 +105,7 @@
       <script>
         (function () {
           var LOOP = 8; // seconds; every motion below completes a whole number of cycles per loop
-          var PERIOD = 480; // px between pulse rings (matches the mask's repeat length)
+          var PERIOD = 320; // px between pulse rings (matches the mask's repeat length)
 
           // Seeded PRNG so ember placement is identical on every render.
           var seed = 20261020;
@@ -111,14 +138,18 @@
 
           var pulse = document.getElementById("streaks-pulse");
           var glow = document.getElementById("streaks-glow");
+          var disp = document.getElementById("streaks-disp");
           var clock = { t: 0 };
 
           function render() {
             var t = clock.t;
-            // Rings move outward exactly 2 periods per loop, so frame 0 and the last frame match.
-            pulse.style.setProperty("--streaks-o", ((t / LOOP) * PERIOD * 2) % PERIOD);
+            var w = (2 * Math.PI * t) / LOOP;
+            // Rings move outward exactly 3 periods per loop, so the first and last frames match.
+            pulse.style.setProperty("--streaks-o", ((t / LOOP) * PERIOD * 3) % PERIOD);
+            // Sway: the lines bend a little more and less, two slow cycles per loop.
+            disp.setAttribute("scale", (9 + 6 * Math.sin(2 * w) + 2 * Math.sin(w + 1.3)).toFixed(3));
             // Glow breathes twice per loop.
-            glow.style.opacity = (0.4 + 0.14 * Math.sin((2 * Math.PI * t) / (LOOP / 2))).toFixed(4);
+            glow.style.opacity = (0.4 + 0.14 * Math.sin(2 * w)).toFixed(4);
             for (var k = 0; k < embers.length; k++) {
               var e = embers[k];
               var u = (t / LOOP + e.phase) % 1; // each ember lives one loop, offset by its phase
