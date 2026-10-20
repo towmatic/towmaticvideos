@@ -109,12 +109,12 @@
     });
   }
 
-  /* ---------- Hero video: desktop only, never with reduced motion ---------- */
+  /* ---------- Hero video: every screen size, never with reduced motion or Data Saver ---------- */
   var video = document.querySelector('[data-hero-video]');
   if (video) {
-    var wide = window.matchMedia('(min-width: 768px)');
     var hasSource = video.querySelector('source');
-    if (hasSource && wide.matches && !reduceMotion.matches) {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (hasSource && !reduceMotion.matches && !saveData) {
       video.preload = 'auto';
       var playing = video.play();
       if (playing && playing.catch) playing.catch(function () {});

@@ -148,8 +148,10 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 **Hero video.** The homepage hero `<video>` plays `images/hero.mp4` (1.2 MB, 8s seamless loop, 1920×1080, H.264,
 no audio, muted, looping, with `images/hero.webm` (VP9, 0.96 MB) as a fallback source) with `hero.webp` as its poster. It animates the orange light lines in the hero photo:
 light pulses run outward along the lines, the lines sway gently, the glow breathes and embers drift; the truck stays
-still. It plays only on screens 768px and wider without reduced motion (see `main.js`); phones and reduced-motion
-visitors only ever see the poster. Keep that behavior. Source project: `videos/hero-streaks/` in this repo
+still. It plays on every screen size, except for visitors with reduced motion or Data Saver turned on, who see the
+poster (see `main.js`). **On phones (under 768px) the homepage hero (`.hero--home`) shows the video as a band at the
+top**, zoomed toward the truck and fading into the background above the headline, so the truck is easy to see. The
+text no longer sits on top of the photo there. Keep that behavior. Source project: `videos/hero-streaks/` in this repo
 (HyperFrames composition; re-render with `npx hyperframes render`).
 
 ---

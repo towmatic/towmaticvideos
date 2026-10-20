@@ -121,25 +121,30 @@
       index = (index + 1) % words.length;
       var next = words[index];
       if (!canAnimate) { cycleWord.textContent = next; return; }
-      cycleWord.animate(
+      // Clear any leftover animation first, so the word can never stay stuck invisible
+      if (cycleWord.getAnimations) cycleWord.getAnimations().forEach(function (a) { a.cancel(); });
+      var out = cycleWord.animate(
         [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-0.18em)' }],
         { duration: 220, easing: 'ease-in', fill: 'forwards' }
-      ).onfinish = function () {
+      );
+      out.onfinish = function () {
         cycleWord.textContent = next;
+        // No forward fill on the way in: when it ends, the word is plainly visible
         cycleWord.animate(
           [{ opacity: 0, transform: 'translateY(0.18em)' }, { opacity: 1, transform: 'none' }],
-          { duration: 320, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'forwards' }
+          { duration: 320, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
         );
+        out.cancel();
       };
     }, 2500);
   }
 
-  /* ---------- Hero video: desktop only, never with reduced motion ---------- */
+  /* ---------- Hero video: every screen size, never with reduced motion or Data Saver ---------- */
   var video = document.querySelector('[data-hero-video]');
   if (video) {
-    var wide = window.matchMedia('(min-width: 768px)');
     var hasSource = video.querySelector('source');
-    if (hasSource && wide.matches && !reduceMotion.matches) {
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (hasSource && !reduceMotion.matches && !saveData) {
       video.preload = 'auto';
       var playing = video.play();
       if (playing && playing.catch) playing.catch(function () {});
