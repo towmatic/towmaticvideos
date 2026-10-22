@@ -296,6 +296,9 @@ These are intentional. Build them as shown in the prototype.
   If Needed, or Never** (use these exact setting names). Shown in a homepage FAQ and a Web Forms FAQ ("Can I control
   which trucks get which jobs?"), the homepage SmartDispatch tab, the Web Forms dispatch section and the Pricing
   "Every plan" tile.
+- **Dispatcher-first option:** FAQ "Do I have to dispatch automatically to a driver?" on the homepage and Web Forms
+  page: bookings can go to the owner's dispatcher first, who assigns the job "the way your team already works". Keep
+  this wording: do not say Towmatic lets the dispatcher pick or send to any driver.
 - **Quotes are optional on the forms.** ASAP Tow, ASAP Service and Scheduled each come in two versions: quote first
   (dispatched when the customer replies YES) or book now (dispatched right away, no quote). Never write that every
   form or every booking is quoted.
