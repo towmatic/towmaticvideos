@@ -33,7 +33,7 @@ site assets: don't publish the folder.
 | `index.html` | `/` | Homepage |
 | `ai-voice-agent-tow-dispatch.html` | `/ai-voice-agent-tow-dispatch` | **Voice AI page.** Uses this existing URL to keep its ranking. There is no `/voice-ai` page. |
 | `web-forms.html` | `/web-forms` | Instant Dispatch Forms |
-| `native-app.html` | `/native-app` | Branded Customer App |
+| `native-app.html` | `/native-app` | Instant Dispatch App |
 | `google-business-profile-management.html` | `/google-business-profile-management` | **New page.** Towmatic Local (Google Business Profile posts and review replies) |
 | `pricing.html` | `/pricing` | Plans and pricing |
 | `contact.html` | `/contact` | Contact form (see section 7) |
@@ -130,11 +130,11 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `closing.webp` | Closing section on most pages | kie.ai, seedream-5-pro |
 | `voice-ai.webp` | Voice AI hero | kie.ai, seedream-5-pro |
 | `web-forms.webp` | Web Forms hero | kie.ai, seedream-5-pro |
-| `native-app.webp` | Branded App hero | kie.ai, seedream-5-pro |
+| `native-app.webp` | Instant Dispatch App hero | kie.ai, seedream-5-pro |
 | `tab-voice.webp`, `tab-forms.webp`, `tab-app.webp`, `tab-dispatch.webp` | Homepage platform tabs | kie.ai, nano-banana-pro |
 | `va-voice.webp`, `va-choice.webp`, `va-quote.webp`, `va-log.webp` | Voice AI feature blocks | kie.ai, nano-banana-pro |
 | `wf-quote.webp`, `wf-locate.webp`, `wf-rotation.webp` | Web Forms feature blocks | kie.ai, nano-banana-pro |
-| `app-home.webp`, `app-book.webp`, `app-driver.webp` | Branded App feature blocks | kie.ai, nano-banana-pro |
+| `app-home.webp`, `app-book.webp`, `app-driver.webp` | Instant Dispatch App feature blocks | kie.ai, nano-banana-pro |
 | `local.webp`, `local-post.webp`, `local-review.webp` | Towmatic Local hero and feature blocks | kie.ai, nano-banana-pro |
 | `blog-ai-vs-traditional.webp` | AI vs Traditional post cover and blog card | Owner (from the live post) |
 | `blog-10-seconds.webp` | 10 Seconds post cover and blog card | Owner (from the live post) |
@@ -169,7 +169,7 @@ Carry every tag over exactly. Each page has:
 - JSON-LD structured data:
   - Homepage: `Organization` and `SoftwareApplication` (the three products plus Towmatic Local, at current prices).
   - Pricing: `SoftwareApplication`.
-  - Homepage, Voice AI, Web Forms, Branded App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
+  - Homepage, Voice AI, Web Forms, Instant Dispatch App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
     it in sync if an FAQ changes.
   - Blog posts: `BlogPosting` and `BreadcrumbList`.
   - **The old self-awarded `aggregateRating` (5 stars from 1 review) has been removed on purpose. Do not
@@ -180,7 +180,7 @@ Carry every tag over exactly. Each page has:
 | `/` | Towmatic \| AI Dispatch Automation for Tow Companies | Towmatic answers calls, quotes from your rate sheet and dispatches your next driver in seconds, 24/7. Voice AI, online booking and your own branded app. |
 | `/ai-voice-agent-tow-dispatch` | AI Voice Agent for Tow Dispatch \| Towmatic | Towmatic Voice AI answers every tow call 24/7, quotes from your real rate sheet and books the job. Multilingual, including Spanish. Every call logged. |
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
-| `/native-app` | Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
+| `/native-app` | Instant Dispatch App: Your Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for Voice AI, online booking forms and your own branded app. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about AI dispatch for your tow company. Sales, customer service and partnership questions. |
@@ -205,7 +205,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
   length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox and, for Voice AI Pro only, an
   "Add Instant Dispatch Forms (+$97/mo)" checkbox (hidden for plans without Voice AI). Plans: Voice AI Pro, Instant Dispatch Forms,
-  Branded Customer App. Math: subscription + add-ons + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
+  Instant Dispatch App. Math: subscription + add-ons + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 communication credit (applied to texts, never below $0; driver backup texts and calls also use
   the credit but aren't estimated), with the setup fee shown separately. Voice AI lines
   only appear for Voice AI Pro. Keep the rates in `main.js` in sync with billing.
@@ -257,8 +257,8 @@ These are intentional. Build them as shown in the prototype.
   call our AI agent to book a test tow, and try the online booking form yourself." (The demo is a
   sandbox dashboard with a callable AI agent and a test booking form; it is not customized per company.)
 - **"Play sample call" buttons removed**; the Voice AI page links to the interactive demo instead.
-- **Branded App goes live in 2–3 weeks** (App Store and Google Play).
-- **Pricing:** three products only: Voice AI Pro, Instant Dispatch Forms and Branded Customer App, plus the Towmatic Local
+- **Instant Dispatch App goes live in 2–3 weeks** (App Store and Google Play).
+- **Pricing:** three products only: Voice AI Pro, Instant Dispatch Forms and Instant Dispatch App, plus the Towmatic Local
   add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not show them anywhere (cards,
   calculator, structured data or copy). Instant Dispatch Forms is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
   setup fee on Voice AI Pro or Instant Dispatch Forms. The $30/month communication credit is per account.
@@ -282,10 +282,13 @@ These are intentional. Build them as shown in the prototype.
   "you only pay for the minutes you use". Shown on the Pricing cards, billing notes, calculator, the Voice AI
   hero, the homepage Voice AI tab, and an FAQ on Pricing and Voice AI.
 - **Unlimited bookings** on every plan: on all three product cards on Pricing (Voice AI Pro reads "Unlimited calls
-  and bookings"), the billing note, the calculator, and an FAQ on the Web Forms and Branded App pages.
+  and bookings"), the billing note, the calculator, and an FAQ on the Web Forms and Instant Dispatch App pages.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **App renamed:** "Branded Customer App" is now **Instant Dispatch App** everywhere, always paired with a descriptor
+  that it is the tow company's own app for its customers ("Your company's own app for your customers" in the menus).
+  Keep it clearly separate from the Towmatic app for owners and drivers (footer badges). URL stays `/native-app`.
 - **Plan renamed:** "Web Forms Pro" is now **Instant Dispatch Forms** everywhere (cards, calculator, add-on, FAQs,
   structured data). The blog post keeps its original title. Each product card on Pricing shows a highlighted
   "Includes a $30/mo communication credit" badge under the price (the per-account detail is in the note below the cards).

@@ -1,7 +1,7 @@
 # Towmatic Marketing Site Redesign: Handoff (version without Voice AI)
 
 > **This is the "no Voice AI" version of the site.** Towmatic no longer offers Voice AI in this version: the
-> product is online booking (Instant Dispatch Forms and the Branded Customer App) with automatic dispatch,
+> product is online booking (Instant Dispatch Forms and the Instant Dispatch App) with automatic dispatch,
 > plus the Towmatic Local add-on. Positioning: booking online is faster and easier than a phone call, so
 > customers would rather tap than call. Do not mention Voice AI, an AI phone agent, call minutes or
 > "unlimited calls" anywhere.
@@ -38,7 +38,7 @@ site assets: don't publish the folder.
 |---|---|---|
 | `index.html` | `/` | Homepage |
 | `web-forms.html` | `/web-forms` | Instant Dispatch Forms |
-| `native-app.html` | `/native-app` | Branded Customer App |
+| `native-app.html` | `/native-app` | Instant Dispatch App |
 | `google-business-profile-management.html` | `/google-business-profile-management` | **New page.** Towmatic Local (Google Business Profile posts and review replies) |
 | `pricing.html` | `/pricing` | Plans and pricing |
 | `contact.html` | `/contact` | Contact form (see section 7) |
@@ -144,10 +144,10 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `hero.mp4`, `hero.webm` | Homepage hero video (animated version of `hero.webp`) | Rendered with HyperFrames from `videos/hero-streaks/` |
 | `closing.webp` | Closing section on most pages | kie.ai, seedream-5-pro |
 | `web-forms.webp` | Web Forms hero | kie.ai, seedream-5-pro |
-| `native-app.webp` | Branded App hero | kie.ai, seedream-5-pro |
+| `native-app.webp` | Instant Dispatch App hero | kie.ai, seedream-5-pro |
 | `tab-forms.webp`, `tab-app.webp`, `tab-dispatch.webp` | Homepage platform tabs | kie.ai, nano-banana-pro |
 | `wf-quote.webp`, `wf-locate.webp`, `wf-rotation.webp` | Web Forms feature blocks | kie.ai, nano-banana-pro |
-| `app-home.webp`, `app-book.webp`, `app-driver.webp` | Branded App feature blocks | kie.ai, nano-banana-pro |
+| `app-home.webp`, `app-book.webp`, `app-driver.webp` | Instant Dispatch App feature blocks | kie.ai, nano-banana-pro |
 | `truck-qr-side.webp` (Web Forms, "Put it everywhere"), `truck-qr-back.webp` (homepage, "In the real world") | Real client truck photos with QR codes | Owner (Midwest Tow & Recovery, used with permission; Towmatic watermark cropped out; QR codes left real and scannable) |
 | `local.webp`, `local-post.webp`, `local-review.webp` | Towmatic Local hero and feature blocks | kie.ai, nano-banana-pro |
 | `blog-10-seconds.webp` | 10 Seconds post cover and blog card | Owner (from the live post) |
@@ -180,9 +180,9 @@ Carry every tag over exactly. Each page has:
   (`https://towmatic.ai/towmatic-logo-color.png`) resolve wherever the files are hosted.** Update the paths
   if they are stored elsewhere.
 - JSON-LD structured data:
-  - Homepage: `Organization` and `SoftwareApplication` (Instant Dispatch Forms, Branded Customer App and Towmatic Local, at current prices).
+  - Homepage: `Organization` and `SoftwareApplication` (Instant Dispatch Forms, Instant Dispatch App and Towmatic Local, at current prices).
   - Pricing: `SoftwareApplication`.
-  - Homepage, Web Forms, Branded App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
+  - Homepage, Web Forms, Instant Dispatch App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
     it in sync if an FAQ changes.
   - Blog posts: `BlogPosting` and `BreadcrumbList`.
   - **The old self-awarded `aggregateRating` (5 stars from 1 review) has been removed on purpose. Do not
@@ -192,7 +192,7 @@ Carry every tag over exactly. Each page has:
 |---|---|---|
 | `/` | Towmatic \| Online Tow Booking with Automatic Dispatch | Let customers book a tow in seconds instead of calling. Instant quotes by text, one-tap GPS and automatic dispatch to your next driver, 24/7. Online booking forms and your own branded app. |
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
-| `/native-app` | Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
+| `/native-app` | Instant Dispatch App: Your Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for online booking forms and your own branded app, with unlimited bookings. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about online booking and automatic dispatch for your tow company. Sales, customer service and partnership questions. |
@@ -213,7 +213,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Hero video plays only on screens 768px and wider without reduced motion, once a source is added.
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
-- Pricing cost calculator (`#calculator` on `/pricing`): plan picker (Instant Dispatch Forms, Branded Customer App), an
+- Pricing cost calculator (`#calculator` on `/pricing`): plan picker (Instant Dispatch Forms, Instant Dispatch App), an
   "Add Towmatic Local (+$197/mo)" checkbox, and sliders for quotes and booked jobs (start at 180 quotes and 110 jobs). Math: subscription + add-on
   + (quotes + 2 × jobs) × $0.016 − the $30 communication credit (applied to texts, never below $0; driver backup
   texts and calls also use the credit but aren't estimated), with the setup fee shown separately. Keep the rate in
@@ -267,8 +267,8 @@ These are intentional. Build them as shown in the prototype.
 - **Closing section** on every page: "Take Towmatic for a test drive." / "Click around the full dashboard
   and book a test tow with the online booking form yourself." (The demo is a sandbox dashboard with a test
   booking form; it is not customized per company. The owner is updating the demo separately.)
-- **Branded App goes live in 2–3 weeks** (App Store and Google Play).
-- **Pricing:** two products, Instant Dispatch Forms ($397/mo, no setup fee) and Branded Customer App ($397/mo + $1,997
+- **Instant Dispatch App goes live in 2–3 weeks** (App Store and Google Play).
+- **Pricing:** two products, Instant Dispatch Forms ($397/mo, no setup fee) and Instant Dispatch App ($397/mo + $1,997
   setup), plus the Towmatic Local add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not
   show them anywhere. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
@@ -288,10 +288,13 @@ These are intentional. Build them as shown in the prototype.
   the Towmatic app.
 - **Monthly cost calculator** added to the Pricing page (section 6).
 - **Unlimited bookings** on every plan: on both product cards on Pricing, the billing note, the calculator, and an FAQ on
-  Pricing and the Web Forms and Branded App pages.
+  Pricing and the Web Forms and Instant Dispatch App pages.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **App renamed:** "Branded Customer App" is now **Instant Dispatch App** everywhere, always paired with a descriptor
+  that it is the tow company's own app for its customers ("Your company's own app for your customers" in the menus).
+  Keep it clearly separate from the Towmatic app for owners and drivers (footer badges). URL stays `/native-app`.
 - **Plan renamed:** "Web Forms Pro" is now **Instant Dispatch Forms** everywhere (cards, calculator, add-on, FAQs,
   structured data). The blog post keeps its original title. Each product card on Pricing shows a highlighted
   "Includes a $30/mo communication credit" badge under the price (the per-account detail is in the note below the cards).
