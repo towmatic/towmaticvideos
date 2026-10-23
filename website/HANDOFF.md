@@ -132,7 +132,7 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `web-forms.webp` | Web Forms hero | kie.ai, seedream-5-pro |
 | `native-app.webp` | Branded App hero | kie.ai, seedream-5-pro |
 | `tab-voice.webp`, `tab-forms.webp`, `tab-app.webp`, `tab-dispatch.webp` | Homepage platform tabs | kie.ai, nano-banana-pro |
-| `va-voice.webp`, `va-quote.webp`, `va-log.webp` | Voice AI feature blocks | kie.ai, nano-banana-pro |
+| `va-voice.webp`, `va-choice.webp`, `va-quote.webp`, `va-log.webp` | Voice AI feature blocks | kie.ai, nano-banana-pro |
 | `wf-quote.webp`, `wf-locate.webp`, `wf-rotation.webp` | Web Forms feature blocks | kie.ai, nano-banana-pro |
 | `app-home.webp`, `app-book.webp`, `app-driver.webp` | Branded App feature blocks | kie.ai, nano-banana-pro |
 | `local.webp`, `local-post.webp`, `local-review.webp` | Towmatic Local hero and feature blocks | kie.ai, nano-banana-pro |
@@ -286,6 +286,12 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **"Not everyone wants to talk to AI" (caller's choice):** when someone calls for a tow, the Voice AI agent asks "I
+  can text you an instant dispatch form, or we can continue here. What would you like to do?" Owner data: about half
+  of callers choose the form and the rest finish booking on the call. Shown as a "Their choice" section on the Voice AI
+  page (`va-choice.webp`), a Voice AI and homepage FAQ ("What if my customers don't want to talk to an AI?"), a line in
+  the homepage Voice AI tab, and the Web Forms Pro add-on box on Pricing. It uses Web Forms Pro ($97/mo add-on). Always
+  say the other half finish booking on the call, so it never reads as callers hanging up.
 - **Dispatch rules by truck type:** owners set each truck to take light, medium and heavy duty jobs **Always, Only
   If Needed, or Never** (use these exact setting names). Shown in a homepage FAQ and a Web Forms FAQ ("Can I control
   which trucks get which jobs?"), the homepage SmartDispatch tab, the Web Forms dispatch section and the Pricing

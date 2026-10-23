@@ -26,6 +26,14 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What if my customers don’t want to talk to an AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They don’t have to. When someone calls for a tow, your agent asks: “I can text you an instant dispatch form, or we can continue here. What would you like to do?” About half of callers choose the form. The rest finish booking right on the call. Either way, the job lands with your next driver. Texting the form uses Web Forms Pro, a $97/mo add-on with Voice AI Pro."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How does Voice AI price a tow?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -237,8 +245,23 @@
     </div>
   </section>
 
+  <!-- Feature: caller's choice (owner data: about half of callers choose the texted form) -->
+  <section class="section section--alt feature feature--flip" aria-labelledby="fc-title">
+    <div class="container feature__grid">
+      <div class="feature__copy reveal">
+        <p class="eyebrow">Their choice</p>
+        <h2 class="feature__title" id="fc-title">Not everyone wants to talk to AI. They don’t have to.</h2>
+        <p class="feature__line">When someone calls for a tow, your agent offers to text them your Instant Dispatch Form or keep going on the call. About half of callers choose the form. The rest finish booking right on the call. Either way, the job lands with your next driver.</p>
+        <p class="feature__note">Uses Web Forms Pro, a $97/mo add-on with Voice AI Pro.</p>
+      </div>
+      <div class="feature__visual reveal">
+        <img class="shot shot--phone" src="images/va-choice.webp" alt="A phone at night during a call with Your Tow Co., showing a text with the link to book a tow, the customer replying Got it, booking now, and a reply that a driver is dispatched as soon as they submit" width="1000" height="1340" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
   <!-- Feature 2: SmartQuote -->
-  <section class="section section--alt feature feature--flip" aria-labelledby="f2-title">
+  <section class="section feature" aria-labelledby="f2-title">
     <div class="container feature__grid">
       <div class="feature__copy reveal">
         <p class="eyebrow">SmartQuote</p>
@@ -252,7 +275,7 @@
   </section>
 
   <!-- Feature 3: call log -->
-  <section class="section feature" aria-labelledby="f3-title">
+  <section class="section section--alt feature feature--flip" aria-labelledby="f3-title">
     <div class="container feature__grid">
       <div class="feature__copy reveal">
         <p class="eyebrow">Call history</p>
@@ -266,7 +289,7 @@
   </section>
 
   <!-- Detail block: call types -->
-  <section class="section section--alt" aria-labelledby="types-title">
+  <section class="section" aria-labelledby="types-title">
     <div class="container">
       <header class="section-head reveal">
         <p class="eyebrow">You decide what it handles</p>
@@ -287,13 +310,18 @@
   </section>
 
   <!-- FAQ — answers confirmed by the owner -->
-  <section class="section" aria-labelledby="faq-title">
+  <section class="section section--alt" aria-labelledby="faq-title">
     <div class="container">
       <header class="section-head reveal">
         <p class="eyebrow">FAQ</p>
         <h2 class="section-title" id="faq-title">Voice AI questions.</h2>
       </header>
       <div class="faq reveal">
+        <details class="faq__item">
+          <summary>What if my customers don’t want to talk to an AI?</summary>
+          <p>They don’t have to. When someone calls for a tow, your agent asks: “I can text you an instant dispatch form, or we can continue here. What would you like to do?” About half of callers choose the form. The rest finish booking right on the call. Either way, the job lands with your next driver.</p>
+          <p>Texting the form uses Web Forms Pro, a $97/mo add-on with Voice AI Pro.</p>
+        </details>
         <details class="faq__item">
           <summary>How does Voice AI price a tow?</summary>
           <p>SmartQuote prices each call from your real rate sheet: mileage, fees, vehicle class and time of day. The quote is texted to the customer automatically. Your driver gets nothing until the customer replies YES.</p>

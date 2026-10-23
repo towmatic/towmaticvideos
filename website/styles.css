@@ -1118,6 +1118,7 @@ main:focus { outline: none; }
   max-width: 32rem;
   color: var(--color-text-muted);
 }
+.feature__note { margin-top: 12px; font-size: var(--fs-small); color: var(--color-text-muted); }
 
 @media (min-width: 960px) {
   .feature__grid { grid-template-columns: 1fr 1fr; gap: 80px; }
