@@ -1406,6 +1406,17 @@ main:focus { outline: none; }
 }
 .plan__per { color: var(--color-text-muted); }
 .plan__setup { font-size: 0.9375rem; color: var(--color-text-muted); }
+.plan__credit {
+  justify-self: start;
+  margin-top: 6px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 45%, transparent);
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+.plan__credit b { color: var(--color-text); font-weight: 700; }
 .plan__setup b { color: var(--color-text); font-weight: 600; }
 .plan s { text-decoration-thickness: 1px; }
 

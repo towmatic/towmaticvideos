@@ -52,7 +52,7 @@
     },
     {
       "@type": "Offer",
-      "name": "Web Forms Pro",
+      "name": "Instant Dispatch Forms",
       "price": "397",
       "priceCurrency": "USD",
       "url": "https://towmatic.ai/pricing",
@@ -87,7 +87,7 @@
       "name": "How does usage billing work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost."
+        "text": "Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Instant Dispatch Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost."
       }
     },
     {
@@ -226,7 +226,7 @@
 
   <!--
     Prices confirmed by the owner (September 2026).
-    Voice AI Pro and Web Forms Pro have no setup fee. Web Forms Pro is a $97/mo add-on with Voice AI Pro (regularly $397/mo). The $30/month communication credit is per account, not per product.
+    Voice AI Pro and Instant Dispatch Forms have no setup fee. Instant Dispatch Forms is a $97/mo add-on with Voice AI Pro (regularly $397/mo). The $30/month communication credit is per account, not per product.
     Towmatic Local: $197/mo add-on to any plan (not sold on its own), no setup fee, no other charges.
   -->
 
@@ -240,11 +240,12 @@
           <div class="plan__pricing">
             <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
             <p class="plan__setup"><b>No setup fee</b></p>
+            <p class="plan__credit">Includes a <b>$30/mo</b> communication credit</p>
           </div>
           <div class="plan__bonus">
             <span class="plan__bonus-badge">$97</span>
             <div class="plan__bonus-copy">
-              <p class="plan__bonus-title">Add Web Forms Pro</p>
+              <p class="plan__bonus-title">Add Instant Dispatch Forms</p>
               <p class="plan__bonus-text"><s>$397/mo</s> Just $97/mo with Voice AI. Save $300 a month on online booking forms, QR codes, SmartLocate, and the option to text callers the form.</p>
             </div>
           </div>
@@ -261,11 +262,12 @@
         </article>
 
         <article class="plan reveal" aria-labelledby="plan-forms">
-          <h2 class="plan__name plan__name--sm" id="plan-forms">Web Forms Pro</h2>
+          <h2 class="plan__name plan__name--sm" id="plan-forms">Instant Dispatch Forms</h2>
           <p class="plan__includes">Customers book by form or QR code. No phone call needed.</p>
           <div class="plan__pricing">
             <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
             <p class="plan__setup"><b>No setup fee</b></p>
+            <p class="plan__credit">Includes a <b>$30/mo</b> communication credit</p>
           </div>
           <ul class="plan__list">
             <li><b>Unlimited bookings.</b> No caps or tiers</li>
@@ -284,6 +286,7 @@
           <div class="plan__pricing">
             <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
             <p class="plan__setup"><b>$1,997</b> one-time setup</p>
+            <p class="plan__credit">Includes a <b>$30/mo</b> communication credit</p>
           </div>
           <ul class="plan__list">
             <li><b>Unlimited bookings.</b> No caps or tiers</li>
@@ -336,7 +339,7 @@
 
       <!-- Monthly cost calculator. Rates: Voice AI approx. $0.20/min; each text $0.016; $30/mo communication credit per account (texts, plus backup texts and calls to drivers).
            Plan option values are price|setup|hasVoice. Towmatic Local is a $197/mo add-on to any plan.
-           Web Forms Pro is a $97/mo add-on for Voice AI Pro only. -->
+           Instant Dispatch Forms is a $97/mo add-on for Voice AI Pro only. -->
       <section class="calc reveal" id="calculator" aria-labelledby="calc-title" data-calc>
         <header class="calc__head">
           <p class="eyebrow">Cost calculator</p>
@@ -348,13 +351,13 @@
               <label for="calc-plan">Plan</label>
               <select id="calc-plan" data-calc-plan>
                 <option value="397|0|1" selected>Voice AI Pro ($397/mo)</option>
-                <option value="397|0|0">Web Forms Pro ($397/mo)</option>
+                <option value="397|0|0">Instant Dispatch Forms ($397/mo)</option>
                 <option value="397|1997|0">Branded Customer App ($397/mo)</option>
               </select>
             </div>
             <label class="calc__check" data-calc-forms-wrap>
               <input type="checkbox" data-calc-forms>
-              <span>Add Web Forms Pro (+$97/mo)</span>
+              <span>Add Instant Dispatch Forms (+$97/mo)</span>
             </label>
             <label class="calc__check">
               <input type="checkbox" data-calc-local>
@@ -390,7 +393,7 @@
           <div class="calc__result" aria-live="polite">
             <dl class="calc__lines">
               <div><dt>Subscription</dt><dd data-out="sub">$397.00</dd></div>
-              <div data-calc-forms-line hidden><dt>Web Forms Pro</dt><dd data-out="forms">$97.00</dd></div>
+              <div data-calc-forms-line hidden><dt>Instant Dispatch Forms</dt><dd data-out="forms">$97.00</dd></div>
               <div data-calc-local-line hidden><dt>Towmatic Local</dt><dd data-out="local">$197.00</dd></div>
               <div data-calc-voice><dt>Voice AI minutes <span data-out="mins">250 min</span></dt><dd data-out="voice">$50.00</dd></div>
               <div><dt>Text messages <span data-out="texts">370 texts</span></dt><dd data-out="textcost">$5.92</dd></div>
@@ -460,7 +463,7 @@
       <div class="faq reveal">
         <details class="faq__item" open>
           <summary>How does usage billing work?</summary>
-          <p>Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Web Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost.</p>
+          <p>Voice AI usage is billed per minute based on actual call duration, approximately $0.20 per minute, a little more or less depending on the call. Every subscription—whether you choose Voice AI, Instant Dispatch Forms, or bundle both—includes $30/month in communication credits. These credits cover text messages, like quotes, booking confirmations and driver dispatch texts. That’s approximately 500-600 dispatches per month included at no extra cost.</p>
         </details>
         <details class="faq__item">
           <summary>Is there a limit on how many calls I get?</summary>

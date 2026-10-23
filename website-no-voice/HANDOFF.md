@@ -180,7 +180,7 @@ Carry every tag over exactly. Each page has:
   (`https://towmatic.ai/towmatic-logo-color.png`) resolve wherever the files are hosted.** Update the paths
   if they are stored elsewhere.
 - JSON-LD structured data:
-  - Homepage: `Organization` and `SoftwareApplication` (Web Forms Pro, Branded Customer App and Towmatic Local, at current prices).
+  - Homepage: `Organization` and `SoftwareApplication` (Instant Dispatch Forms, Branded Customer App and Towmatic Local, at current prices).
   - Pricing: `SoftwareApplication`.
   - Homepage, Web Forms, Branded App, Towmatic Local, Pricing: `FAQPage` built from the visible FAQs. Keep
     it in sync if an FAQ changes.
@@ -213,7 +213,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Hero video plays only on screens 768px and wider without reduced motion, once a source is added.
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
-- Pricing cost calculator (`#calculator` on `/pricing`): plan picker (Web Forms Pro, Branded Customer App), an
+- Pricing cost calculator (`#calculator` on `/pricing`): plan picker (Instant Dispatch Forms, Branded Customer App), an
   "Add Towmatic Local (+$197/mo)" checkbox, and sliders for quotes and booked jobs (start at 180 quotes and 110 jobs). Math: subscription + add-on
   + (quotes + 2 × jobs) × $0.016 − the $30 communication credit (applied to texts, never below $0; driver backup
   texts and calls also use the credit but aren't estimated), with the setup fee shown separately. Keep the rate in
@@ -268,7 +268,7 @@ These are intentional. Build them as shown in the prototype.
   and book a test tow with the online booking form yourself." (The demo is a sandbox dashboard with a test
   booking form; it is not customized per company. The owner is updating the demo separately.)
 - **Branded App goes live in 2–3 weeks** (App Store and Google Play).
-- **Pricing:** two products, Web Forms Pro ($397/mo, no setup fee) and Branded Customer App ($397/mo + $1,997
+- **Pricing:** two products, Instant Dispatch Forms ($397/mo, no setup fee) and Branded Customer App ($397/mo + $1,997
   setup), plus the Towmatic Local add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not
   show them anywhere. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
@@ -292,6 +292,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **Plan renamed:** "Web Forms Pro" is now **Instant Dispatch Forms** everywhere (cards, calculator, add-on, FAQs,
+  structured data). The blog post keeps its original title. Each product card on Pricing shows a highlighted
+  "Includes a $30/mo communication credit" badge under the price (the per-account detail is in the note below the cards).
 - **"Where tow booking is going"** homepage section right after the product tabs: "Your customers already book
   everything else online. Towing is next." with four tiles (Food, Rides, Appointments, and Towing highlighted in
   accent). Framed on how customers already book other services; no statistics.
@@ -313,13 +316,13 @@ These are intentional. Build them as shown in the prototype.
   Towmatic Instant Dispatch Form, five rows that line up across both cards on desktop and stack on phones), and the
   first FAQ on both the Web Forms page and the homepage ("I already have a 'request a tow' form on my website. Why
   would I need this?", a three-paragraph answer).
-- **Free website setup** for Web Forms Pro customers: Towmatic adds the booking form to the customer's website for
+- **Free website setup** for Instant Dispatch Forms customers: Towmatic adds the booking form to the customer's website for
   free, as a "Book a Tow" button that opens the form or the whole form built into their page (their choice), on any
   website. Shown as a "We'll put it on your website for you" section on the Web Forms page, a Web Forms FAQ, a
-  "Free setup on your website" bullet on the Web Forms Pro card, and a line in the homepage Web Forms tab.
+  "Free setup on your website" bullet on the Instant Dispatch Forms card, and a line in the homepage Web Forms tab.
 - **Seven booking forms** grid on the Web Forms page ("A form for every kind of job."): ASAP Tow, ASAP Service,
   Private Property, Fleet/Account, Scheduled, Police Calls, Motor Club. Carried over from the original site's Voice AI
-  call types, with "Transfer to Human" removed. The Web Forms Pro card and the homepage FAQ list the same seven.
+  call types, with "Transfer to Human" removed. The Instant Dispatch Forms card and the homepage FAQ list the same seven.
 - **Real truck photos** (Midwest Tow & Recovery, a client, approved): homepage "In the real world" section and the
   Web Forms "Put it everywhere" section.
 - **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile

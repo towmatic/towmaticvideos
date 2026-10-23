@@ -204,7 +204,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Contact form validation (section 7).
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
   length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox and, for Voice AI Pro only, an
-  "Add Web Forms Pro (+$97/mo)" checkbox (hidden for plans without Voice AI). Plans: Voice AI Pro, Web Forms Pro,
+  "Add Instant Dispatch Forms (+$97/mo)" checkbox (hidden for plans without Voice AI). Plans: Voice AI Pro, Instant Dispatch Forms,
   Branded Customer App. Math: subscription + add-ons + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 communication credit (applied to texts, never below $0; driver backup texts and calls also use
   the credit but aren't estimated), with the setup fee shown separately. Voice AI lines
@@ -258,10 +258,10 @@ These are intentional. Build them as shown in the prototype.
   sandbox dashboard with a callable AI agent and a test booking form; it is not customized per company.)
 - **"Play sample call" buttons removed**; the Voice AI page links to the interactive demo instead.
 - **Branded App goes live in 2–3 weeks** (App Store and Google Play).
-- **Pricing:** three products only: Voice AI Pro, Web Forms Pro and Branded Customer App, plus the Towmatic Local
+- **Pricing:** three products only: Voice AI Pro, Instant Dispatch Forms and Branded Customer App, plus the Towmatic Local
   add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not show them anywhere (cards,
-  calculator, structured data or copy). Web Forms Pro is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
-  setup fee on Voice AI Pro or Web Forms Pro. The $30/month communication credit is per account.
+  calculator, structured data or copy). Instant Dispatch Forms is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
+  setup fee on Voice AI Pro or Instant Dispatch Forms. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
   1,000 jobs" became "thousands of jobs".
@@ -286,6 +286,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **Plan renamed:** "Web Forms Pro" is now **Instant Dispatch Forms** everywhere (cards, calculator, add-on, FAQs,
+  structured data). The blog post keeps its original title. Each product card on Pricing shows a highlighted
+  "Includes a $30/mo communication credit" badge under the price (the per-account detail is in the note below the cards).
 - **"Where tow booking is going"** homepage section right after the product tabs: "Your customers already book
   everything else online. Towing is next." with four tiles (Food, Rides, Appointments, and Towing highlighted in
   accent). Framed on how customers already book other services; no statistics.
@@ -296,7 +299,7 @@ These are intentional. Build them as shown in the prototype.
   can text you an instant dispatch form, or we can continue here. What would you like to do?" Owner data: about half
   of callers choose the form and the rest finish booking on the call. Shown as a "Their choice" section on the Voice AI
   page (`va-choice.webp`), a Voice AI and homepage FAQ ("What if my customers don't want to talk to an AI?"), a line in
-  the homepage Voice AI tab, and the Web Forms Pro add-on box on Pricing. It uses Web Forms Pro ($97/mo add-on). Always
+  the homepage Voice AI tab, and the Instant Dispatch Forms add-on box on Pricing. It uses Instant Dispatch Forms ($97/mo add-on). Always
   say the other half finish booking on the call, so it never reads as callers hanging up.
 - **Dispatch rules by truck type:** owners set each truck to take light, medium and heavy duty jobs **Always, Only
   If Needed, or Never** (use these exact setting names). Shown in a homepage FAQ and a Web Forms FAQ ("Can I control
