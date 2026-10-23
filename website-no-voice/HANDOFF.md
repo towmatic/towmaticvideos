@@ -292,6 +292,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **"Where tow booking is going"** homepage section right after the product tabs: "Your customers already book
+  everything else online. Towing is next." with four tiles (Food, Rides, Appointments, and Towing highlighted in
+  accent). Framed on how customers already book other services; no statistics.
 - **SmartQuote copy stays at the category level** (owner's choice, so competitors don't get a feature list): "your own
   rate sheet and the rules you set, from vehicle type and distance to the equipment the job needs and the time of
   day." Don't list specific rules (skates, dollies, mileage from the lot, etc.); the interactive demo shows them.
