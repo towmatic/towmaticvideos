@@ -286,6 +286,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **SmartQuote copy stays at the category level** (owner's choice, so competitors don't get a feature list): "your own
+  rate sheet and the rules you set, from vehicle type and distance to the equipment the job needs and the time of
+  day." Don't list specific rules (skates, dollies, mileage from the lot, etc.); the interactive demo shows them.
 - **"Not everyone wants to talk to AI" (caller's choice):** when someone calls for a tow, the Voice AI agent asks "I
   can text you an instant dispatch form, or we can continue here. What would you like to do?" Owner data: about half
   of callers choose the form and the rest finish booking on the call. Shown as a "Their choice" section on the Voice AI

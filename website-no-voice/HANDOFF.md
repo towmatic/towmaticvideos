@@ -292,6 +292,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **SmartQuote copy stays at the category level** (owner's choice, so competitors don't get a feature list): "your own
+  rate sheet and the rules you set, from vehicle type and distance to the equipment the job needs and the time of
+  day." Don't list specific rules (skates, dollies, mileage from the lot, etc.); the interactive demo shows them.
 - **Dispatch rules by truck type:** owners set each truck to take light, medium and heavy duty jobs **Always, Only
   If Needed, or Never** (use these exact setting names). Shown in a homepage FAQ and a Web Forms FAQ ("Can I control
   which trucks get which jobs?"), the homepage SmartDispatch tab, the Web Forms dispatch section and the Pricing
