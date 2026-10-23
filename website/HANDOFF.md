@@ -203,9 +203,9 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
 - Homepage platform tabs: click or arrow keys, Home/End.
 - Contact form validation (section 7).
 - Pricing cost calculator (`#calculator` on `/pricing`): plan picker plus sliders for calls, average call
-  length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox and, for Voice AI Pro only, an
-  "Add Instant Dispatch Forms (+$97/mo)" checkbox (hidden for plans without Voice AI). Plans: Voice AI Pro, Instant Dispatch Forms,
-  Instant Dispatch App. Math: subscription + add-ons + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
+  length, quotes and booked jobs, plus an "Add Towmatic Local (+$197/mo)" checkbox and, for Instant Dispatch Forms only, an
+  "Add Voice AI (+$97/mo)" checkbox (checked by default; it reveals the call sliders). Plans: Instant Dispatch Forms
+  (default), Voice AI Pro on its own, Instant Dispatch App. Math: subscription + add-ons + calls × minutes × $0.20 + (quotes + 2 × jobs) × $0.016
   − the $30 communication credit (applied to texts, never below $0; driver backup texts and calls also use
   the credit but aren't estimated), with the setup fee shown separately. Voice AI lines
   only appear for Voice AI Pro. Keep the rates in `main.js` in sync with billing.
@@ -258,9 +258,10 @@ These are intentional. Build them as shown in the prototype.
   sandbox dashboard with a callable AI agent and a test booking form; it is not customized per company.)
 - **"Play sample call" buttons removed**; the Voice AI page links to the interactive demo instead.
 - **Instant Dispatch App goes live in 2–3 weeks** (App Store and Google Play).
-- **Pricing:** three products only: Voice AI Pro, Instant Dispatch Forms and Instant Dispatch App, plus the Towmatic Local
-  add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not show them anywhere (cards,
-  calculator, structured data or copy). Instant Dispatch Forms is a $97/mo add-on with Voice AI Pro (shown as ~~$397/mo~~, "save $300 a month"); it is no longer free. No
+- **Pricing (forms first):** Instant Dispatch Forms is the lead plan at $397/mo, with Voice AI as a $97/mo add-on
+  (shown as ~~$397/mo~~). Voice AI Pro is also sold on its own at $397/mo, with the line "Or add it to Instant Dispatch
+  Forms for just $97/mo." Then the Instant Dispatch App and the Towmatic Local add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not show them anywhere (cards,
+  calculator, structured data or copy). No
   setup fee on Voice AI Pro or Instant Dispatch Forms. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
   described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
@@ -302,7 +303,7 @@ These are intentional. Build them as shown in the prototype.
   can text you an instant dispatch form, or we can continue here. What would you like to do?" Owner data: about half
   of callers choose the form and the rest finish booking on the call. Shown as a "Their choice" section on the Voice AI
   page (`va-choice.webp`), a Voice AI and homepage FAQ ("What if my customers don't want to talk to an AI?"), a line in
-  the homepage Voice AI tab, and the Instant Dispatch Forms add-on box on Pricing. It uses Instant Dispatch Forms ($97/mo add-on). Always
+  the homepage Voice AI tab, and the Voice AI add-on box on Pricing. It works when Voice AI is paired with Instant Dispatch Forms (Voice AI is $97/mo with Forms). Always
   say the other half finish booking on the call, so it never reads as callers hanging up.
 - **Dispatch rules by truck type:** owners set each truck to take light, medium and heavy duty jobs **Always, Only
   If Needed, or Never** (use these exact setting names). Shown in a homepage FAQ and a Web Forms FAQ ("Can I control

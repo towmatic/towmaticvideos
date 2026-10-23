@@ -226,7 +226,8 @@
 
   <!--
     Prices confirmed by the owner (September 2026).
-    Voice AI Pro and Instant Dispatch Forms have no setup fee. Instant Dispatch Forms is a $97/mo add-on with Voice AI Pro (regularly $397/mo). The $30/month communication credit is per account, not per product.
+    Instant Dispatch Forms and Voice AI Pro have no setup fee. Forms-first pricing: Instant Dispatch Forms $397/mo; Voice AI is a
+    $97/mo add-on with Forms (regularly $397/mo); Voice AI Pro on its own is $397/mo. The $30/month communication credit is per account, not per product.
     Towmatic Local: $197/mo add-on to any plan (not sold on its own), no setup fee, no other charges.
   -->
 
@@ -234,9 +235,9 @@
   <section class="section section--flush-top" aria-label="Plans">
     <div class="container">
       <div class="plans plans--single">
-        <article class="plan reveal" aria-labelledby="plan-voice">
-          <h2 class="plan__name plan__name--sm" id="plan-voice">Voice AI Pro</h2>
-          <p class="plan__includes">An AI dispatcher that answers every call, quotes and books the job.</p>
+        <article class="plan reveal" aria-labelledby="plan-forms">
+          <h2 class="plan__name plan__name--sm" id="plan-forms">Instant Dispatch Forms</h2>
+          <p class="plan__includes">Customers book by form or QR code. No phone call needed.</p>
           <div class="plan__pricing">
             <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
             <p class="plan__setup"><b>No setup fee</b></p>
@@ -245,29 +246,9 @@
           <div class="plan__bonus">
             <span class="plan__bonus-badge">$97</span>
             <div class="plan__bonus-copy">
-              <p class="plan__bonus-title">Add Instant Dispatch Forms</p>
-              <p class="plan__bonus-text"><s>$397/mo</s> Just $97/mo with Voice AI. Save $300 a month on online booking forms, QR codes, SmartLocate, and the option to text callers the form.</p>
+              <p class="plan__bonus-title">Add Voice AI</p>
+              <p class="plan__bonus-text"><s>$397/mo</s> Just $97/mo with Instant Dispatch Forms. An AI dispatcher that answers every call, books the job, and can text callers your form.</p>
             </div>
-          </div>
-          <ul class="plan__list">
-            <li><b>Unlimited calls and bookings.</b> No caps or tiers</li>
-            <li>AI voice agent, 24/7, including Spanish</li>
-            <li>SmartQuote™ from your rate sheet</li>
-            <li>SmartDispatch™ and SmartConfirm™</li>
-            <li>SmartLocate™ GPS sharing</li>
-            <li>Call logs, transcripts and recordings</li>
-          </ul>
-          <a class="btn btn--secondary plan__cta" href="/signup">Get started</a>
-          <a class="link-more" href="ai-voice-agent-tow-dispatch.html">Learn more <span aria-hidden="true">→</span></a>
-        </article>
-
-        <article class="plan reveal" aria-labelledby="plan-forms">
-          <h2 class="plan__name plan__name--sm" id="plan-forms">Instant Dispatch Forms</h2>
-          <p class="plan__includes">Customers book by form or QR code. No phone call needed.</p>
-          <div class="plan__pricing">
-            <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
-            <p class="plan__setup"><b>No setup fee</b></p>
-            <p class="plan__credit">Includes a <b>$30/mo</b> communication credit</p>
           </div>
           <ul class="plan__list">
             <li><b>Unlimited bookings.</b> No caps or tiers</li>
@@ -278,6 +259,27 @@
           </ul>
           <a class="btn btn--secondary plan__cta" href="/signup">Get started</a>
           <a class="link-more" href="web-forms.html">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="plan reveal" aria-labelledby="plan-voice">
+          <h2 class="plan__name plan__name--sm" id="plan-voice">Voice AI Pro</h2>
+          <p class="plan__includes">Voice AI on its own: an AI dispatcher that answers every call, quotes and books the job.</p>
+          <div class="plan__pricing">
+            <p class="plan__price"><span class="plan__amount">$397</span><span class="plan__per">/month</span></p>
+            <p class="plan__setup"><b>No setup fee</b></p>
+            <p class="plan__credit">Includes a <b>$30/mo</b> communication credit</p>
+          </div>
+          <p class="plan__pair">Or add it to Instant Dispatch Forms for just <b>$97/mo</b>.</p>
+          <ul class="plan__list">
+            <li><b>Unlimited calls and bookings.</b> No caps or tiers</li>
+            <li>AI voice agent, 24/7, including Spanish</li>
+            <li>SmartQuote™ from your rate sheet</li>
+            <li>SmartDispatch™ and SmartConfirm™</li>
+            <li>SmartLocate™ GPS sharing</li>
+            <li>Call logs, transcripts and recordings</li>
+          </ul>
+          <a class="btn btn--secondary plan__cta" href="/signup">Get started</a>
+          <a class="link-more" href="ai-voice-agent-tow-dispatch.html">Learn more <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="plan reveal" aria-labelledby="plan-app">
@@ -338,8 +340,7 @@
       </ul>
 
       <!-- Monthly cost calculator. Rates: Voice AI approx. $0.20/min; each text $0.016; $30/mo communication credit per account (texts, plus backup texts and calls to drivers).
-           Plan option values are price|setup|hasVoice. Towmatic Local is a $197/mo add-on to any plan.
-           Instant Dispatch Forms is a $97/mo add-on for Voice AI Pro only. -->
+           Plan option values are price|setup|hasVoice|canAddVoice. Voice AI is a $97/mo add-on for Instant Dispatch Forms only. -->
       <section class="calc reveal" id="calculator" aria-labelledby="calc-title" data-calc>
         <header class="calc__head">
           <p class="eyebrow">Cost calculator</p>
@@ -350,14 +351,14 @@
             <div class="calc__field">
               <label for="calc-plan">Plan</label>
               <select id="calc-plan" data-calc-plan>
-                <option value="397|0|1" selected>Voice AI Pro ($397/mo)</option>
-                <option value="397|0|0">Instant Dispatch Forms ($397/mo)</option>
-                <option value="397|1997|0">Instant Dispatch App ($397/mo)</option>
+                <option value="397|0|0|1" selected>Instant Dispatch Forms ($397/mo)</option>
+                <option value="397|0|1|0">Voice AI Pro on its own ($397/mo)</option>
+                <option value="397|1997|0|0">Instant Dispatch App ($397/mo)</option>
               </select>
             </div>
-            <label class="calc__check" data-calc-forms-wrap>
-              <input type="checkbox" data-calc-forms>
-              <span>Add Instant Dispatch Forms (+$97/mo)</span>
+            <label class="calc__check" data-calc-addvoice-wrap>
+              <input type="checkbox" data-calc-addvoice checked>
+              <span>Add Voice AI (+$97/mo)</span>
             </label>
             <label class="calc__check">
               <input type="checkbox" data-calc-local>
@@ -393,7 +394,7 @@
           <div class="calc__result" aria-live="polite">
             <dl class="calc__lines">
               <div><dt>Subscription</dt><dd data-out="sub">$397.00</dd></div>
-              <div data-calc-forms-line hidden><dt>Instant Dispatch Forms</dt><dd data-out="forms">$97.00</dd></div>
+              <div data-calc-addvoice-line><dt>Voice AI add-on</dt><dd>$97.00</dd></div>
               <div data-calc-local-line hidden><dt>Towmatic Local</dt><dd data-out="local">$197.00</dd></div>
               <div data-calc-voice><dt>Voice AI minutes <span data-out="mins">250 min</span></dt><dd data-out="voice">$50.00</dd></div>
               <div><dt>Text messages <span data-out="texts">370 texts</span></dt><dd data-out="textcost">$5.92</dd></div>
@@ -401,7 +402,7 @@
             </dl>
             <div class="calc__total">
               <p class="calc__total-label">Estimated monthly total</p>
-              <p class="calc__total-amount" data-out="total">$447.00</p>
+              <p class="calc__total-amount" data-out="total">$544.00</p>
             </div>
             <p class="calc__setup" data-out="setup">No setup fee</p>
             <div class="calc__revenue">
@@ -425,9 +426,9 @@
           <div class="compare__result" aria-live="polite">
             <div class="compare__bars">
               <div class="compare__bar"><span class="compare__label" data-role-name>Full-time dispatcher</span><span class="compare__track"><i data-bar="human"></i></span><span class="compare__value" data-out="human">$4,000</span></div>
-              <div class="compare__bar compare__bar--us"><span class="compare__label">Towmatic</span><span class="compare__track"><i data-bar="us"></i></span><span class="compare__value" data-out="us">$447</span></div>
+              <div class="compare__bar compare__bar--us"><span class="compare__label">Towmatic</span><span class="compare__track"><i data-bar="us"></i></span><span class="compare__value" data-out="us">$544</span></div>
             </div>
-            <p class="compare__verdict" data-out="verdict">You’d save <b>$3,553 a month</b>, about $42,636 a year.</p>
+            <p class="compare__verdict" data-out="verdict">You’d save <b>$3,456 a month</b>, about $41,472 a year.</p>
           </div>
         </div>
         <p class="calc__note">Estimate only. Voice AI minutes run approximately $0.20 per minute and are billed by the second, so a 1 minute 23 second call is charged as exactly that, never rounded up to 2 minutes. Your $30 monthly credit covers text messages, plus backup texts and calls to drivers who aren’t signed into the Towmatic app. Those backups aren’t part of this estimate, so they use some of the credit shown.</p>

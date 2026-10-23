@@ -188,16 +188,17 @@
   /* ---------- Pricing: monthly cost calculator ----------
      Voice AI ≈ $0.20/min. Each text $0.016: 1 per quote, 2 per booked job.
      The $30 monthly credit covers texts (and backup texts/calls to drivers, not estimated here).
-     Towmatic Local is a $197/mo add-on to any plan. Web Forms Pro is a $97/mo add-on for Voice AI Pro. */
+     Towmatic Local is a $197/mo add-on to any plan. Voice AI is a $97/mo add-on for Instant Dispatch Forms
+     (Voice AI Pro on its own is $397/mo). */
   document.querySelectorAll('[data-calc]').forEach(function (calc) {
-    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30, LOCAL = 197, FORMS = 97;
+    var RATE_MIN = 0.20, RATE_TEXT = 0.016, TEXT_CREDIT = 30, LOCAL = 197, VOICE_ADDON = 97;
     var plan = calc.querySelector('[data-calc-plan]');
     var local = calc.querySelector('[data-calc-local]');
     var localLine = calc.querySelector('[data-calc-local-line]');
-    var forms = calc.querySelector('[data-calc-forms]');
-    var formsWrap = calc.querySelector('[data-calc-forms-wrap]');
-    var formsLine = calc.querySelector('[data-calc-forms-line]');
-    var formsWanted = false;
+    var addVoice = calc.querySelector('[data-calc-addvoice]');
+    var addVoiceWrap = calc.querySelector('[data-calc-addvoice-wrap]');
+    var addVoiceLine = calc.querySelector('[data-calc-addvoice-line]');
+    var addVoiceWanted = addVoice.checked;
     var inputs = {};
     calc.querySelectorAll('[data-calc-input]').forEach(function (el) { inputs[el.getAttribute('data-calc-input')] = el; });
     var out = {};
@@ -208,13 +209,14 @@
 
     function update() {
       var parts = plan.value.split('|');
-      var sub = +parts[0], setup = +parts[1], hasVoice = parts[2] === '1';
+      var sub = +parts[0], setup = +parts[1], canAddVoice = parts[3] === '1';
       localLine.hidden = !local.checked;
       var localCost = local.checked ? LOCAL : 0;
-      formsWrap.hidden = !hasVoice;
-      forms.checked = hasVoice && formsWanted;
-      formsLine.hidden = !forms.checked;
-      var formsCost = forms.checked ? FORMS : 0;
+      addVoiceWrap.hidden = !canAddVoice;
+      addVoice.checked = canAddVoice && addVoiceWanted;
+      addVoiceLine.hidden = !addVoice.checked;
+      var addVoiceCost = addVoice.checked ? VOICE_ADDON : 0;
+      var hasVoice = parts[2] === '1' || addVoice.checked;
       var calls = +inputs.calls.value, length = +inputs.length.value;
       var quotes = +inputs.quotes.value, jobs = +inputs.jobs.value;
 
@@ -224,7 +226,7 @@
       var texts = quotes + jobs * 2;
       var textCost = texts * RATE_TEXT;
       var credit = Math.min(textCost, TEXT_CREDIT);
-      var total = sub + localCost + formsCost + voice + textCost - credit;
+      var total = sub + localCost + addVoiceCost + voice + textCost - credit;
 
       out.calls.textContent = whole(calls);
       out.length.textContent = length + ' min';
@@ -288,7 +290,7 @@
     if (ticketInput) ticketInput.addEventListener('input', update);
     plan.addEventListener('change', update);
     local.addEventListener('change', update);
-    forms.addEventListener('change', function () { formsWanted = forms.checked; update(); });
+    addVoice.addEventListener('change', function () { addVoiceWanted = addVoice.checked; update(); });
     Object.keys(inputs).forEach(function (k) { inputs[k].addEventListener('input', update); });
     update();
   });
