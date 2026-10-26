@@ -360,6 +360,18 @@ main:focus { outline: none; }
 }
 .site-nav__actions .nav-link { margin-right: 12px; }
 
+/* Login button next to the hamburger (phones and tablets only) */
+.nav-login { margin-left: auto; }
+.nav-login + .nav-toggle { margin-left: 0; }
+@media (max-width: 1079px) {
+  /* Only the logo, Login and the menu button show here, so a tighter gap keeps them on one line */
+  .site-nav__inner { gap: 12px; }
+}
+@media (max-width: 374px) {
+  .logo__img { height: 30px; }
+  .nav-login { padding-inline: 12px; }
+}
+
 /* Hamburger */
 .nav-toggle {
   display: grid;
@@ -452,6 +464,7 @@ main:focus { outline: none; }
   .site-nav__primary,
   .site-nav__actions { display: flex; }
   .nav-toggle,
+  .nav-login,
   .mobile-menu { display: none !important; }
 }
 
@@ -2250,4 +2263,20 @@ main:focus { outline: none; }
 @media (max-width: 639px) {
   .webshow__stage { padding: 0 18% 18% 0; }
   .webshow__phone { width: 34%; border-width: 4px; border-radius: 18px; }
+}
+
+/* Smallest phones (under 375px): let the calculator columns shrink instead of overflowing,
+   and keep the booking-form tiles inside the screen */
+.calc,
+.compare { grid-template-columns: minmax(0, 1fr); }
+.calc > *,
+.compare > * { min-width: 0; }
+.calc__body,
+.calc__inputs,
+.calc__field,
+.compare__inputs { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 374px) {
+  .calc { padding-inline: 16px; }
+  .type-grid li { padding: 14px; font-size: 1.25rem; }
+  .plan__cta { height: auto; min-height: var(--button-height); padding-block: 10px; white-space: normal; text-align: center; }
 }

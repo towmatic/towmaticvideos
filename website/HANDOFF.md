@@ -290,6 +290,9 @@ These are intentional. Build them as shown in the prototype.
 
 - **No "live the same day" claim** for Instant Dispatch Forms anywhere (removed at the owner's request).
 - **Start Free Trial** buttons go to `/signup`.
+- **Login button on phones and tablets:** a small outlined "Login" button sits next to the menu button in the top bar on
+  every page (under 1080px wide), linking to `/login` (https://towmatic.ai/login), so returning clients don't have to
+  open the menu. On desktop the existing Login link in the nav is used instead.
 - **Instant Dispatch Websites** (new product, new page `/instant-dispatch-websites`, 5th item in the Products menu and
   footer): websites designed to convert, built around the Instant Dispatch Form. **$500 one-time** to rebuild an
   existing site, **$750 one-time** for a brand-new one. Requires a Towmatic plan. Live in 7 days. The customer picks
