@@ -256,7 +256,7 @@ These are intentional. Build them as shown in the prototype.
   operators." · "Month-to-month. No contracts."
 - **Your dashboard section** (replaces Real Results): "See exactly what Towmatic brings in." with a panel
   listing what's tracked: bookings by source, quotes, call history, revenue by channel. No numbers.
-- **Testimonial** is attributed to **Overland Tow Service**, Towmatic client.
+- **No testimonials.** The owner removed the homepage testimonial; do not add any quotes or client names.
 - **Homepage FAQ** added (seven owner-supplied questions).
 - **Closing section** on every page: "Take Towmatic for a test drive." / "Click around the full dashboard,
   call our AI agent to book a test tow, and try the online booking form yourself." (The demo is a
@@ -376,7 +376,6 @@ live site or older copy:
 
 - All prices and setup fees on the Pricing page.
 - The FAQ answers on every page.
-- Overland Tow Service approved being quoted by name.
 
 ---
 
