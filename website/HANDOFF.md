@@ -212,8 +212,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
   − the $30 communication credit (applied to texts, never below $0; driver backup texts and calls also use
   the credit but aren't estimated), with the setup fee shown separately. Voice AI lines
   only appear for Voice AI Pro. Keep the rates in `main.js` in sync with billing.
-  An **Average ticket price** box (example $175, from the real results: $28,488 ÷ 164 jobs) adds
-  "Revenue from booked jobs" (jobs booked × ticket).
+  An **Average ticket price** box (example $175) adds "Estimated value of jobs booked" (jobs booked × ticket).
   Below it, **Compare to a human dispatcher**: a Part-time / Full-time toggle and a monthly cost box (example
   starting amounts $2,000 and $4,000; each option remembers its own value). Shows two bars and "You'd save
   $X a month, about $Y a year", or says plainly when Towmatic would cost more.
@@ -250,10 +249,13 @@ These are intentional. Build them as shown in the prototype.
 
 - **Product visuals are realistic AI images**, not HTML/CSS mockups (homepage tabs and all three product pages).
 - **Voice AI page URL** is `/ai-voice-agent-tow-dispatch`, not `/voice-ai`.
-- **Hero proof strip:** "$28,488 captured for one client in one month, nights and weekends only" ·
-  "Thousands of tows booked for clients" · "Month-to-month. No contracts."
-- **Real Results panel:** $28,488 total, 164 jobs, nights and weekends only. Voice AI 85 jobs / 52% /
-  $14,799; Online Form 69 / 42% / $11,895; App 10 / 6% / $1,794.
+- **No results figures on this site.** The owner removed every dollar amount and job count claim
+  ($28,488, 164 jobs, "thousands of tows", "thousands of jobs"). Do not add results, revenue or volume
+  claims anywhere, including from the live site.
+- **Hero strip:** "24/7 · Calls, online bookings and app requests" · "Built by tow operators. For tow
+  operators." · "Month-to-month. No contracts."
+- **Your dashboard section** (replaces Real Results): "See exactly what Towmatic brings in." with a panel
+  listing what's tracked: bookings by source, quotes, call history, revenue by channel. No numbers.
 - **Testimonial** is attributed to **Overland Tow Service**, Towmatic client.
 - **Homepage FAQ** added (seven owner-supplied questions).
 - **Closing section** on every page: "Take Towmatic for a test drive." / "Click around the full dashboard,
@@ -267,8 +269,8 @@ These are intentional. Build them as shown in the prototype.
   calculator, structured data or copy). No
   setup fee on Voice AI Pro or Instant Dispatch Forms. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
-  described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
-  1,000 jobs" became "thousands of jobs".
+  described as a push notification in the Towmatic app (text or phone call as the fallback), and the
+  job-count claims were removed.
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
 - **Footer app badges:** "Get the Towmatic app for owners and drivers" with the App Store and Google Play badges,
   40px tall, on every page. **They are not linked to the store listings on purpose (owner's choice). Do not add
