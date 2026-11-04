@@ -184,7 +184,7 @@ Carry every tag over exactly. Each page has:
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
 | `/native-app` | Instant Dispatch App: Your Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
-| `/instant-dispatch-websites` | Tow Company Websites Built to Book More Tows \| Towmatic | Instant Dispatch Websites put your booking form front and center, so more visitors become booked tows, day or night. Live in 7 days once we have your content. One-time fee with any Towmatic plan. |
+| `/instant-dispatch-websites` | Tow Company Websites Built to Book More Tows \| Towmatic | Instant Dispatch Websites put your booking form front and center, so more visitors become booked tows. Live in 7 days once we have your content. One-time fee with any Towmatic plan. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for Voice AI, online booking forms and your own branded app. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about AI dispatch for your tow company. Sales, customer service and partnership questions. |
 | `/blog` | Towmatic Blog \| Insights from Inside the Towing Industry | Real talk about AI dispatch, towing automation and running a tow company, from tow operators who run tow companies themselves. |
@@ -350,6 +350,8 @@ live site or older copy:
 
 - No absolutes about calls ("answers every call", "never misses a call"), and **no "24/7" anywhere** (the owner
   removed it). The Voice AI menu line is "An AI dispatcher for your calls."
+- No around-the-clock promises: no "around the clock", "any time of day", "day or night" or "even at 3AM"
+  about Towmatic. Describing the owner's 3 AM problem in the blog posts is fine.
 - "Unlimited calls, no caps. You pay only for minutes used." wherever unlimited calls are mentioned.
 - "In our call data, about half of callers choose the form."
 - "Natural-sounding AI built for towing" (not "trained on towing").
