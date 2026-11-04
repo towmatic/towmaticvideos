@@ -196,11 +196,11 @@ Carry every tag over exactly. Each page has:
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
 | `/native-app` | Instant Dispatch App: Your Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
-| `/instant-dispatch-websites` | Tow Company Websites Built to Book More Tows \| Towmatic | Instant Dispatch Websites put your booking form front and center, so more visitors become booked tows, day or night. Live in 7 days. One-time fee with any Towmatic plan. |
+| `/instant-dispatch-websites` | Tow Company Websites Built to Book More Tows \| Towmatic | Instant Dispatch Websites put your booking form front and center, so more visitors become booked tows, day or night. Live in 7 days once we have your content. One-time fee with any Towmatic plan. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for online booking forms and your own branded app, with unlimited bookings. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about online booking and automatic dispatch for your tow company. Sales, customer service and partnership questions. |
-| `/blog` | Towmatic Blog \| Insights from Inside the Towing Industry | Real talk about online booking, towing automation and running a tow company, from operators with 90+ years of combined experience. |
-| `/blog/book-tow-jobs-in-10-seconds` | Book a Tow in 10 Seconds — How Web Forms & QR Codes Change Towing \| Towmatic Blog | (kept from the live post) Customers no longer want to call. Learn how QR-code-driven web forms let drivers book a tow in under 10 seconds — and why partner locations love them. |
+| `/blog` | Towmatic Blog \| Insights from Inside the Towing Industry | Real talk about online booking, towing automation and running a tow company, from tow operators who run tow companies themselves. |
+| `/blog/book-tow-jobs-in-10-seconds` | Book a Tow in Seconds — How Web Forms & QR Codes Change Towing \| Towmatic Blog | Customers no longer want to call. Learn how QR-code-driven web forms let customers book a tow in seconds — and why partner locations love them. |
 
 **`sitemap.xml`** in this folder lists all 18 live URLs, including the pages kept as is. Replace the live
 sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.txt` also points to
@@ -270,7 +270,7 @@ These are intentional. Build them as shown in the prototype.
 - **Closing section** on every page: "Take Towmatic for a test drive." / "Click around the full dashboard
   and book a test tow with the online booking form yourself." (The demo is a sandbox dashboard with a test
   booking form; it is not customized per company. The owner is updating the demo separately.)
-- **Instant Dispatch App goes live in 2–3 weeks** (App Store and Google Play).
+- **Instant Dispatch App is typically live in 2–3 weeks**, including App Store and Google Play review.
 - **Pricing:** two products, Instant Dispatch Forms ($397/mo, no setup fee) and Instant Dispatch App ($397/mo + $1,997
   setup), plus the Towmatic Local add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not
   show them anywhere. The $30/month communication credit is per account.
@@ -300,7 +300,7 @@ These are intentional. Build them as shown in the prototype.
   open the menu. On desktop the existing Login link in the nav is used instead.
 - **Instant Dispatch Websites** (new product, new page `/instant-dispatch-websites`, 5th item in the Products menu and
   footer): websites designed to convert, built around the Instant Dispatch Form. **$500 one-time** to rebuild an
-  existing site, **$750 one-time** for a brand-new one (adding the booking button to a current site stays free). Requires a Towmatic plan. Live in 7 days. The customer picks
+  existing site, **$750 one-time** for a brand-new one (adding the booking button to a current site stays free). Requires a Towmatic plan. Live in 7 days once we have the customer's content. The customer picks
   their own hosting and pays the host directly. Showcase: screenshots of protowllc.com (Pro-Tow, the owner's company).
   Also a wide card in the Pricing "Grow your business" section ("Get found. Get booked.") and a link from the Web Forms
   "Put it everywhere" section. Always lead with the conversion angle: built to turn visitors into booked tows.
@@ -348,6 +348,26 @@ These are intentional. Build them as shown in the prototype.
   Copy rules: present it as a done-for-you service ("we post", "we reply"); don't describe how posts and
   replies are produced; never promise a specific ranking. Benefit copy is framed on Google's own local
   ranking factors (relevance, distance, prominence), with no third-party statistics.
+
+### Claims review (owner-approved wording changes)
+
+The owner reviewed every page for claims that can't be backed up. Use the wording in the prototype, not the
+live site or older copy:
+
+- Timelines: the app is "typically live in 2–3 weeks, including app store review"; websites are "live in 7 days
+  once we have your content".
+- Towmatic Local headline: "Stay visible when someone needs a tow." (no "show up first"). Google ranking copy says
+  only what Google says: reviews and ratings count toward prominence, and keep your profile up to date.
+  Weekly posts mention the company's hours (not "open 24/7" unless it is).
+- Pricing calculator: "Estimated value of jobs booked" (not "revenue"), plus "Example only. Towmatic handles intake
+  and dispatch, not everything a dispatcher does." under the dispatcher savings line.
+- Blog posts are no longer word for word from the live site:
+  - No "90+ years of experience" anywhere.
+  - "Book Jobs in 10 Seconds" now says "in seconds" (the URL stays `/blog/book-tow-jobs-in-10-seconds`).
+  - Removed: "captured perfectly", "every time", "profitable quoting", "don't require retraining drivers",
+    "protecting both the property and the tow company" (now "a time-stamped record"), "one of the last service
+    industries", "that group is growing every year".
+- Legal additions for the Terms & Conditions page: see `TERMS-ADDITIONS.md` (for the owner's attorney to review).
 
 ### Confirmed by the owner
 

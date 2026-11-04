@@ -2377,3 +2377,10 @@ main:focus { outline: none; }
   .type-grid li { padding: 14px; font-size: 1.25rem; }
   .plan__cta { height: auto; min-height: var(--button-height); padding-block: 10px; white-space: normal; text-align: center; }
 }
+
+/* Blog posts: keep the article column inside small phones */
+.prose { grid-template-columns: minmax(0, 1fr); }
+.prose > * { min-width: 0; }
+@media (max-width: 374px) {
+  .post-cta .btn { height: auto; min-height: var(--button-height); padding-block: 10px; white-space: normal; text-align: center; }
+}
