@@ -179,8 +179,8 @@ Carry every tag over exactly. Each page has:
 
 | Page | Title | Description |
 |---|---|---|
-| `/` | Towmatic \| AI Dispatch Automation for Tow Companies | Towmatic answers calls, quotes from your rate sheet and dispatches your next driver in seconds, 24/7. Voice AI, online booking and your own branded app. |
-| `/ai-voice-agent-tow-dispatch` | AI Voice Agent for Tow Dispatch \| Towmatic | Towmatic Voice AI answers every tow call 24/7, quotes from your real rate sheet and books the job. Multilingual, including Spanish. Every call logged. |
+| `/` | Towmatic \| AI Dispatch Automation for Tow Companies | Towmatic answers calls, quotes from your rate sheet and dispatches your next driver in seconds. Voice AI, online booking and your own branded app. |
+| `/ai-voice-agent-tow-dispatch` | AI Voice Agent for Tow Dispatch \| Towmatic | Towmatic Voice AI answers tow calls, quotes from your real rate sheet and books the job. Multilingual, including Spanish. Every call logged. |
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
 | `/native-app` | Instant Dispatch App: Your Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
@@ -252,7 +252,7 @@ These are intentional. Build them as shown in the prototype.
 - **No results figures on this site.** The owner removed every dollar amount and job count claim
   ($28,488, 164 jobs, "thousands of tows", "thousands of jobs"). Do not add results, revenue or volume
   claims anywhere, including from the live site.
-- **Hero strip:** "24/7 · Calls, online bookings and app requests" · "Built by tow operators. For tow
+- **Hero strip:** "Unlimited bookings. No caps or tiers." · "Built by tow operators. For tow
   operators." · "Month-to-month. No contracts."
 - **Your dashboard section** (replaces Real Results): "See exactly what Towmatic brings in." with a panel
   listing what's tracked: bookings by source, quotes, call history, revenue by channel. No numbers.
@@ -348,7 +348,8 @@ These are intentional. Build them as shown in the prototype.
 The owner reviewed every page for claims that can't be backed up. Use the wording in the prototype, not the
 live site or older copy:
 
-- No absolutes about calls: "answers calls, 24/7" (not "answers every call" / "never misses a call").
+- No absolutes about calls ("answers every call", "never misses a call"), and **no "24/7" anywhere** (the owner
+  removed it). The Voice AI menu line is "An AI dispatcher for your calls."
 - "Unlimited calls, no caps. You pay only for minutes used." wherever unlimited calls are mentioned.
 - "In our call data, about half of callers choose the form."
 - "Natural-sounding AI built for towing" (not "trained on towing").
