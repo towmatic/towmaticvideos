@@ -314,8 +314,8 @@ These are intentional. Build them as shown in the prototype.
   rate sheet and the rules you set, from vehicle type and distance to the equipment the job needs and the time of
   day." Don't list specific rules (skates, dollies, mileage from the lot, etc.); the interactive demo shows them.
 - **"Not everyone wants to talk to AI" (caller's choice):** when someone calls for a tow, the Voice AI agent asks "I
-  can text you an instant dispatch form, or we can continue here. What would you like to do?" Owner data: about half
-  of callers choose the form and the rest finish booking on the call. Shown as a "Their choice" section on the Voice AI
+  can text you an instant dispatch form, or we can continue here. What would you like to do?" Callers who
+  choose the form get it by text; the rest finish booking on the call. (No share-of-callers figure.) Shown as a "Their choice" section on the Voice AI
   page (`va-choice.webp`), a Voice AI and homepage FAQ ("What if my customers don't want to talk to an AI?"), a line in
   the homepage Voice AI tab, and the Voice AI add-on box on Pricing. It works when Voice AI is paired with Instant Dispatch Forms (Voice AI is $97/mo with Forms). Always
   say the other half finish booking on the call, so it never reads as callers hanging up.
@@ -353,7 +353,7 @@ live site or older copy:
 - No around-the-clock promises: no "around the clock", "any time of day", "day or night" or "even at 3AM"
   about Towmatic. Describing the owner's 3 AM problem in the blog posts is fine.
 - "Unlimited calls, no caps. You pay only for minutes used." wherever unlimited calls are mentioned.
-- "In our call data, about half of callers choose the form."
+- No share-of-callers figure ("about half of callers choose the form" was removed; it isn't measured).
 - "Natural-sounding AI built for towing" (not "trained on towing").
 - Timelines: the app is "typically live in 2–3 weeks, including app store review"; websites are "live in 7 days
   once we have your content".
