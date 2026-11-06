@@ -149,7 +149,7 @@ All images are WebP in `images/` and lazy-loaded below the first screen. The her
 | `tab-forms.webp`, `tab-app.webp`, `tab-dispatch.webp` | Homepage platform tabs | kie.ai, nano-banana-pro |
 | `wf-quote.webp`, `wf-locate.webp`, `wf-rotation.webp` | Web Forms feature blocks | kie.ai, nano-banana-pro |
 | `app-home.webp`, `app-book.webp`, `app-driver.webp` | Instant Dispatch App feature blocks | kie.ai, nano-banana-pro |
-| `truck-qr-side.webp` (Web Forms, "Put it everywhere"), `truck-qr-back.webp` (homepage, "In the real world") | Real client truck photos with QR codes | Owner (Midwest Tow & Recovery, used with permission; Towmatic watermark cropped out; QR codes left real and scannable) |
+| `truck-qr-side.webp` (Web Forms, "Put it everywhere"), `truck-qr-back.webp` (homepage, "On your trucks") | Illustrative "Your Tow Co." truck photos with QR codes | Generated with kie.ai (nano-banana-pro). The QR codes are decorative and don't scan. No client names. |
 | `web-protow-desktop.webp`, `web-protow-phone.webp` | Instant Dispatch Websites showcase (screenshots of protowllc.com, the owner's company) | Captured from the live site |
 | `local.webp`, `local-post.webp`, `local-review.webp` | Towmatic Local hero and feature blocks | kie.ai, nano-banana-pro |
 | `blog-10-seconds.webp` | 10 Seconds post cover and blog card | Owner (from the live post) |
@@ -339,7 +339,7 @@ These are intentional. Build them as shown in the prototype.
 - **Seven booking forms** grid on the Web Forms page ("A form for every kind of job."): ASAP Tow, ASAP Service,
   Private Property, Fleet/Account, Scheduled, Police Calls, Motor Club. Carried over from the original site's Voice AI
   call types, with "Transfer to Human" removed. The Instant Dispatch Forms card and the homepage FAQ list the same seven.
-- **Real truck photos** (Midwest Tow & Recovery, a client, approved): homepage "In the real world" section and the
+- **Truck QR photos** are illustrative "Your Tow Co." trucks (no client names): homepage "On your trucks" section and the
   Web Forms "Put it everywhere" section.
 - **Towmatic Local** (new product, new page `/google-business-profile-management`): Google Business Profile
   posts once or twice a week, each with a Book button linking to the customer's Instant Dispatch Form, plus a
