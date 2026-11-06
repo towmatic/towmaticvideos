@@ -192,11 +192,11 @@ Carry every tag over exactly. Each page has:
 
 | Page | Title | Description |
 |---|---|---|
-| `/` | Towmatic \| Online Tow Booking with Automatic Dispatch | Let customers book a tow in seconds instead of calling. Instant quotes by text, one-tap GPS and automatic dispatch to your next driver, 24/7. Online booking forms and your own branded app. |
+| `/` | Towmatic \| Online Tow Booking with Automatic Dispatch | Let customers book a tow in seconds instead of calling. Instant quotes by text, one-tap GPS and automatic dispatch to your next driver. Online booking forms and your own branded app. |
 | `/web-forms` | Online Tow Booking Forms \| Towmatic | Let customers book a tow online. Instant quotes by text, one-tap GPS with SmartLocate, and automatic dispatch to your next driver. |
 | `/native-app` | Instant Dispatch App: Your Branded Tow Booking App \| Towmatic | Put your tow company in the App Store. A custom app with your name and logo for dealers, body shops and repeat customers, with every booking dispatched automatically. |
 | `/google-business-profile-management` | Google Business Profile Management for Tow Companies \| Towmatic | Towmatic Local keeps your Google Business Profile active with weekly posts that link to your booking form, and replies to every review. $197/mo, no setup fee. |
-| `/instant-dispatch-websites` | Tow Company Websites Built to Book More Tows \| Towmatic | Instant Dispatch Websites put your booking form front and center, so more visitors become booked tows, day or night. Live in 7 days once we have your content. One-time fee with any Towmatic plan. |
+| `/instant-dispatch-websites` | Tow Company Websites Built to Book More Tows \| Towmatic | Instant Dispatch Websites put your booking form front and center, so more visitors become booked tows. Live in 7 days once we have your content. One-time fee with any Towmatic plan. |
 | `/pricing` | Pricing \| Towmatic | Towmatic pricing for tow companies. Month-to-month plans for online booking forms and your own branded app, with unlimited bookings. No contracts. |
 | `/contact` | Contact \| Towmatic | Contact Towmatic about online booking and automatic dispatch for your tow company. Sales, customer service and partnership questions. |
 | `/blog` | Towmatic Blog \| Insights from Inside the Towing Industry | Real talk about online booking, towing automation and running a tow company, from tow operators who run tow companies themselves. |
@@ -221,8 +221,7 @@ sitemap with it (or merge it into whatever generates `/sitemap.xml`). `robots.tx
   + (quotes + 2 × jobs) × $0.016 − the $30 communication credit (applied to texts, never below $0; driver backup
   texts and calls also use the credit but aren't estimated), with the setup fee shown separately. Keep the rate in
   `main.js` in sync with billing.
-  An **Average ticket price** box (example $175, close to the real results: $13,689 ÷ 79 jobs ≈ $173) adds
-  "Revenue from booked jobs" (jobs booked × ticket).
+  An **Average ticket price** box (example $175) adds "Estimated value of jobs booked" (jobs booked × ticket).
   Below it, **Compare to a human dispatcher**: a Part-time / Full-time toggle and a monthly cost box (example
   starting amounts $2,000 and $4,000; each option remembers its own value). Shows two bars and "You'd save
   $X a month, about $Y a year", or says plainly when Towmatic would cost more.
@@ -261,11 +260,13 @@ These are intentional. Build them as shown in the prototype.
 - **No Voice AI.** The Voice AI page, the homepage Voice AI tab, the Voice AI Pro plan, the $97 Web Forms add-on and
   every call-minute and "unlimited calls" line are removed. See the redirects in section 2.
 - **Homepage hero:** "Your customers would rather tap than call." (no cycling word).
-- **Hero proof strip:** "$13,689 captured for one client in one month" ·
-  "Thousands of tows booked for clients" · "Month-to-month. No contracts."
-- **Real Results panel:** $13,689 total, 79 jobs, one client, one month. No "nights and weekends only" wording in this version: the forms take bookings 24/7. Online Form 69 jobs / 87% /
-  $11,895; App 10 / 13% / $1,794. (The same client's Voice AI bookings are left out because Voice AI isn't offered.)
-- **Testimonial** is attributed to **Overland Tow Service**, Towmatic client.
+- **No results figures, testimonials or client names on this site.** The owner removed every dollar amount and
+  job count claim ($13,689, 79 jobs, "thousands of tows", "thousands of jobs") and the homepage testimonial. Do not
+  add any, including from the live site.
+- **Hero strip:** "Unlimited bookings. No caps or tiers." · "Built by tow operators. For tow operators." ·
+  "Month-to-month. No contracts."
+- **Your dashboard section** (replaces Real Results): "See exactly what Towmatic brings in." with a panel listing
+  what's tracked: bookings by source, quotes, revenue by channel. No numbers.
 - **Homepage FAQ** (six questions, rewritten for online booking: cancel by text link, choose which booking forms, see every booking, rates, service area, change things myself).
 - **Closing section** on every page: "Take Towmatic for a test drive." / "Click around the full dashboard
   and book a test tow with the online booking form yourself." (The demo is a sandbox dashboard with a test
@@ -275,8 +276,8 @@ These are intentional. Build them as shown in the prototype.
   setup), plus the Towmatic Local add-on. **The Towmatic Max and Towmatic Edge bundles are discontinued**: do not
   show them anywhere. The $30/month communication credit is per account.
 - **Blog posts** recreated word for word from the live site, with two owner edits: driver dispatch is
-  described as a push notification in the Towmatic app (text or phone call as the fallback), and "over
-  1,000 jobs" became "thousands of jobs". In this version only "Book Jobs in 10 Seconds" is kept, and its
+  described as a push notification in the Towmatic app (text or phone call as the fallback), and the
+  job-count claims were removed. In this version only "Book Jobs in 10 Seconds" is kept, and its
   "For Owners Reluctant to Use Voice AI…" section is retitled "For Owners Reluctant to Change…" (first line: "Some
   tow owners aren't ready to change how they take jobs."); its "Keep reading" link to the removed post is gone.
 - **Official Towmatic logo** used in the nav, the footer and as the favicon.
@@ -351,6 +352,9 @@ These are intentional. Build them as shown in the prototype.
 
 ### Claims review (owner-approved wording changes)
 
+- **No "24/7" anywhere and no around-the-clock promises** ("around the clock", "any time of day", "day or night")
+  about Towmatic. Describing the owner's after-hours problem in the blog post is fine.
+
 The owner reviewed every page for claims that can't be backed up. Use the wording in the prototype, not the
 live site or older copy:
 
@@ -373,7 +377,6 @@ live site or older copy:
 
 - All prices and setup fees on the Pricing page.
 - The FAQ answers on every page.
-- Overland Tow Service approved being quoted by name.
 
 ---
 
